@@ -1,0 +1,41 @@
+<h1>Добовление преподователя:</h1>
+{{ form.create('Teacher', {'class':'form'}) }}
+
+    {{ form.hidden('id') }}
+
+        <div class="section">
+            <label>Имя:</label>
+            <p class="error"></p>
+            {{ form.input('fname', {'div' : false, 'label' : false }) }}
+        </div>
+        <div class="section">
+            <label>Фамилия:</label>
+            <p class="error"></p>
+            {{ form.input('sname', {'div' : false, 'label' : false }) }}
+        </div>
+        <div class="section">
+            <label>Отчество:</label>
+            <p class="error"></p>
+            {{ form.input('pname', {'div' : false, 'label' : false }) }}
+        </div>
+    <div class="section last">
+        <div>
+            {{ form.submit('Сохранить', {'class' : 'uibutton loading'}) }}
+        </div>
+    </div>
+
+    {{ form.end() }}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

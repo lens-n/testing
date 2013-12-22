@@ -1,0 +1,95 @@
+<h1>Добовление студента:</h1>
+{{ form.create('Student', {'class':'form'}) }}
+
+    {{ form.hidden('Student.id') }}
+
+        <div class="section">
+            <label>Имя:</label>
+            <p class="error"></p>
+
+            {{ form.input('Student.fname', {'div' : false, 'label' : false }) }}
+        </div>
+        <div class="section">
+            <label>Фамилия:</label>
+            <p class="error"></p>
+            {{ form.input('Student.sname', {'div' : false, 'label' : false }) }}
+        </div>
+        <div class="section">
+            <label>Отчество:</label>
+            <p class="error"></p>
+            {{ form.input('Student.pname', {'div' : false, 'label' : false }) }}
+        </div>
+            <div class="row">
+                <label>Курс:</label>
+                <div class="row">
+                    <select name="data[Student][cours_id]" id="cours_id" >
+                        {% for cours in courses %}
+                            <option {% if  cours.Cours.id == _view.request.data['Student']['cours_id'] %}selected="selected" {% endif %} value="{{ cours.Cours.id}}">{{ cours.Cours.title }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <label>Факультет:</label>
+                <div class="row">
+                    <select name="data[Student][faculty_id]" id="faculty_id" >
+                        {% for faculty in faculties %}
+                            <option {% if faculty.Faculty.id == _view.request.data['Student']['faculty_id'] %}selected="selected" {% endif %} value="{{ faculty.Faculty.id}}">{{ faculty.Faculty.title }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+        <div class="row">
+            <label>Группа:</label>
+            <div class="row">
+                <select name="data[Student][group_id]" id="groups" >
+                    {% for group in groups %}
+                        <option {% if grop.Group.id == _view.request.data['Student']['groups_id'] %}selected="selected" {% endif %} value="{{ group.Group.id}}">{{ group.Group.title }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+
+    <div class="section last">
+        <div>
+            {{ form.submit('Сохранить', {'class' : 'uibutton loading'}) }}
+        </div>
+    </div>
+
+    {{ form.end() }}
+
+<script type="text/javascript">
+    $(function() {
+
+    id = $('#cours_id').val() + '/' + $('#faculty_id').val();
+        $.post( "/students/ajax/" + id, function(data ) {
+            $('#groups').html( data );
+
+        });
+
+
+        $('#cours_id, #faculty_id').change(function() {
+
+            id = $('#cours_id').val() + '/' + $('#faculty_id').val();
+            $.post( "/students/ajax/" + id, function(data ) {
+                $('#groups').html( data );
+            });
+        });
+
+    });
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

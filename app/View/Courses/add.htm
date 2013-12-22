@@ -1,0 +1,31 @@
+<h1>Добовление факультета:</h1>
+{{ form.create('Cours', {'class':'form'}) }}
+
+    {{ form.hidden('id') }}
+
+        <div class="section">
+            <label>Имя курса:</label>
+            <p class="error"></p>
+            {{ form.input('title', {'div' : false, 'label' : false }) }}
+        </div>
+    <div class="section last">
+        <div>
+            {{ form.submit('Сохранить', {'class' : 'uibutton loading'}) }}
+        </div>
+    </div>
+
+    {{ form.end() }}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

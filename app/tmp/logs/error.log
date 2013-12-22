@@ -1,0 +1,3086 @@
+2013-10-19 14:20:08 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /admin
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-10-19 21:35:17 Error: Fatal Error (4): syntax error, unexpected T_PUBLIC in [/home/www-data/www/testing/app/Controller/AppController.php, line 24]
+2013-10-19 21:35:17 Error: [FatalErrorException] syntax error, unexpected T_PUBLIC
+Request URL: /
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Error/ErrorHandler.php(205): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/www-data/...', 24)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/www-data/...', 24, Array)
+#2 /home/www-data/www/testing/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/www-data/...', 24, Array)
+#3 /home/www-data/www/testing/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-19 21:35:30 Error: Fatal Error (4): syntax error, unexpected T_STRING, expecting T_FUNCTION in [/home/www-data/www/testing/app/Controller/AppController.php, line 35]
+2013-10-19 21:35:30 Error: [FatalErrorException] syntax error, unexpected T_STRING, expecting T_FUNCTION
+Request URL: /
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Error/ErrorHandler.php(205): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/www-data/...', 35)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/www-data/...', 35, Array)
+#2 /home/www-data/www/testing/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/www-data/...', 35, Array)
+#3 /home/www-data/www/testing/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-19 21:40:11 Error: [MissingViewException] View file "/home/www-data/www/testing/app/View/Students/index.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/home/www-data/www/testing/app/View/Students/index.ctp',
+)
+Request URL: /students
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/View/View.php(459): View->_getViewFileName(NULL)
+#1 /home/www-data/www/testing/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#2 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#3 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(StudentsController), Object(CakeRequest), Object(CakeResponse))
+#4 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-10-20 14:13:36 Error: Fatal Error (4): syntax error, unexpected ':', expecting ';' in [/home/www-data/www/testing/app/View/Students/index.ctp, line 3]
+2013-10-20 14:13:36 Error: [FatalErrorException] syntax error, unexpected ':', expecting ';'
+Request URL: /
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Error/ErrorHandler.php(205): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/www-data/...', 3)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/www-data/...', 3, Array)
+#2 /home/www-data/www/testing/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/www-data/...', 3, Array)
+#3 /home/www-data/www/testing/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-20 14:52:14 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'testing_db.Students' doesn't exist
+Request URL: /
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /home/www-data/www/testing/lib/Cake/Model/Datasource/Database/Mysql.php(333): DboSource->_execute('SHOW FULL COLUM...')
+#2 /home/www-data/www/testing/lib/Cake/Model/Model.php(1353): Mysql->describe(Object(Student))
+#3 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(2293): Model->schema()
+#4 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(1047): DboSource->fields(Object(Student))
+#5 /home/www-data/www/testing/lib/Cake/Model/Model.php(2880): DboSource->read(Object(Student), Array)
+#6 /home/www-data/www/testing/lib/Cake/Model/Model.php(2852): Model->_readDataSource('all', Array)
+#7 /home/www-data/www/testing/app/Controller/StudentsController.php(15): Model->find('all')
+#8 [internal function]: StudentsController->index()
+#9 /home/www-data/www/testing/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(StudentsController), Array)
+#10 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(StudentsController), Object(CakeRequest), Object(CakeResponse))
+#12 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-10-20 16:10:24 Error: Fatal Error (1): Call to a member function find() on a non-object in [/home/www-data/www/testing/app/Controller/StudentsController.php, line 15]
+2013-10-20 16:10:24 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Error/ErrorHandler.php(205): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/www-data/...', 15)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/www-data/...', 15, Array)
+#2 /home/www-data/www/testing/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/www-data/...', 15, Array)
+#3 /home/www-data/www/testing/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-20 16:10:38 Error: Fatal Error (1): Call to a member function find() on a non-object in [/home/www-data/www/testing/app/Controller/StudentsController.php, line 15]
+2013-10-20 16:10:38 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Error/ErrorHandler.php(205): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/www-data/...', 15)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/www-data/...', 15, Array)
+#2 /home/www-data/www/testing/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/www-data/...', 15, Array)
+#3 /home/www-data/www/testing/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-20 16:10:46 Error: Fatal Error (1): Call to a member function find() on a non-object in [/home/www-data/www/testing/app/Controller/StudentsController.php, line 15]
+2013-10-20 16:10:46 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Error/ErrorHandler.php(205): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/www-data/...', 15)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/www-data/...', 15, Array)
+#2 /home/www-data/www/testing/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/www-data/...', 15, Array)
+#3 /home/www-data/www/testing/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-20 16:10:47 Error: Fatal Error (1): Call to a member function find() on a non-object in [/home/www-data/www/testing/app/Controller/StudentsController.php, line 15]
+2013-10-20 16:10:47 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Error/ErrorHandler.php(205): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/www-data/...', 15)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/www-data/...', 15, Array)
+#2 /home/www-data/www/testing/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/www-data/...', 15, Array)
+#3 /home/www-data/www/testing/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-07 14:26:35 Error: [MissingControllerException] Controller class StudentController could not be found.
+Exception Attributes: array (
+  'class' => 'StudentController',
+  'plugin' => NULL,
+)
+Request URL: /student
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 15:20:43 Error: [MissingViewException] View file "/home/www-data/www/testing/app/View/Students/index.htm" is missing.
+Exception Attributes: array (
+  'file' => '/home/www-data/www/testing/app/View/Students/index.htm',
+)
+Request URL: /
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/View/View.php(459): View->_getViewFileName(NULL)
+#1 /home/www-data/www/testing/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#2 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#3 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(StudentsController), Object(CakeRequest), Object(CakeResponse))
+#4 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-14 15:21:02 Error: [RuntimeException] Unable to create the cache directory (/home/www-data/www/testing/app/Plugin/TwigView/tmp/views/9d/1d).
+Request URL: /
+Stack Trace:
+#0 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Environment.php(323): Twig_Environment->writeCacheFile('/home/www-data/...', '<?php??/* Stude...')
+#1 /home/www-data/www/testing/app/Plugin/TwigView/View/TwigView.php(155): Twig_Environment->loadTemplate('Students/index....')
+#2 /home/www-data/www/testing/lib/Cake/View/View.php(462): TwigView->_render('/home/www-data/...')
+#3 /home/www-data/www/testing/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#4 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#5 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(StudentsController), Object(CakeRequest), Object(CakeResponse))
+#6 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2013-12-14 15:25:46 Error: [Twig_Error_Syntax] Unexpected token "name" of value "as" ("operator" expected with value "in") in "Students/index.htm" at line 1
+Request URL: /
+Stack Trace:
+#0 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/TokenParser/For.php(38): Twig_TokenStream->expect(8, 'in')
+#1 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Parser.php(191): Twig_TokenParser_For->parse(Object(Twig_Token))
+#2 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Parser.php(99): Twig_Parser->subparse(NULL, false)
+#3 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Environment.php(479): Twig_Parser->parse(Object(Twig_TokenStream))
+#4 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Environment.php(529): Twig_Environment->parse(Object(Twig_TokenStream))
+#5 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Environment.php(323): Twig_Environment->compileSource('{% for students...', 'Students/index....')
+#6 /home/www-data/www/testing/app/Plugin/TwigView/View/TwigView.php(155): Twig_Environment->loadTemplate('Students/index....')
+#7 /home/www-data/www/testing/lib/Cake/View/View.php(462): TwigView->_render('/home/www-data/...')
+#8 /home/www-data/www/testing/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#9 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#10 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(StudentsController), Object(CakeRequest), Object(CakeResponse))
+#11 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-12-14 15:29:24 Error: [Twig_Error_Syntax] Unexpected token "operator" of value ">" in "Students/index.htm" at line 2
+Request URL: /
+Stack Trace:
+#0 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/ExpressionParser.php(84): Twig_ExpressionParser->parsePrimaryExpression()
+#1 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/ExpressionParser.php(41): Twig_ExpressionParser->getPrimary()
+#2 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/ExpressionParser.php(50): Twig_ExpressionParser->parseExpression(31)
+#3 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Parser.php(145): Twig_ExpressionParser->parseExpression()
+#4 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/TokenParser/For.php(48): Twig_Parser->subparse(Array)
+#5 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Parser.php(191): Twig_TokenParser_For->parse(Object(Twig_Token))
+#6 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Parser.php(99): Twig_Parser->subparse(NULL, false)
+#7 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Environment.php(479): Twig_Parser->parse(Object(Twig_TokenStream))
+#8 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Environment.php(529): Twig_Environment->parse(Object(Twig_TokenStream))
+#9 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Environment.php(323): Twig_Environment->compileSource('{% for student ...', 'Students/index....')
+#10 /home/www-data/www/testing/app/Plugin/TwigView/View/TwigView.php(155): Twig_Environment->loadTemplate('Students/index....')
+#11 /home/www-data/www/testing/lib/Cake/View/View.php(462): TwigView->_render('/home/www-data/...')
+#12 /home/www-data/www/testing/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#13 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#14 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(StudentsController), Object(CakeRequest), Object(CakeResponse))
+#15 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2013-12-14 15:29:32 Error: [Twig_Error_Syntax] Unexpected token "operator" of value "=" ("end of print statement" expected) in "Students/index.htm" at line 2
+Request URL: /
+Stack Trace:
+#0 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Parser.php(146): Twig_TokenStream->expect(4)
+#1 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/TokenParser/For.php(48): Twig_Parser->subparse(Array)
+#2 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Parser.php(191): Twig_TokenParser_For->parse(Object(Twig_Token))
+#3 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Parser.php(99): Twig_Parser->subparse(NULL, false)
+#4 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Environment.php(479): Twig_Parser->parse(Object(Twig_TokenStream))
+#5 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Environment.php(529): Twig_Environment->parse(Object(Twig_TokenStream))
+#6 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Environment.php(323): Twig_Environment->compileSource('{% for student ...', 'Students/index....')
+#7 /home/www-data/www/testing/app/Plugin/TwigView/View/TwigView.php(155): Twig_Environment->loadTemplate('Students/index....')
+#8 /home/www-data/www/testing/lib/Cake/View/View.php(462): TwigView->_render('/home/www-data/...')
+#9 /home/www-data/www/testing/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#10 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#11 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(StudentsController), Object(CakeRequest), Object(CakeResponse))
+#12 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-12-14 16:24:02 Error: [MissingControllerException] Controller class Index.htmlController could not be found.
+Exception Attributes: array (
+  'class' => 'Index.htmlController',
+  'plugin' => NULL,
+)
+Request URL: /index.html
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:30:33 Error: [MissingControllerException] Controller class Support.htmlController could not be found.
+Exception Attributes: array (
+  'class' => 'Support.htmlController',
+  'plugin' => NULL,
+)
+Request URL: /support.html
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:38:51 Error: [MissingControllerException] Controller class Style.cssController could not be found.
+Exception Attributes: array (
+  'class' => 'Style.cssController',
+  'plugin' => NULL,
+)
+Request URL: /style.css
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:39:01 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/leftfolder.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:39:01 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/red-image.jpg
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:39:01 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/main-bg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:39:01 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/arrow1.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:39:01 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/menu-bg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:39:01 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/redpan-bg.jpg
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:39:01 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/headermore-normal.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:39:01 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/rightfolder.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:39:01 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/bodybottombg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:39:01 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/icon1.jpg
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:39:01 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/bullet1.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:39:01 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/bottom-more-bg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:39:01 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/icon2.jpg
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:39:01 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/footerbg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:39:01 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/html-bg-normal.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:39:01 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/css-bg-normal.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:39:25 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/main-bg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:39:25 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/red-image.jpg
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:39:25 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/leftfolder.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:39:25 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/arrow1.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:39:25 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/redpan-bg.jpg
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:39:25 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/menu-bg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:39:25 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/headermore-normal.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:39:25 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/rightfolder.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:39:25 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/bodybottombg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:39:25 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/icon1.jpg
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:39:25 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/bullet1.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:39:25 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/bottom-more-bg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:39:25 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/icon2.jpg
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:39:25 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/footerbg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:39:25 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/html-bg-normal.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:39:25 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/css-bg-normal.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:39:30 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/bullet1.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:39:31 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/bottom-more-bg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:01 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/main-bg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:02 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/red-image.jpg
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:02 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/rightfolder.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:02 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/arrow1.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:02 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/headermore-normal.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:02 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/redpan-bg.jpg
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:02 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/bodybottombg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:02 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/icon1.jpg
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:02 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/bullet1.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:02 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/bottom-more-bg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:02 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/icon2.jpg
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:02 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/footerbg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:02 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/html-bg-normal.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:02 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/css-bg-normal.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:02 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/headermore-hover.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:19 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/bullet1.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:20 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/main-bg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:20 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/arrow1.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:20 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/headermore-normal.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:20 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/icon1.jpg
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:20 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/red-image.jpg
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:20 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/bodybottombg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:20 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/bullet1.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:20 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/bottom-more-bg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:20 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/icon2.jpg
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:20 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/footerbg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:20 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/html-bg-normal.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:20 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/css-bg-normal.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:25 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/main-bg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:26 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/headermore-normal.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:26 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/red-image.jpg
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:26 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/bodybottombg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:26 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/arrow1.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:26 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/icon1.jpg
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:26 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/bullet1.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:26 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/bottom-more-bg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:26 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/icon2.jpg
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:26 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/footerbg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:26 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/html-bg-normal.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:26 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/css-bg-normal.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:28 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/main-bg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:28 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/arrow1.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:28 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/bullet1.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:28 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/bodybottombg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:28 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/icon1.jpg
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:28 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/red-image.jpg
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:28 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/headermore-normal.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:28 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/bottom-more-bg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:28 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/icon2.jpg
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:29 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/footerbg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:29 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/html-bg-normal.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:29 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/css-bg-normal.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:29 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/main-bg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:29 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/arrow1.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:29 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/icon1.jpg
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:29 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/bullet1.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:29 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/headermore-normal.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:29 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/red-image.jpg
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:29 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/bottom-more-bg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:29 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/icon2.jpg
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:29 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/bodybottombg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:29 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/css-bg-normal.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:29 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/html-bg-normal.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:29 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/footerbg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:38 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/main-bg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:39 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/bodybottombg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:39 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/red-image.jpg
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:39 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/arrow1.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:39 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/icon1.jpg
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:39 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/headermore-normal.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:39 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/bullet1.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:39 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/bottom-more-bg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:39 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/icon2.jpg
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:39 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/footerbg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:39 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/html-bg-normal.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:39 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/css-bg-normal.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:45 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/main-bg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:45 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/headermore-normal.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:45 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/bodybottombg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:45 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/arrow1.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:45 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/red-image.jpg
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:45 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/icon1.jpg
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:45 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/bullet1.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:45 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/bottom-more-bg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:45 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/icon2.jpg
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:45 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/footerbg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:45 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/html-bg-normal.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:45 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/css-bg-normal.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:46 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/arrow1.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:46 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/icon1.jpg
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:46 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/main-bg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:46 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/headermore-normal.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:46 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/bodybottombg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:46 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/red-image.jpg
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:46 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/bullet1.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:46 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/bottom-more-bg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:46 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/icon2.jpg
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:46 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/footerbg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:47 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/html-bg-normal.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:47 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/css-bg-normal.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:48 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/main-bg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:48 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/icon1.jpg
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:48 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/red-image.jpg
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:48 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/headermore-normal.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:48 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/arrow1.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:48 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/bodybottombg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:48 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/bullet1.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:48 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/bottom-more-bg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:48 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/icon2.jpg
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:48 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/footerbg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:48 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/html-bg-normal.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:48 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/css-bg-normal.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:54 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/bullet1.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:40:54 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/bottom-more-bg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:41:17 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/main-bg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:41:17 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/arrow1.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:41:17 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/red-image.jpg
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:41:17 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/bullet1.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:41:17 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/headermore-normal.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:41:17 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/bottom-more-bg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:41:17 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/bodybottombg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:41:18 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/icon2.jpg
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:41:18 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/footerbg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:41:18 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/html-bg-normal.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:41:18 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/css-bg-normal.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:41:19 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/bullet1.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:41:19 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/red-image.jpg
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:41:19 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/main-bg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:41:19 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/headermore-normal.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:41:19 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/bottom-more-bg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:41:19 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/arrow1.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:41:19 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/bodybottombg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:41:19 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/icon2.jpg
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:41:19 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/footerbg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:41:19 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/html-bg-normal.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:41:19 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/css-bg-normal.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:41:19 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/bullet1.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:41:19 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/bullet1.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:41:21 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/css-bg-hover.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:41:28 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/arrow1-hover.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:41:34 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/leftfolder.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:41:34 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/main-bg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:41:34 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/menu-bg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:41:34 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/redpan-bg.jpg
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:41:34 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/red-image.jpg
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:41:34 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/arrow1.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:41:34 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/headermore-normal.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:41:34 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/rightfolder.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:41:34 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/bodybottombg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:41:34 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/icon1.jpg
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:41:34 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/bullet1.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:41:34 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/bottom-more-bg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:41:34 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/icon2.jpg
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:41:34 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/footerbg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:41:35 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/html-bg-normal.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:41:35 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/css-bg-normal.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:41:56 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/main-bg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:41:56 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/arrow1.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:41:56 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/menu-bg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:41:56 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/leftfolder.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:41:56 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/red-image.jpg
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:41:56 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/redpan-bg.jpg
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:41:56 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/headermore-normal.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:41:56 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/rightfolder.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:41:56 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/bodybottombg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:41:56 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/icon1.jpg
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:41:56 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/bullet1.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:41:56 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/bottom-more-bg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:41:56 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/icon2.jpg
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:41:57 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/footerbg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:41:57 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/html-bg-normal.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:41:57 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/css-bg-normal.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:42:10 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/main-bg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:42:10 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/red-image.jpg
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:42:10 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/redpan-bg.jpg
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:42:10 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/leftfolder.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:42:10 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/arrow1.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:42:10 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/menu-bg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:42:10 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/headermore-normal.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:42:10 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/rightfolder.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:42:10 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/bodybottombg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:42:10 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/icon1.jpg
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:42:10 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/bullet1.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:42:10 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/bottom-more-bg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:42:10 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/icon2.jpg
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:42:10 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/footerbg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:42:10 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/html-bg-normal.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:42:10 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/css-bg-normal.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:45:27 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/arrow1.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:45:27 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/main-bg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:45:27 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/leftfolder.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:45:27 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/menu-bg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:45:27 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/redpan-bg.jpg
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:45:27 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/red-image.jpg
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:45:27 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/headermore-normal.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:45:27 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/rightfolder.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:45:27 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/bodybottombg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:45:27 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/icon1.jpg
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:45:27 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/bullet1.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:45:27 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/bottom-more-bg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:45:27 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/icon2.jpg
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:45:27 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/footerbg.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:45:27 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/html-bg-normal.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-14 16:45:27 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/images/css-bg-normal.gif
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-15 12:48:19 Error: [MissingControllerException] Controller class AddController could not be found.
+Exception Attributes: array (
+  'class' => 'AddController',
+  'plugin' => NULL,
+)
+Request URL: /add
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-15 13:40:55 Error: Fatal Error (1): Call to undefined method FacultiesController::setFlash() in [/home/www-data/www/testing/app/Controller/FacultiesController.php, line 22]
+2013-12-15 13:40:55 Error: [FatalErrorException] Call to undefined method FacultiesController::setFlash()
+Request URL: /faculties/add
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Error/ErrorHandler.php(205): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/home/www-data/...', 22)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/home/www-data/...', 22, Array)
+#2 /home/www-data/www/testing/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/home/www-data/...', 22, Array)
+#3 /home/www-data/www/testing/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-15 14:15:35 Error: Fatal Error (1): Call to a member function find() on a non-object in [/home/www-data/www/testing/app/Controller/CoursesController.php, line 15]
+2013-12-15 14:15:35 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /courses
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Error/ErrorHandler.php(205): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/www-data/...', 15)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/www-data/...', 15, Array)
+#2 /home/www-data/www/testing/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/www-data/...', 15, Array)
+#3 /home/www-data/www/testing/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-15 14:16:25 Error: Fatal Error (1): Call to a member function find() on a non-object in [/home/www-data/www/testing/app/Controller/CoursesController.php, line 15]
+2013-12-15 14:16:25 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /courses
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Error/ErrorHandler.php(205): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/www-data/...', 15)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/www-data/...', 15, Array)
+#2 /home/www-data/www/testing/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/www-data/...', 15, Array)
+#3 /home/www-data/www/testing/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-15 14:16:38 Error: Fatal Error (1): Call to a member function find() on a non-object in [/home/www-data/www/testing/app/Controller/CoursesController.php, line 15]
+2013-12-15 14:16:38 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /courses
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Error/ErrorHandler.php(205): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/www-data/...', 15)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/www-data/...', 15, Array)
+#2 /home/www-data/www/testing/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/www-data/...', 15, Array)
+#3 /home/www-data/www/testing/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-15 14:17:08 Error: Fatal Error (1): Call to a member function find() on a non-object in [/home/www-data/www/testing/app/Controller/CoursesController.php, line 15]
+2013-12-15 14:17:08 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /courses
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Error/ErrorHandler.php(205): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/www-data/...', 15)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/www-data/...', 15, Array)
+#2 /home/www-data/www/testing/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/www-data/...', 15, Array)
+#3 /home/www-data/www/testing/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-15 14:17:09 Error: Fatal Error (1): Call to a member function find() on a non-object in [/home/www-data/www/testing/app/Controller/CoursesController.php, line 15]
+2013-12-15 14:17:09 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /courses
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Error/ErrorHandler.php(205): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/www-data/...', 15)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/www-data/...', 15, Array)
+#2 /home/www-data/www/testing/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/www-data/...', 15, Array)
+#3 /home/www-data/www/testing/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-15 14:18:13 Error: Fatal Error (1): Call to a member function read() on a non-object in [/home/www-data/www/testing/app/Controller/CoursesController.php, line 34]
+2013-12-15 14:18:13 Error: [FatalErrorException] Call to a member function read() on a non-object
+Request URL: /courses/edit
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Error/ErrorHandler.php(205): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/www-data/...', 34)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/www-data/...', 34, Array)
+#2 /home/www-data/www/testing/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/www-data/...', 34, Array)
+#3 /home/www-data/www/testing/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-15 14:20:39 Error: [MissingViewException] View file "/home/www-data/www/testing/app/View/Courses/a_d_d.htm" is missing.
+Exception Attributes: array (
+  'file' => '/home/www-data/www/testing/app/View/Courses/a_d_d.htm',
+)
+Request URL: /courses/ADD
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/View/View.php(459): View->_getViewFileName(NULL)
+#1 /home/www-data/www/testing/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#2 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#3 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CoursesController), Object(CakeRequest), Object(CakeResponse))
+#4 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-15 14:20:48 Error: [MissingControllerException] Controller class CoursController could not be found.
+Exception Attributes: array (
+  'class' => 'CoursController',
+  'plugin' => NULL,
+)
+Request URL: /cours
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-15 14:26:50 Error: [MissingControllerException] Controller class CoursController could not be found.
+Exception Attributes: array (
+  'class' => 'CoursController',
+  'plugin' => NULL,
+)
+Request URL: /cours/
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-15 14:26:57 Error: [MissingControllerException] Controller class CoursController could not be found.
+Exception Attributes: array (
+  'class' => 'CoursController',
+  'plugin' => NULL,
+)
+Request URL: /cours/
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-15 15:06:41 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`testing_db`.`groups`, CONSTRAINT `fk_groups_cours1` FOREIGN KEY (`cours_id`) REFERENCES `courses` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+Request URL: /groups/add
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `te...', Array)
+#2 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(1004): DboSource->execute('INSERT INTO `te...')
+#3 /home/www-data/www/testing/lib/Cake/Model/Model.php(1827): DboSource->create(Object(AppModel), Array, Array)
+#4 /home/www-data/www/testing/lib/Cake/Model/Model.php(2373): Model->save(Array, Array)
+#5 /home/www-data/www/testing/lib/Cake/Model/Model.php(2163): Model->saveAssociated(Array, Array)
+#6 /home/www-data/www/testing/app/Controller/GroupsController.php(21): Model->saveAll(Array)
+#7 [internal function]: GroupsController->add()
+#8 /home/www-data/www/testing/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(GroupsController), Array)
+#9 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(GroupsController), Object(CakeRequest), Object(CakeResponse))
+#11 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-12-15 17:22:27 Error: [Twig_Error_Syntax] Unexpected tag name "id" (expecting closing tag for the "for" tag defined near line 3) in "Groups/index.htm" at line 3
+Request URL: /groups
+Stack Trace:
+#0 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/TokenParser/For.php(48): Twig_Parser->subparse(Array)
+#1 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Parser.php(191): Twig_TokenParser_For->parse(Object(Twig_Token))
+#2 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Parser.php(99): Twig_Parser->subparse(NULL, false)
+#3 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Environment.php(479): Twig_Parser->parse(Object(Twig_TokenStream))
+#4 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Environment.php(529): Twig_Environment->parse(Object(Twig_TokenStream))
+#5 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Environment.php(323): Twig_Environment->compileSource('????????????:<b...', 'Groups/index.ht...')
+#6 /home/www-data/www/testing/app/Plugin/TwigView/View/TwigView.php(155): Twig_Environment->loadTemplate('Groups/index.ht...')
+#7 /home/www-data/www/testing/lib/Cake/View/View.php(462): TwigView->_render('/home/www-data/...')
+#8 /home/www-data/www/testing/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#9 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#10 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(GroupsController), Object(CakeRequest), Object(CakeResponse))
+#11 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-12-15 17:22:57 Error: [Twig_Error_Syntax] Unclosed "[" in "Groups/index.htm" at line 4
+Request URL: /groups
+Stack Trace:
+#0 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Lexer.php(219): Twig_Lexer->lexExpression()
+#1 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Lexer.php(118): Twig_Lexer->lexVar()
+#2 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Environment.php(443): Twig_Lexer->tokenize('????????????:<b...', 'Groups/index.ht...')
+#3 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Environment.php(529): Twig_Environment->tokenize('????????????:<b...', 'Groups/index.ht...')
+#4 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Environment.php(323): Twig_Environment->compileSource('????????????:<b...', 'Groups/index.ht...')
+#5 /home/www-data/www/testing/app/Plugin/TwigView/View/TwigView.php(155): Twig_Environment->loadTemplate('Groups/index.ht...')
+#6 /home/www-data/www/testing/lib/Cake/View/View.php(462): TwigView->_render('/home/www-data/...')
+#7 /home/www-data/www/testing/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#8 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#9 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(GroupsController), Object(CakeRequest), Object(CakeResponse))
+#10 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-12-15 17:23:10 Error: [Twig_Error_Syntax] Unclosed "{" in "Groups/index.htm" at line 4
+Request URL: /groups
+Stack Trace:
+#0 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Lexer.php(219): Twig_Lexer->lexExpression()
+#1 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Lexer.php(118): Twig_Lexer->lexVar()
+#2 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Environment.php(443): Twig_Lexer->tokenize('????????????:<b...', 'Groups/index.ht...')
+#3 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Environment.php(529): Twig_Environment->tokenize('????????????:<b...', 'Groups/index.ht...')
+#4 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Environment.php(323): Twig_Environment->compileSource('????????????:<b...', 'Groups/index.ht...')
+#5 /home/www-data/www/testing/app/Plugin/TwigView/View/TwigView.php(155): Twig_Environment->loadTemplate('Groups/index.ht...')
+#6 /home/www-data/www/testing/lib/Cake/View/View.php(462): TwigView->_render('/home/www-data/...')
+#7 /home/www-data/www/testing/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#8 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#9 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(GroupsController), Object(CakeRequest), Object(CakeResponse))
+#10 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-12-15 17:23:17 Error: [Twig_Error_Syntax] Unexpected tag name "id" (expecting closing tag for the "for" tag defined near line 3) in "Groups/index.htm" at line 3
+Request URL: /groups
+Stack Trace:
+#0 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/TokenParser/For.php(48): Twig_Parser->subparse(Array)
+#1 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Parser.php(191): Twig_TokenParser_For->parse(Object(Twig_Token))
+#2 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Parser.php(99): Twig_Parser->subparse(NULL, false)
+#3 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Environment.php(479): Twig_Parser->parse(Object(Twig_TokenStream))
+#4 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Environment.php(529): Twig_Environment->parse(Object(Twig_TokenStream))
+#5 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Environment.php(323): Twig_Environment->compileSource('????????????:<b...', 'Groups/index.ht...')
+#6 /home/www-data/www/testing/app/Plugin/TwigView/View/TwigView.php(155): Twig_Environment->loadTemplate('Groups/index.ht...')
+#7 /home/www-data/www/testing/lib/Cake/View/View.php(462): TwigView->_render('/home/www-data/...')
+#8 /home/www-data/www/testing/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#9 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#10 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(GroupsController), Object(CakeRequest), Object(CakeResponse))
+#11 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-12-15 17:23:29 Error: [Twig_Error_Syntax] Unexpected tag name "id" (expecting closing tag for the "for" tag defined near line 3) in "Groups/index.htm" at line 3
+Request URL: /groups
+Stack Trace:
+#0 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/TokenParser/For.php(48): Twig_Parser->subparse(Array)
+#1 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Parser.php(191): Twig_TokenParser_For->parse(Object(Twig_Token))
+#2 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Parser.php(99): Twig_Parser->subparse(NULL, false)
+#3 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Environment.php(479): Twig_Parser->parse(Object(Twig_TokenStream))
+#4 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Environment.php(529): Twig_Environment->parse(Object(Twig_TokenStream))
+#5 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Environment.php(323): Twig_Environment->compileSource('????????????:<b...', 'Groups/index.ht...')
+#6 /home/www-data/www/testing/app/Plugin/TwigView/View/TwigView.php(155): Twig_Environment->loadTemplate('Groups/index.ht...')
+#7 /home/www-data/www/testing/lib/Cake/View/View.php(462): TwigView->_render('/home/www-data/...')
+#8 /home/www-data/www/testing/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#9 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#10 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(GroupsController), Object(CakeRequest), Object(CakeResponse))
+#11 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-12-15 17:27:35 Error: [Twig_Error_Syntax] A hash key must be followed by a colon (:). Unexpected token "punctuation" of value "}" ("punctuation" expected with value ":") in "Groups/index.htm" at line 4
+Request URL: /groups
+Stack Trace:
+#0 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/ExpressionParser.php(267): Twig_TokenStream->expect(9, ':', 'A hash key must...')
+#1 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/ExpressionParser.php(168): Twig_ExpressionParser->parseHashExpression()
+#2 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/ExpressionParser.php(84): Twig_ExpressionParser->parsePrimaryExpression()
+#3 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/ExpressionParser.php(41): Twig_ExpressionParser->getPrimary()
+#4 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/ExpressionParser.php(387): Twig_ExpressionParser->parseExpression()
+#5 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/ExpressionParser.php(283): Twig_ExpressionParser->parseSubscriptExpression(Object(Twig_Node_Expression_Name))
+#6 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/ExpressionParser.php(174): Twig_ExpressionParser->parsePostfixExpression(Object(Twig_Node_Expression_Name))
+#7 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/ExpressionParser.php(84): Twig_ExpressionParser->parsePrimaryExpression()
+#8 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/ExpressionParser.php(41): Twig_ExpressionParser->getPrimary()
+#9 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Parser.php(145): Twig_ExpressionParser->parseExpression()
+#10 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/TokenParser/For.php(48): Twig_Parser->subparse(Array)
+#11 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Parser.php(191): Twig_TokenParser_For->parse(Object(Twig_Token))
+#12 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Parser.php(99): Twig_Parser->subparse(NULL, false)
+#13 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Environment.php(479): Twig_Parser->parse(Object(Twig_TokenStream))
+#14 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Environment.php(529): Twig_Environment->parse(Object(Twig_TokenStream))
+#15 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Environment.php(323): Twig_Environment->compileSource('????????????:<b...', 'Groups/index.ht...')
+#16 /home/www-data/www/testing/app/Plugin/TwigView/View/TwigView.php(155): Twig_Environment->loadTemplate('Groups/index.ht...')
+#17 /home/www-data/www/testing/lib/Cake/View/View.php(462): TwigView->_render('/home/www-data/...')
+#18 /home/www-data/www/testing/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#19 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#20 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(GroupsController), Object(CakeRequest), Object(CakeResponse))
+#21 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#22 {main}
+2013-12-15 17:29:34 Error: [Twig_Error_Syntax] A hash key must be followed by a colon (:). Unexpected token "punctuation" of value "}" ("punctuation" expected with value ":") in "Groups/index.htm" at line 4
+Request URL: /groups
+Stack Trace:
+#0 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/ExpressionParser.php(267): Twig_TokenStream->expect(9, ':', 'A hash key must...')
+#1 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/ExpressionParser.php(168): Twig_ExpressionParser->parseHashExpression()
+#2 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/ExpressionParser.php(84): Twig_ExpressionParser->parsePrimaryExpression()
+#3 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/ExpressionParser.php(41): Twig_ExpressionParser->getPrimary()
+#4 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/ExpressionParser.php(387): Twig_ExpressionParser->parseExpression()
+#5 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/ExpressionParser.php(283): Twig_ExpressionParser->parseSubscriptExpression(Object(Twig_Node_Expression_Name))
+#6 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/ExpressionParser.php(174): Twig_ExpressionParser->parsePostfixExpression(Object(Twig_Node_Expression_Name))
+#7 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/ExpressionParser.php(84): Twig_ExpressionParser->parsePrimaryExpression()
+#8 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/ExpressionParser.php(41): Twig_ExpressionParser->getPrimary()
+#9 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Parser.php(145): Twig_ExpressionParser->parseExpression()
+#10 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/TokenParser/For.php(48): Twig_Parser->subparse(Array)
+#11 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Parser.php(191): Twig_TokenParser_For->parse(Object(Twig_Token))
+#12 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Parser.php(99): Twig_Parser->subparse(NULL, false)
+#13 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Environment.php(479): Twig_Parser->parse(Object(Twig_TokenStream))
+#14 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Environment.php(529): Twig_Environment->parse(Object(Twig_TokenStream))
+#15 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Environment.php(323): Twig_Environment->compileSource('????????????:<b...', 'Groups/index.ht...')
+#16 /home/www-data/www/testing/app/Plugin/TwigView/View/TwigView.php(155): Twig_Environment->loadTemplate('Groups/index.ht...')
+#17 /home/www-data/www/testing/lib/Cake/View/View.php(462): TwigView->_render('/home/www-data/...')
+#18 /home/www-data/www/testing/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#19 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#20 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(GroupsController), Object(CakeRequest), Object(CakeResponse))
+#21 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#22 {main}
+2013-12-15 17:34:02 Error: [Twig_Error_Syntax] Unexpected token "operator" of value "=" in "Groups/index.htm" at line 5
+Request URL: /groups
+Stack Trace:
+#0 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/ExpressionParser.php(84): Twig_ExpressionParser->parsePrimaryExpression()
+#1 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/ExpressionParser.php(41): Twig_ExpressionParser->getPrimary()
+#2 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/ExpressionParser.php(50): Twig_ExpressionParser->parseExpression(21)
+#3 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/TokenParser/If.php(38): Twig_ExpressionParser->parseExpression()
+#4 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Parser.php(191): Twig_TokenParser_If->parse(Object(Twig_Token))
+#5 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/TokenParser/For.php(48): Twig_Parser->subparse(Array)
+#6 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Parser.php(191): Twig_TokenParser_For->parse(Object(Twig_Token))
+#7 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Parser.php(99): Twig_Parser->subparse(NULL, false)
+#8 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Environment.php(479): Twig_Parser->parse(Object(Twig_TokenStream))
+#9 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Environment.php(529): Twig_Environment->parse(Object(Twig_TokenStream))
+#10 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Environment.php(323): Twig_Environment->compileSource('????????????:<b...', 'Groups/index.ht...')
+#11 /home/www-data/www/testing/app/Plugin/TwigView/View/TwigView.php(155): Twig_Environment->loadTemplate('Groups/index.ht...')
+#12 /home/www-data/www/testing/lib/Cake/View/View.php(462): TwigView->_render('/home/www-data/...')
+#13 /home/www-data/www/testing/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#14 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#15 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(GroupsController), Object(CakeRequest), Object(CakeResponse))
+#16 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#17 {main}
+2013-12-15 18:48:48 Error: [Twig_Error_Syntax] Unclosed "[" in "Groups/add.htm" at line 28
+Request URL: /groups/edit/8
+Stack Trace:
+#0 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Lexer.php(208): Twig_Lexer->lexExpression()
+#1 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Lexer.php(114): Twig_Lexer->lexBlock()
+#2 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Environment.php(443): Twig_Lexer->tokenize('<h1>???????????...', 'Groups/add.htm')
+#3 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Environment.php(529): Twig_Environment->tokenize('<h1>???????????...', 'Groups/add.htm')
+#4 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Environment.php(323): Twig_Environment->compileSource('<h1>???????????...', 'Groups/add.htm')
+#5 /home/www-data/www/testing/app/Plugin/TwigView/View/TwigView.php(155): Twig_Environment->loadTemplate('Groups/add.htm')
+#6 /home/www-data/www/testing/lib/Cake/View/View.php(462): TwigView->_render('/home/www-data/...')
+#7 /home/www-data/www/testing/lib/Cake/Controller/Controller.php(952): View->render('add', NULL)
+#8 /home/www-data/www/testing/app/Controller/GroupsController.php(52): Controller->render('add')
+#9 [internal function]: GroupsController->edit('8')
+#10 /home/www-data/www/testing/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(GroupsController), Array)
+#11 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#12 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(GroupsController), Object(CakeRequest), Object(CakeResponse))
+#13 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2013-12-15 19:43:42 Error: Fatal Error (1): Call to a member function find() on a non-object in [/home/www-data/www/testing/app/Controller/TeachersController.php, line 16]
+2013-12-15 19:43:42 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /teachers
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Error/ErrorHandler.php(205): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/www-data/...', 16)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/www-data/...', 16, Array)
+#2 /home/www-data/www/testing/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/www-data/...', 16, Array)
+#3 /home/www-data/www/testing/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-15 19:53:24 Error: Fatal Error (4): syntax error, unexpected '{', expecting T_STRING in [/home/www-data/www/testing/app/Config/database.php, line 56]
+2013-12-15 19:53:24 Error: [FatalErrorException] syntax error, unexpected '{', expecting T_STRING
+Request URL: /teachers
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Error/ErrorHandler.php(205): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/www-data/...', 56)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/www-data/...', 56, Array)
+#2 /home/www-data/www/testing/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/www-data/...', 56, Array)
+#3 /home/www-data/www/testing/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-15 19:53:25 Error: Fatal Error (4): syntax error, unexpected '{', expecting T_STRING in [/home/www-data/www/testing/app/Config/database.php, line 56]
+2013-12-15 19:53:25 Error: [FatalErrorException] syntax error, unexpected '{', expecting T_STRING
+Request URL: /teachers
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Error/ErrorHandler.php(205): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/www-data/...', 56)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/www-data/...', 56, Array)
+#2 /home/www-data/www/testing/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/www-data/...', 56, Array)
+#3 /home/www-data/www/testing/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-15 20:21:02 Error: Fatal Error (4): syntax error, unexpected '}' in [/home/www-data/www/testing/app/Controller/StudentsController.php, line 27]
+2013-12-15 20:21:02 Error: [FatalErrorException] syntax error, unexpected '}'
+Request URL: /students/
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Error/ErrorHandler.php(205): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/www-data/...', 27)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/www-data/...', 27, Array)
+#2 /home/www-data/www/testing/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/www-data/...', 27, Array)
+#3 /home/www-data/www/testing/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-15 20:21:18 Error: Fatal Error (1): Call to a member function find() on a non-object in [/home/www-data/www/testing/app/Controller/StudentsController.php, line 25]
+2013-12-15 20:21:18 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /students/add
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Error/ErrorHandler.php(205): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/www-data/...', 25)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/www-data/...', 25, Array)
+#2 /home/www-data/www/testing/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/www-data/...', 25, Array)
+#3 /home/www-data/www/testing/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-15 21:47:55 Error: Fatal Error (4): syntax error, unexpected ';' in [/home/www-data/www/testing/app/Controller/StudentsController.php, line 26]
+2013-12-15 21:47:55 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /students/add
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Error/ErrorHandler.php(205): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/www-data/...', 26)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/www-data/...', 26, Array)
+#2 /home/www-data/www/testing/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/www-data/...', 26, Array)
+#3 /home/www-data/www/testing/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-19 23:21:29 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`testing_db`.`students`, CONSTRAINT `fk_students_faculties1` FOREIGN KEY (`faculty_id`) REFERENCES `faculties` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+Request URL: /students/add
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `te...', Array)
+#2 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(1004): DboSource->execute('INSERT INTO `te...')
+#3 /home/www-data/www/testing/lib/Cake/Model/Model.php(1827): DboSource->create(Object(Student), Array, Array)
+#4 /home/www-data/www/testing/lib/Cake/Model/Model.php(2373): Model->save(Array, Array)
+#5 /home/www-data/www/testing/lib/Cake/Model/Model.php(2163): Model->saveAssociated(Array, Array)
+#6 /home/www-data/www/testing/app/Controller/StudentsController.php(22): Model->saveAll(Array)
+#7 [internal function]: StudentsController->add()
+#8 /home/www-data/www/testing/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(StudentsController), Array)
+#9 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(StudentsController), Object(CakeRequest), Object(CakeResponse))
+#11 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-12-20 01:18:50 Error: Fatal Error (4): syntax error, unexpected ')', expecting '&' or T_VARIABLE in [/home/www-data/www/testing/app/Controller/StudentsController.php, line 46]
+2013-12-20 01:18:50 Error: [FatalErrorException] syntax error, unexpected ')', expecting '&' or T_VARIABLE
+Request URL: /students/add
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Error/ErrorHandler.php(205): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/www-data/...', 46)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/www-data/...', 46, Array)
+#2 /home/www-data/www/testing/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/www-data/...', 46, Array)
+#3 /home/www-data/www/testing/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-20 01:26:25 Error: [MissingActionException] Action StudentsController::students() could not be found.
+Exception Attributes: array (
+  'controller' => 'StudentsController',
+  'action' => 'students',
+)
+Request URL: /students/students/ajax
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(StudentsController), Object(CakeRequest), Object(CakeResponse))
+#2 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-12-20 01:28:17 Error: [MissingActionException] Action StudentsController::ajax1() could not be found.
+Exception Attributes: array (
+  'controller' => 'StudentsController',
+  'action' => 'ajax1',
+)
+Request URL: /students/ajax1
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(StudentsController), Object(CakeRequest), Object(CakeResponse))
+#2 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-12-20 01:34:16 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`testing_db`.`students`, CONSTRAINT `fk_students_faculties1` FOREIGN KEY (`faculty_id`) REFERENCES `faculties` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+Request URL: /students/add
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `te...', Array)
+#2 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(1004): DboSource->execute('INSERT INTO `te...')
+#3 /home/www-data/www/testing/lib/Cake/Model/Model.php(1827): DboSource->create(Object(Student), Array, Array)
+#4 /home/www-data/www/testing/lib/Cake/Model/Model.php(2373): Model->save(Array, Array)
+#5 /home/www-data/www/testing/lib/Cake/Model/Model.php(2163): Model->saveAssociated(Array, Array)
+#6 /home/www-data/www/testing/app/Controller/StudentsController.php(22): Model->saveAll(Array)
+#7 [internal function]: StudentsController->add()
+#8 /home/www-data/www/testing/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(StudentsController), Array)
+#9 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(StudentsController), Object(CakeRequest), Object(CakeResponse))
+#11 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-12-20 01:34:30 Error: [MissingViewException] View file "/home/www-data/www/testing/app/View/Students/ajax.htm" is missing.
+Exception Attributes: array (
+  'file' => '/home/www-data/www/testing/app/View/Students/ajax.htm',
+)
+Request URL: /students/ajax/1
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/View/View.php(459): View->_getViewFileName(NULL)
+#1 /home/www-data/www/testing/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#2 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#3 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(StudentsController), Object(CakeRequest), Object(CakeResponse))
+#4 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-20 01:34:32 Error: [MissingViewException] View file "/home/www-data/www/testing/app/View/Students/ajax.htm" is missing.
+Exception Attributes: array (
+  'file' => '/home/www-data/www/testing/app/View/Students/ajax.htm',
+)
+Request URL: /students/ajax/3
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/View/View.php(459): View->_getViewFileName(NULL)
+#1 /home/www-data/www/testing/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#2 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#3 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(StudentsController), Object(CakeRequest), Object(CakeResponse))
+#4 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-22 12:19:02 Error: [MissingViewException] View file "/home/www-data/www/testing/app/View/Students/ajax.htm" is missing.
+Exception Attributes: array (
+  'file' => '/home/www-data/www/testing/app/View/Students/ajax.htm',
+)
+Request URL: /students/ajax/1
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/View/View.php(459): View->_getViewFileName(NULL)
+#1 /home/www-data/www/testing/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#2 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#3 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(StudentsController), Object(CakeRequest), Object(CakeResponse))
+#4 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-22 12:19:10 Error: [MissingViewException] View file "/home/www-data/www/testing/app/View/Students/ajax.htm" is missing.
+Exception Attributes: array (
+  'file' => '/home/www-data/www/testing/app/View/Students/ajax.htm',
+)
+Request URL: /students/ajax/2
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/View/View.php(459): View->_getViewFileName(NULL)
+#1 /home/www-data/www/testing/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#2 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#3 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(StudentsController), Object(CakeRequest), Object(CakeResponse))
+#4 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-22 12:49:47 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`testing_db`.`students`, CONSTRAINT `fk_students_faculties1` FOREIGN KEY (`faculty_id`) REFERENCES `faculties` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+Request URL: /students/add
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `te...', Array)
+#2 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(1004): DboSource->execute('INSERT INTO `te...')
+#3 /home/www-data/www/testing/lib/Cake/Model/Model.php(1827): DboSource->create(Object(Student), Array, Array)
+#4 /home/www-data/www/testing/lib/Cake/Model/Model.php(2373): Model->save(Array, Array)
+#5 /home/www-data/www/testing/lib/Cake/Model/Model.php(2163): Model->saveAssociated(Array, Array)
+#6 /home/www-data/www/testing/app/Controller/StudentsController.php(22): Model->saveAll(Array)
+#7 [internal function]: StudentsController->add()
+#8 /home/www-data/www/testing/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(StudentsController), Array)
+#9 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(StudentsController), Object(CakeRequest), Object(CakeResponse))
+#11 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-12-22 12:49:57 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`testing_db`.`students`, CONSTRAINT `fk_students_faculties1` FOREIGN KEY (`faculty_id`) REFERENCES `faculties` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+Request URL: /students/add
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `te...', Array)
+#2 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(1004): DboSource->execute('INSERT INTO `te...')
+#3 /home/www-data/www/testing/lib/Cake/Model/Model.php(1827): DboSource->create(Object(Student), Array, Array)
+#4 /home/www-data/www/testing/lib/Cake/Model/Model.php(2373): Model->save(Array, Array)
+#5 /home/www-data/www/testing/lib/Cake/Model/Model.php(2163): Model->saveAssociated(Array, Array)
+#6 /home/www-data/www/testing/app/Controller/StudentsController.php(22): Model->saveAll(Array)
+#7 [internal function]: StudentsController->add()
+#8 /home/www-data/www/testing/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(StudentsController), Array)
+#9 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(StudentsController), Object(CakeRequest), Object(CakeResponse))
+#11 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-12-22 12:50:59 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`testing_db`.`students`, CONSTRAINT `fk_students_faculties1` FOREIGN KEY (`faculty_id`) REFERENCES `faculties` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+Request URL: /students/add
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `te...', Array)
+#2 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(1004): DboSource->execute('INSERT INTO `te...')
+#3 /home/www-data/www/testing/lib/Cake/Model/Model.php(1827): DboSource->create(Object(Student), Array, Array)
+#4 /home/www-data/www/testing/lib/Cake/Model/Model.php(2373): Model->save(Array, Array)
+#5 /home/www-data/www/testing/lib/Cake/Model/Model.php(2163): Model->saveAssociated(Array, Array)
+#6 /home/www-data/www/testing/app/Controller/StudentsController.php(22): Model->saveAll(Array)
+#7 [internal function]: StudentsController->add()
+#8 /home/www-data/www/testing/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(StudentsController), Array)
+#9 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(StudentsController), Object(CakeRequest), Object(CakeResponse))
+#11 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-12-22 12:51:04 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`testing_db`.`students`, CONSTRAINT `fk_students_faculties1` FOREIGN KEY (`faculty_id`) REFERENCES `faculties` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+Request URL: /students/add
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `te...', Array)
+#2 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(1004): DboSource->execute('INSERT INTO `te...')
+#3 /home/www-data/www/testing/lib/Cake/Model/Model.php(1827): DboSource->create(Object(Student), Array, Array)
+#4 /home/www-data/www/testing/lib/Cake/Model/Model.php(2373): Model->save(Array, Array)
+#5 /home/www-data/www/testing/lib/Cake/Model/Model.php(2163): Model->saveAssociated(Array, Array)
+#6 /home/www-data/www/testing/app/Controller/StudentsController.php(22): Model->saveAll(Array)
+#7 [internal function]: StudentsController->add()
+#8 /home/www-data/www/testing/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(StudentsController), Array)
+#9 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(StudentsController), Object(CakeRequest), Object(CakeResponse))
+#11 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-12-22 12:51:12 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`testing_db`.`students`, CONSTRAINT `fk_students_faculties1` FOREIGN KEY (`faculty_id`) REFERENCES `faculties` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+Request URL: /students/add
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `te...', Array)
+#2 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(1004): DboSource->execute('INSERT INTO `te...')
+#3 /home/www-data/www/testing/lib/Cake/Model/Model.php(1827): DboSource->create(Object(Student), Array, Array)
+#4 /home/www-data/www/testing/lib/Cake/Model/Model.php(2373): Model->save(Array, Array)
+#5 /home/www-data/www/testing/lib/Cake/Model/Model.php(2163): Model->saveAssociated(Array, Array)
+#6 /home/www-data/www/testing/app/Controller/StudentsController.php(22): Model->saveAll(Array)
+#7 [internal function]: StudentsController->add()
+#8 /home/www-data/www/testing/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(StudentsController), Array)
+#9 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(StudentsController), Object(CakeRequest), Object(CakeResponse))
+#11 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-12-22 12:51:57 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`testing_db`.`students`, CONSTRAINT `fk_students_faculties1` FOREIGN KEY (`faculty_id`) REFERENCES `faculties` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+Request URL: /students/add
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `te...', Array)
+#2 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(1004): DboSource->execute('INSERT INTO `te...')
+#3 /home/www-data/www/testing/lib/Cake/Model/Model.php(1827): DboSource->create(Object(Student), Array, Array)
+#4 /home/www-data/www/testing/lib/Cake/Model/Model.php(2373): Model->save(Array, Array)
+#5 /home/www-data/www/testing/lib/Cake/Model/Model.php(2163): Model->saveAssociated(Array, Array)
+#6 /home/www-data/www/testing/app/Controller/StudentsController.php(22): Model->saveAll(Array)
+#7 [internal function]: StudentsController->add()
+#8 /home/www-data/www/testing/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(StudentsController), Array)
+#9 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(StudentsController), Object(CakeRequest), Object(CakeResponse))
+#11 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-12-22 13:01:46 Error: Fatal Error (4): syntax error, unexpected T_DOUBLE_ARROW in [xdebug://debug-eval, line 1]
+2013-12-22 13:01:46 Error: [FatalErrorException] syntax error, unexpected T_DOUBLE_ARROW
+Request URL: /students/ajax/1/1
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Error/ErrorHandler.php(205): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'xdebug://debug-...', 1)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'xdebug://debug-...', 1, Array)
+#2 /home/www-data/www/testing/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'xdebug://debug-...', 1, Array)
+#3 /home/www-data/www/testing/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-22 13:16:52 Error: Fatal Error (4): syntax error, unexpected '}' in [/home/www-data/www/testing/app/Controller/StudentsController.php, line 54]
+2013-12-22 13:16:52 Error: [FatalErrorException] syntax error, unexpected '}'
+Request URL: /students/add
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Error/ErrorHandler.php(205): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/www-data/...', 54)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/www-data/...', 54, Array)
+#2 /home/www-data/www/testing/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/www-data/...', 54, Array)
+#3 /home/www-data/www/testing/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-22 13:18:49 Error: Fatal Error (4): syntax error, unexpected T_ENCAPSED_AND_WHITESPACE in [xdebug://debug-eval, line 1]
+2013-12-22 13:18:49 Error: [FatalErrorException] syntax error, unexpected T_ENCAPSED_AND_WHITESPACE
+Request URL: /students/ajax/1/1
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Error/ErrorHandler.php(205): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'xdebug://debug-...', 1)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'xdebug://debug-...', 1, Array)
+#2 /home/www-data/www/testing/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'xdebug://debug-...', 1, Array)
+#3 /home/www-data/www/testing/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-22 13:19:22 Error: [MissingViewException] View file "/home/www-data/www/testing/app/View/Students/ajax.htm" is missing.
+Exception Attributes: array (
+  'file' => '/home/www-data/www/testing/app/View/Students/ajax.htm',
+)
+Request URL: /students/ajax/1/1
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/View/View.php(459): View->_getViewFileName(NULL)
+#1 /home/www-data/www/testing/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#2 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#3 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(StudentsController), Object(CakeRequest), Object(CakeResponse))
+#4 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-22 13:49:59 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`testing_db`.`students`, CONSTRAINT `fk_students_faculties1` FOREIGN KEY (`faculty_id`) REFERENCES `faculties` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+Request URL: /students/add
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `te...', Array)
+#2 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(1004): DboSource->execute('INSERT INTO `te...')
+#3 /home/www-data/www/testing/lib/Cake/Model/Model.php(1827): DboSource->create(Object(Student), Array, Array)
+#4 /home/www-data/www/testing/lib/Cake/Model/Model.php(2373): Model->save(Array, Array)
+#5 /home/www-data/www/testing/lib/Cake/Model/Model.php(2163): Model->saveAssociated(Array, Array)
+#6 /home/www-data/www/testing/app/Controller/StudentsController.php(22): Model->saveAll(Array)
+#7 [internal function]: StudentsController->add()
+#8 /home/www-data/www/testing/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(StudentsController), Array)
+#9 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(StudentsController), Object(CakeRequest), Object(CakeResponse))
+#11 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-12-22 13:52:02 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`testing_db`.`students`, CONSTRAINT `fk_students_faculties1` FOREIGN KEY (`faculty_id`) REFERENCES `faculties` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+Request URL: /students/add
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `te...', Array)
+#2 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(1004): DboSource->execute('INSERT INTO `te...')
+#3 /home/www-data/www/testing/lib/Cake/Model/Model.php(1827): DboSource->create(Object(Student), Array, Array)
+#4 /home/www-data/www/testing/lib/Cake/Model/Model.php(2373): Model->save(Array, Array)
+#5 /home/www-data/www/testing/lib/Cake/Model/Model.php(2163): Model->saveAssociated(Array, Array)
+#6 /home/www-data/www/testing/app/Controller/StudentsController.php(22): Model->saveAll(Array)
+#7 [internal function]: StudentsController->add()
+#8 /home/www-data/www/testing/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(StudentsController), Array)
+#9 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(StudentsController), Object(CakeRequest), Object(CakeResponse))
+#11 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-12-22 13:54:56 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`testing_db`.`students`, CONSTRAINT `fk_students_faculties1` FOREIGN KEY (`faculty_id`) REFERENCES `faculties` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+Request URL: /students/add
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `te...', Array)
+#2 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(1004): DboSource->execute('INSERT INTO `te...')
+#3 /home/www-data/www/testing/lib/Cake/Model/Model.php(1827): DboSource->create(Object(Student), Array, Array)
+#4 /home/www-data/www/testing/lib/Cake/Model/Model.php(2373): Model->save(Array, Array)
+#5 /home/www-data/www/testing/lib/Cake/Model/Model.php(2163): Model->saveAssociated(Array, Array)
+#6 /home/www-data/www/testing/app/Controller/StudentsController.php(22): Model->saveAll(Array)
+#7 [internal function]: StudentsController->add()
+#8 /home/www-data/www/testing/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(StudentsController), Array)
+#9 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(StudentsController), Object(CakeRequest), Object(CakeResponse))
+#11 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-12-22 13:55:09 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`testing_db`.`students`, CONSTRAINT `fk_students_faculties1` FOREIGN KEY (`faculty_id`) REFERENCES `faculties` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+Request URL: /students/add
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `te...', Array)
+#2 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(1004): DboSource->execute('INSERT INTO `te...')
+#3 /home/www-data/www/testing/lib/Cake/Model/Model.php(1827): DboSource->create(Object(Student), Array, Array)
+#4 /home/www-data/www/testing/lib/Cake/Model/Model.php(2373): Model->save(Array, Array)
+#5 /home/www-data/www/testing/lib/Cake/Model/Model.php(2163): Model->saveAssociated(Array, Array)
+#6 /home/www-data/www/testing/app/Controller/StudentsController.php(22): Model->saveAll(Array)
+#7 [internal function]: StudentsController->add()
+#8 /home/www-data/www/testing/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(StudentsController), Array)
+#9 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(StudentsController), Object(CakeRequest), Object(CakeResponse))
+#11 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-12-22 13:56:19 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`testing_db`.`students`, CONSTRAINT `fk_students_faculties1` FOREIGN KEY (`faculty_id`) REFERENCES `faculties` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+Request URL: /students/add
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `te...', Array)
+#2 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(1004): DboSource->execute('INSERT INTO `te...')
+#3 /home/www-data/www/testing/lib/Cake/Model/Model.php(1827): DboSource->create(Object(Student), Array, Array)
+#4 /home/www-data/www/testing/lib/Cake/Model/Model.php(2373): Model->save(Array, Array)
+#5 /home/www-data/www/testing/lib/Cake/Model/Model.php(2163): Model->saveAssociated(Array, Array)
+#6 /home/www-data/www/testing/app/Controller/StudentsController.php(22): Model->saveAll(Array)
+#7 [internal function]: StudentsController->add()
+#8 /home/www-data/www/testing/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(StudentsController), Array)
+#9 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(StudentsController), Object(CakeRequest), Object(CakeResponse))
+#11 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-12-22 14:03:17 Error: Fatal Error (1): Call to a member function read() on a non-object in [/home/www-data/www/testing/app/Controller/StudentsController.php, line 38]
+2013-12-22 14:03:17 Error: [FatalErrorException] Call to a member function read() on a non-object
+Request URL: /students/edit
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Error/ErrorHandler.php(205): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/www-data/...', 38)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/www-data/...', 38, Array)
+#2 /home/www-data/www/testing/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/www-data/...', 38, Array)
+#3 /home/www-data/www/testing/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-22 14:33:33 Error: [MissingActionException] Action StudentsController::del() could not be found.
+Exception Attributes: array (
+  'controller' => 'StudentsController',
+  'action' => 'del',
+)
+Request URL: /students/del/14
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(StudentsController), Object(CakeRequest), Object(CakeResponse))
+#2 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-12-22 14:34:13 Error: Fatal Error (1): Call to a member function read() on a non-object in [/home/www-data/www/testing/app/Controller/StudentsController.php, line 38]
+2013-12-22 14:34:13 Error: [FatalErrorException] Call to a member function read() on a non-object
+Request URL: /students/edit/15
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Error/ErrorHandler.php(205): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/www-data/...', 38)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/www-data/...', 38, Array)
+#2 /home/www-data/www/testing/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/www-data/...', 38, Array)
+#3 /home/www-data/www/testing/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

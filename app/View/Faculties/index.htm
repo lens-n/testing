@@ -1,0 +1,23 @@
+<h1>Факультеты:</h1>
+
+{% for faculty in faculties %}
+    {{ faculty.Faculty.title}}  <a href="/faculties/edit/{{ faculty.Faculty.id }}">изминить</a><br/>
+{% endfor %}
+
+<br/>
+<a href="/faculties/add">Добавить</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

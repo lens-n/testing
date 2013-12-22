@@ -1,0 +1,23 @@
+<h1>Преподаватели:</h1>
+
+{% for teacher in teachers %}
+    {{ teacher.Teacher.sname}} {{ teacher.Teacher.fname}} {{ teacher.Teacher.pname}}    <a href="/teachers/edit/{{ teacher.Teacher.id}}">изминить</a><br/>
+{% endfor %}
+
+<br/>
+<a href="/teachers/add">Добавить</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

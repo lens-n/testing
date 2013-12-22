@@ -1,0 +1,33 @@
+<h1>Группы:</h1>
+{% for group in groups %}
+    {%  set id = group.Group.faculties_id %}
+    {%  set id_cours = group.Group.cours_id %}
+
+    {% if id_cours != id_old_cours %}
+        <h2> Курс: {{ courses[id_cours]['title']}}</h2>
+    {% endif %}
+
+    {% if id != id_old %}
+       <h3> Факультет: {{ faculties[id]['title']}}</h3>
+    {% endif %}
+
+<a href="/groups/edit/{{ group.Group.id}}"> Группа {{ group.Group.title}}</a><br/>
+    {%  set id_old = group.Group.faculties_id %}
+    {%  set id_old_cours = group.Group.cours_id %}
+{% endfor %}
+<br/>
+<a href="/groups/add">Добавить</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
