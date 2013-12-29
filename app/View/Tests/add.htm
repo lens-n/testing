@@ -53,7 +53,7 @@
     <div class="row">
         <select name="data[Test][group_id]" id="groups" >
             {% for group in groups %}
-                <option {% if grop.Group.id ==_view.request.data['Test']['group_id'] %}selected="selected" {% endif %} value="{{ group.Group.id}}">{{ group.Group.title }}</option>
+                <option {% if group.Group.id ==_view.request.data['Test']['group_id'] %}selected="selected" {% endif %} value="{{ group.Group.id}}">{{ group.Group.title }}</option>
             {% endfor %}
         </select>
     </div>
@@ -80,7 +80,7 @@
     $(function() {
 
         id = $('#cours_id').val() + '/' + $('#faculty_id').val();
-        $.post( "/students/getGroup/" + id, function(data ) {
+        $.post( "/students/getGroup/" + id + '/' +{{ _view.request.data['Test']['group_id'] }} , function(data ) {
             $('#groups').html( data );
 
         });

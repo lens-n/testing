@@ -7,56 +7,14 @@ App::uses('AppController', 'Controller');
 
  *
  */
-class TestsController extends AppController{
+class QuestionsController extends AppController{
     public $helpers = array('Html', 'Form');
-    public $uses = array('Group','Faculty', 'Cours', 'Test', 'Subject', 'Teacher');
+    public $uses = array( 'Themes', 'Subject', 'Question');
 
     public function index(){
 
 
-        $groups = $this->Group->find('all');
-        $group = array();
-        foreach($groups  as $item){
-            $group[$item['Group']['id']] =  $item['Group'];
-        }
-        $this->set('groups', $group);
-
-        $faculties = $this->Faculty->find('all');
-        $faculty = array();
-        foreach($faculties  as $item){
-            $faculty[$item['Faculty']['id']] =  $item['Faculty'];
-        }
-        $this->set('faculties', $faculty);
-
-        $teachers = $this->Teacher->find('all');
-        $teacher = array();
-        foreach($teachers  as $item){
-            $teacher[$item['Teacher']['id']] =  $item['Teacher'];
-        }
-        $this->set('teachers', $teacher);
-
-        $subjects = $this->Subject->find('all');
-        $subject = array();
-        foreach($subjects  as $item){
-            $subject[$item['Subject']['id']] =  $item['Subject'];
-        }
-        $this->set('subjects', $subject);
-
-
-
-        $courses = $this->Cours->find('all');
-        $cours = array();
-        foreach($courses  as $item){
-            $cours[$item['Cours']['id']] =  $item['Cours'];
-        }
-        $this->set('courses', $cours);
-
-
-
-
-
-
-        $this->set('tests', $this->Test->find('all'));
+        $this->set('questions', $this->Question->find('all'));
         $this->set('title_for_layout', 'Список тестов');
     }
 

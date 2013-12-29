@@ -45,14 +45,17 @@ class StudentsController extends AppController{
 
     }
 
-    public function getGroup($cours_id, $faculty_id){
+    public function getGroup($cours_id, $faculty_id, $check = null){
         $output = '';
       $groups = $this->Group->find('all', array(
           'conditions' => array('Group.cours_id ' => $cours_id, 'Group.faculties_id' => $faculty_id ) ));
 
       if($groups){
           foreach($groups as $group){
-            $output .=  '<option value="' .$group['Group']['id'] . '">' .$group['Group']['title'] . '</option>' ;
+              if($group['Group']['id'] == $check)
+                  $output .=  '<option selected  value="' .$group['Group']['id'] . '">' .$group['Group']['title'] . '</option>' ;
+                  else
+                    $output .=  '<option value="' .$group['Group']['id'] . '">' .$group['Group']['title'] . '</option>' ;
           }
       }else
         $output =  '<option value="">пусто</option>' ;

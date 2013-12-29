@@ -17,6 +17,10 @@ class Test extends AppModel {
             'rule' => 'notEmpty',
             'message' => 'Имя теста не может быть пустым!'
         ),
+      /*  'group_id' => array(
+            'rule' => 'notEmpty',
+            'message' => 'Группа не может быть пустой!'
+        ),*/
 
 
     );

@@ -3467,3 +3467,226 @@ Stack Trace:
 #3 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(TestsController), Object(CakeRequest), Object(CakeResponse))
 #4 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #5 {main}
+2013-12-29 15:03:34 Error: [MissingActionException] Action StudentsController::ajax() could not be found.
+Exception Attributes: array (
+  'controller' => 'StudentsController',
+  'action' => 'ajax',
+)
+Request URL: /students/ajax/1/1
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(StudentsController), Object(CakeRequest), Object(CakeResponse))
+#2 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-12-29 15:03:38 Error: [MissingActionException] Action StudentsController::ajax() could not be found.
+Exception Attributes: array (
+  'controller' => 'StudentsController',
+  'action' => 'ajax',
+)
+Request URL: /students/ajax/1/1
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(StudentsController), Object(CakeRequest), Object(CakeResponse))
+#2 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-12-29 15:03:39 Error: [MissingActionException] Action StudentsController::ajax() could not be found.
+Exception Attributes: array (
+  'controller' => 'StudentsController',
+  'action' => 'ajax',
+)
+Request URL: /students/ajax/1/1
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(StudentsController), Object(CakeRequest), Object(CakeResponse))
+#2 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-12-29 15:03:39 Error: [MissingActionException] Action StudentsController::ajax() could not be found.
+Exception Attributes: array (
+  'controller' => 'StudentsController',
+  'action' => 'ajax',
+)
+Request URL: /students/ajax/1/1
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(StudentsController), Object(CakeRequest), Object(CakeResponse))
+#2 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-12-29 15:03:47 Error: [MissingActionException] Action StudentsController::ajax() could not be found.
+Exception Attributes: array (
+  'controller' => 'StudentsController',
+  'action' => 'ajax',
+)
+Request URL: /students/ajax/1/1
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(StudentsController), Object(CakeRequest), Object(CakeResponse))
+#2 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-12-29 15:03:53 Error: [MissingActionException] Action StudentsController::ajax() could not be found.
+Exception Attributes: array (
+  'controller' => 'StudentsController',
+  'action' => 'ajax',
+)
+Request URL: /students/ajax/1/1
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(StudentsController), Object(CakeRequest), Object(CakeResponse))
+#2 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-12-29 15:08:54 Error: [MissingControllerException] Controller class Jquery-1.10.2.min.js><Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Jquery-1.10.2.min.js><Controller',
+  'plugin' => NULL,
+)
+Request URL: /jquery-1.10.2.min.js%3E%3C/script%3E%3Clink%20rel=
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-29 15:09:03 Error: [MissingControllerException] Controller class Jquery-1.10.2.min.js><Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Jquery-1.10.2.min.js><Controller',
+  'plugin' => NULL,
+)
+Request URL: /jquery-1.10.2.min.js%3E%3C/script%3E%3Clink%20rel=
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-29 15:09:20 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-1.10.2.min.js%3E%3C/script%3E%3Clink%20rel=
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-29 15:09:48 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-1.10.2.min.map
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-29 15:10:16 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`testing_db`.`tests`, CONSTRAINT `fk_tests_groups1` FOREIGN KEY (`group_id`) REFERENCES `groups` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+Request URL: /tests/edit/16
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('UPDATE `testing...', Array)
+#2 /home/www-data/www/testing/lib/Cake/Model/Datasource/Database/Mysql.php(402): DboSource->execute('UPDATE `testing...')
+#3 /home/www-data/www/testing/lib/Cake/Model/Model.php(1816): Mysql->update(Object(Test), Array, Array)
+#4 /home/www-data/www/testing/lib/Cake/Model/Model.php(2373): Model->save(Array, Array)
+#5 /home/www-data/www/testing/lib/Cake/Model/Model.php(2163): Model->saveAssociated(Array, Array)
+#6 /home/www-data/www/testing/app/Controller/TestsController.php(74): Model->saveAll(Array)
+#7 [internal function]: TestsController->edit('16')
+#8 /home/www-data/www/testing/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TestsController), Array)
+#9 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(TestsController), Object(CakeRequest), Object(CakeResponse))
+#11 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-12-29 15:10:54 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-1.10.2.min.map
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-29 15:15:06 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-1.10.2.min.map
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-29 15:16:26 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-1.10.2.min.map
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-29 15:22:31 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-1.10.2.min.map
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-29 15:22:42 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-1.10.2.min.map
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-29 15:23:02 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-1.10.2.min.map
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-29 15:23:43 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-1.10.2.min.map
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-29 15:45:17 Error: [MissingActionException] Action QuestionsController::review() could not be found.
+Exception Attributes: array (
+  'controller' => 'QuestionsController',
+  'action' => 'review',
+)
+Request URL: /questions/review/12
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(QuestionsController), Object(CakeRequest), Object(CakeResponse))
+#2 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-12-29 23:58:43 Error: [MissingActionException] Action QuestionsController::review() could not be found.
+Exception Attributes: array (
+  'controller' => 'QuestionsController',
+  'action' => 'review',
+)
+Request URL: /questions/review/12
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(QuestionsController), Object(CakeRequest), Object(CakeResponse))
+#2 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-12-29 23:58:50 Error: Fatal Error (1): Call to a member function find() on a non-object in [/home/www-data/www/testing/app/Controller/QuestionsController.php, line 17]
+2013-12-29 23:58:50 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /questions
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Error/ErrorHandler.php(205): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/www-data/...', 17)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/www-data/...', 17, Array)
+#2 /home/www-data/www/testing/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/www-data/...', 17, Array)
+#3 /home/www-data/www/testing/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-29 23:59:20 Error: Fatal Error (1): Call to a member function find() on a non-object in [/home/www-data/www/testing/app/Controller/QuestionsController.php, line 17]
+2013-12-29 23:59:20 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /questions
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Error/ErrorHandler.php(205): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/www-data/...', 17)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/www-data/...', 17, Array)
+#2 /home/www-data/www/testing/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/www-data/...', 17, Array)
+#3 /home/www-data/www/testing/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

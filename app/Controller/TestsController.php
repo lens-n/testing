@@ -71,9 +71,12 @@ class TestsController extends AppController{
         if($this->request->data){
             $this->request->data['Test']['themes'] = json_encode($this->request->data['Test']['_serialize']);
 
-            $this->Test->saveAll($this->request->data);
+            if($this->Test->saveAll($this->request->data))
             //$this->setFlash('Факультет сохранен', 'success');
-            $this->redirect('/tests');
+                $this->redirect('/tests');
+            else
+                $this->redirect($this->referer());
+
         }
 
         $data = $this->Test->read('', $id);
