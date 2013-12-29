@@ -9,7 +9,7 @@ App::uses('AppController', 'Controller');
  */
 class TestsController extends AppController{
     public $helpers = array('Html', 'Form');
-    public $uses = array('Group','Faculty', 'Cours', 'Test', 'Subject', 'Teacher', 'Theme');
+    public $uses = array('Group','Faculty', 'Cours', 'Test', 'Subject', 'Teacher');
 
     public function index(){
 
@@ -43,19 +43,25 @@ class TestsController extends AppController{
         $this->set('subjects', $subject);
 
 
+
         $courses = $this->Cours->find('all');
         $cours = array();
         foreach($courses  as $item){
             $cours[$item['Cours']['id']] =  $item['Cours'];
         }
         $this->set('courses', $cours);
+
+
+
+
+
+
         $this->set('tests', $this->Test->find('all'));
         $this->set('title_for_layout', 'Список тестов');
     }
 
     public function add(){
         if($this->request->data){
-            $this->request->data['Test']['themes'] = json_encode($this->request->data['Test']['_serialize']);
             $this->Test->saveAll($this->request->data);
             //$this->setFlash('Факультет сохранен', 'success');
             $this->redirect('/tests');
@@ -69,7 +75,6 @@ class TestsController extends AppController{
 
     public function edit($id){
         if($this->request->data){
-            $this->request->data['Test']['themes'] = json_encode($this->request->data['Test']['_serialize']);
 
             $this->Test->saveAll($this->request->data);
             //$this->setFlash('Факультет сохранен', 'success');
@@ -87,9 +92,7 @@ class TestsController extends AppController{
 
     }
 
-    public function del($id){
-        $this->Test->delete($id);
-        $this->render('index');
+    public function delete(){
 
     }
 
@@ -97,34 +100,5 @@ class TestsController extends AppController{
 
     }
 
-//Ajax method
-    public function getThemes($subjects_id = null){
-        $output = '';
-        if($subjects_id == null){
-            $checked = $this->request->data['checked'];
-            $subjects_id = $this->request->data['subject_id'];
-
-        }
-        else{
-            $checked = array();
-        }
-
-
-        $themes = $this->Theme->find('all', array(
-            'conditions' => array('Theme.subjects_id ' => $subjects_id ) ));
-
-        if($themes){
-            foreach($themes as $item){
-                if(in_array($item['Theme']['id'],$checked)){
-                    $output .=  '<input type="checkbox" checked="checked"  name="data[Test][_serialize]['. $item['Theme']['id'] . ']" value="'.$item['Theme']['id'] .'">' .$item['Theme']['title'] ;
-                }else{
-                     $output .=  '<input type="checkbox" name="data[Test][_serialize]['. $item['Theme']['id'] . ']" value="'.$item['Theme']['id'] .'">' .$item['Theme']['title'] ;
-                }
-            }
-        }else
-            $output =  'По данному предмету нет заполненых тем!' ;
-        exit($output);
-
-    }
 
 }

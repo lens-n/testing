@@ -3084,3 +3084,386 @@ Stack Trace:
 #3 /home/www-data/www/testing/lib/Cake/Core/App.php(904): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2013-12-22 17:08:02 Error: Fatal Error (1): Call to a member function find() on a non-object in [/home/www-data/www/testing/app/Controller/SubjectsController.php, line 15]
+2013-12-22 17:08:02 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /subjects
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Error/ErrorHandler.php(205): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/www-data/...', 15)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/www-data/...', 15, Array)
+#2 /home/www-data/www/testing/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/www-data/...', 15, Array)
+#3 /home/www-data/www/testing/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-22 17:09:07 Error: Fatal Error (1): Call to a member function find() on a non-object in [/home/www-data/www/testing/app/Controller/SubjectsController.php, line 15]
+2013-12-22 17:09:07 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /subjects
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Error/ErrorHandler.php(205): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/www-data/...', 15)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/www-data/...', 15, Array)
+#2 /home/www-data/www/testing/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/www-data/...', 15, Array)
+#3 /home/www-data/www/testing/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-22 17:09:13 Error: Fatal Error (1): Call to a member function find() on a non-object in [/home/www-data/www/testing/app/Controller/SubjectsController.php, line 15]
+2013-12-22 17:09:13 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /subjects
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Error/ErrorHandler.php(205): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/www-data/...', 15)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/www-data/...', 15, Array)
+#2 /home/www-data/www/testing/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/www-data/...', 15, Array)
+#3 /home/www-data/www/testing/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-22 17:14:43 Error: [MissingViewException] View file "/home/www-data/www/testing/app/View/Subjects/del.htm" is missing.
+Exception Attributes: array (
+  'file' => '/home/www-data/www/testing/app/View/Subjects/del.htm',
+)
+Request URL: /subjects/del/1
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/View/View.php(459): View->_getViewFileName(NULL)
+#1 /home/www-data/www/testing/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#2 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#3 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(SubjectsController), Object(CakeRequest), Object(CakeResponse))
+#4 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-22 21:49:34 Error: [MissingControllerException] Controller class ThemesController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemesController',
+  'plugin' => NULL,
+)
+Request URL: /themes
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-22 21:55:49 Error: Fatal Error (1): Call to a member function find() on a non-object in [/home/www-data/www/testing/app/Controller/ThemesController.php, line 15]
+2013-12-22 21:55:49 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /themes
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Error/ErrorHandler.php(205): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/www-data/...', 15)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/www-data/...', 15, Array)
+#2 /home/www-data/www/testing/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/www-data/...', 15, Array)
+#3 /home/www-data/www/testing/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-22 21:56:15 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Group.cours_id' in 'order clause'
+Request URL: /themes
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Theme`....', Array)
+#2 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT `Theme`....', Array, Array)
+#3 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `Theme`....', false)
+#4 /home/www-data/www/testing/lib/Cake/Model/Model.php(2880): DboSource->read(Object(Theme), Array)
+#5 /home/www-data/www/testing/lib/Cake/Model/Model.php(2852): Model->_readDataSource('all', Array)
+#6 /home/www-data/www/testing/app/Controller/ThemesController.php(16): Model->find('all', Array)
+#7 [internal function]: ThemesController->index()
+#8 /home/www-data/www/testing/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ThemesController), Array)
+#9 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ThemesController), Object(CakeRequest), Object(CakeResponse))
+#11 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-12-28 17:59:58 Error: [MissingControllerException] Controller class TestsController could not be found.
+Exception Attributes: array (
+  'class' => 'TestsController',
+  'plugin' => NULL,
+)
+Request URL: /tests
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-28 18:00:12 Error: Fatal Error (1): Call to a member function find() on a non-object in [/home/www-data/www/testing/app/Controller/TestsController.php, line 15]
+2013-12-28 18:00:12 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /tests
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Error/ErrorHandler.php(205): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/www-data/...', 15)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/www-data/...', 15, Array)
+#2 /home/www-data/www/testing/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/www-data/...', 15, Array)
+#3 /home/www-data/www/testing/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-28 18:00:37 Error: [MissingViewException] View file "/home/www-data/www/testing/app/View/Tests/index.htm" is missing.
+Exception Attributes: array (
+  'file' => '/home/www-data/www/testing/app/View/Tests/index.htm',
+)
+Request URL: /tests
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/View/View.php(459): View->_getViewFileName(NULL)
+#1 /home/www-data/www/testing/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#2 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#3 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(TestsController), Object(CakeRequest), Object(CakeResponse))
+#4 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-28 18:08:58 Error: Fatal Error (1): Call to a member function find() on a non-object in [/home/www-data/www/testing/app/Controller/TestsController.php, line 15]
+2013-12-28 18:08:58 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /tests
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Error/ErrorHandler.php(205): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/www-data/...', 15)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/www-data/...', 15, Array)
+#2 /home/www-data/www/testing/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/www-data/...', 15, Array)
+#3 /home/www-data/www/testing/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-28 18:17:35 Error: [MissingActionException] Action StudentsController::ajax() could not be found.
+Exception Attributes: array (
+  'controller' => 'StudentsController',
+  'action' => 'ajax',
+)
+Request URL: /students/ajax/1/1
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(StudentsController), Object(CakeRequest), Object(CakeResponse))
+#2 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-12-28 20:29:55 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`testing_db`.`tests`, CONSTRAINT `fk_tests_teachers` FOREIGN KEY (`teacher_id`) REFERENCES `teachers` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+Request URL: /tests/add
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `te...', Array)
+#2 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(1004): DboSource->execute('INSERT INTO `te...')
+#3 /home/www-data/www/testing/lib/Cake/Model/Model.php(1827): DboSource->create(Object(Test), Array, Array)
+#4 /home/www-data/www/testing/lib/Cake/Model/Model.php(2373): Model->save(Array, Array)
+#5 /home/www-data/www/testing/lib/Cake/Model/Model.php(2163): Model->saveAssociated(Array, Array)
+#6 /home/www-data/www/testing/app/Controller/TestsController.php(21): Model->saveAll(Array)
+#7 [internal function]: TestsController->add()
+#8 /home/www-data/www/testing/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TestsController), Array)
+#9 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(TestsController), Object(CakeRequest), Object(CakeResponse))
+#11 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-12-28 20:32:21 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`testing_db`.`tests`, CONSTRAINT `fk_tests_teachers` FOREIGN KEY (`teacher_id`) REFERENCES `teachers` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+Request URL: /tests/add
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `te...', Array)
+#2 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(1004): DboSource->execute('INSERT INTO `te...')
+#3 /home/www-data/www/testing/lib/Cake/Model/Model.php(1827): DboSource->create(Object(Test), Array, Array)
+#4 /home/www-data/www/testing/lib/Cake/Model/Model.php(2373): Model->save(Array, Array)
+#5 /home/www-data/www/testing/lib/Cake/Model/Model.php(2163): Model->saveAssociated(Array, Array)
+#6 /home/www-data/www/testing/app/Controller/TestsController.php(21): Model->saveAll(Array)
+#7 [internal function]: TestsController->add()
+#8 /home/www-data/www/testing/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TestsController), Array)
+#9 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(TestsController), Object(CakeRequest), Object(CakeResponse))
+#11 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-12-28 20:33:15 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`testing_db`.`tests`, CONSTRAINT `fk_tests_teachers` FOREIGN KEY (`teacher_id`) REFERENCES `teachers` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+Request URL: /tests/add
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `te...', Array)
+#2 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(1004): DboSource->execute('INSERT INTO `te...')
+#3 /home/www-data/www/testing/lib/Cake/Model/Model.php(1827): DboSource->create(Object(Test), Array, Array)
+#4 /home/www-data/www/testing/lib/Cake/Model/Model.php(2373): Model->save(Array, Array)
+#5 /home/www-data/www/testing/lib/Cake/Model/Model.php(2163): Model->saveAssociated(Array, Array)
+#6 /home/www-data/www/testing/app/Controller/TestsController.php(21): Model->saveAll(Array)
+#7 [internal function]: TestsController->add()
+#8 /home/www-data/www/testing/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TestsController), Array)
+#9 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(TestsController), Object(CakeRequest), Object(CakeResponse))
+#11 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-12-28 21:22:59 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`testing_db`.`tests`, CONSTRAINT `fk_tests_teachers` FOREIGN KEY (`teacher_id`) REFERENCES `teachers` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+Request URL: /tests/add
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `te...', Array)
+#2 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(1004): DboSource->execute('INSERT INTO `te...')
+#3 /home/www-data/www/testing/lib/Cake/Model/Model.php(1827): DboSource->create(Object(Test), Array, Array)
+#4 /home/www-data/www/testing/lib/Cake/Model/Model.php(2373): Model->save(Array, Array)
+#5 /home/www-data/www/testing/lib/Cake/Model/Model.php(2163): Model->saveAssociated(Array, Array)
+#6 /home/www-data/www/testing/app/Controller/TestsController.php(21): Model->saveAll(Array)
+#7 [internal function]: TestsController->add()
+#8 /home/www-data/www/testing/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TestsController), Array)
+#9 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(TestsController), Object(CakeRequest), Object(CakeResponse))
+#11 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-12-28 21:23:03 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`testing_db`.`tests`, CONSTRAINT `fk_tests_teachers` FOREIGN KEY (`teacher_id`) REFERENCES `teachers` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+Request URL: /tests/add
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `te...', Array)
+#2 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(1004): DboSource->execute('INSERT INTO `te...')
+#3 /home/www-data/www/testing/lib/Cake/Model/Model.php(1827): DboSource->create(Object(Test), Array, Array)
+#4 /home/www-data/www/testing/lib/Cake/Model/Model.php(2373): Model->save(Array, Array)
+#5 /home/www-data/www/testing/lib/Cake/Model/Model.php(2163): Model->saveAssociated(Array, Array)
+#6 /home/www-data/www/testing/app/Controller/TestsController.php(21): Model->saveAll(Array)
+#7 [internal function]: TestsController->add()
+#8 /home/www-data/www/testing/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TestsController), Array)
+#9 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(TestsController), Object(CakeRequest), Object(CakeResponse))
+#11 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-12-28 21:23:27 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`testing_db`.`tests`, CONSTRAINT `fk_tests_teachers` FOREIGN KEY (`teacher_id`) REFERENCES `teachers` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+Request URL: /tests/add
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `te...', Array)
+#2 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(1004): DboSource->execute('INSERT INTO `te...')
+#3 /home/www-data/www/testing/lib/Cake/Model/Model.php(1827): DboSource->create(Object(Test), Array, Array)
+#4 /home/www-data/www/testing/lib/Cake/Model/Model.php(2373): Model->save(Array, Array)
+#5 /home/www-data/www/testing/lib/Cake/Model/Model.php(2163): Model->saveAssociated(Array, Array)
+#6 /home/www-data/www/testing/app/Controller/TestsController.php(21): Model->saveAll(Array)
+#7 [internal function]: TestsController->add()
+#8 /home/www-data/www/testing/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TestsController), Array)
+#9 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(TestsController), Object(CakeRequest), Object(CakeResponse))
+#11 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-12-28 21:25:14 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`testing_db`.`tests`, CONSTRAINT `fk_tests_teachers` FOREIGN KEY (`teacher_id`) REFERENCES `teachers` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+Request URL: /tests/add
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `te...', Array)
+#2 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(1004): DboSource->execute('INSERT INTO `te...')
+#3 /home/www-data/www/testing/lib/Cake/Model/Model.php(1827): DboSource->create(Object(Test), Array, Array)
+#4 /home/www-data/www/testing/lib/Cake/Model/Model.php(2373): Model->save(Array, Array)
+#5 /home/www-data/www/testing/lib/Cake/Model/Model.php(2163): Model->saveAssociated(Array, Array)
+#6 /home/www-data/www/testing/app/Controller/TestsController.php(21): Model->saveAll(Array)
+#7 [internal function]: TestsController->add()
+#8 /home/www-data/www/testing/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TestsController), Array)
+#9 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(TestsController), Object(CakeRequest), Object(CakeResponse))
+#11 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-12-28 21:25:21 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`testing_db`.`tests`, CONSTRAINT `fk_tests_teachers` FOREIGN KEY (`teacher_id`) REFERENCES `teachers` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+Request URL: /tests/add
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `te...', Array)
+#2 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(1004): DboSource->execute('INSERT INTO `te...')
+#3 /home/www-data/www/testing/lib/Cake/Model/Model.php(1827): DboSource->create(Object(Test), Array, Array)
+#4 /home/www-data/www/testing/lib/Cake/Model/Model.php(2373): Model->save(Array, Array)
+#5 /home/www-data/www/testing/lib/Cake/Model/Model.php(2163): Model->saveAssociated(Array, Array)
+#6 /home/www-data/www/testing/app/Controller/TestsController.php(21): Model->saveAll(Array)
+#7 [internal function]: TestsController->add()
+#8 /home/www-data/www/testing/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TestsController), Array)
+#9 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(TestsController), Object(CakeRequest), Object(CakeResponse))
+#11 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-12-28 21:26:35 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`testing_db`.`tests`, CONSTRAINT `fk_tests_teachers` FOREIGN KEY (`teacher_id`) REFERENCES `teachers` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+Request URL: /tests/add
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `te...', Array)
+#2 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(1004): DboSource->execute('INSERT INTO `te...')
+#3 /home/www-data/www/testing/lib/Cake/Model/Model.php(1827): DboSource->create(Object(Test), Array, Array)
+#4 /home/www-data/www/testing/lib/Cake/Model/Model.php(2373): Model->save(Array, Array)
+#5 /home/www-data/www/testing/lib/Cake/Model/Model.php(2163): Model->saveAssociated(Array, Array)
+#6 /home/www-data/www/testing/app/Controller/TestsController.php(21): Model->saveAll(Array)
+#7 [internal function]: TestsController->add()
+#8 /home/www-data/www/testing/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TestsController), Array)
+#9 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(TestsController), Object(CakeRequest), Object(CakeResponse))
+#11 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-12-28 22:17:13 Error: [MissingViewException] View file "/home/www-data/www/testing/app/View/Tests/edit.htm" is missing.
+Exception Attributes: array (
+  'file' => '/home/www-data/www/testing/app/View/Tests/edit.htm',
+)
+Request URL: /tests/edit/12
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/View/View.php(459): View->_getViewFileName(NULL)
+#1 /home/www-data/www/testing/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#2 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#3 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(TestsController), Object(CakeRequest), Object(CakeResponse))
+#4 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-29 12:00:42 Error: [MissingControllerException] Controller class QuestionsController could not be found.
+Exception Attributes: array (
+  'class' => 'QuestionsController',
+  'plugin' => NULL,
+)
+Request URL: /questions/12
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-29 12:19:46 Error: Fatal Error (1): Call to a member function find() on a non-object in [/home/www-data/www/testing/app/Controller/TestsController.php, line 106]
+2013-12-29 12:19:46 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /tests/getThemes/2
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Error/ErrorHandler.php(205): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/www-data/...', 106)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/www-data/...', 106, Array)
+#2 /home/www-data/www/testing/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/www-data/...', 106, Array)
+#3 /home/www-data/www/testing/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-29 12:34:57 Error: [MissingControllerException] Controller class QuestionsController could not be found.
+Exception Attributes: array (
+  'class' => 'QuestionsController',
+  'plugin' => NULL,
+)
+Request URL: /questions/13
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-29 13:20:04 Error: [Twig_Error_Syntax] A hash value must be followed by a comma. Unexpected token "name" of value "You" ("punctuation" expected with value ",") in "Tests/add.htm" at line 74
+Request URL: /tests/edit/13
+Stack Trace:
+#0 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/ExpressionParser.php(241): Twig_TokenStream->expect(9, ',', 'A hash value mu...')
+#1 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/ExpressionParser.php(168): Twig_ExpressionParser->parseHashExpression()
+#2 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/ExpressionParser.php(84): Twig_ExpressionParser->parsePrimaryExpression()
+#3 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/ExpressionParser.php(41): Twig_ExpressionParser->getPrimary()
+#4 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/ExpressionParser.php(471): Twig_ExpressionParser->parseExpression()
+#5 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/ExpressionParser.php(360): Twig_ExpressionParser->parseArguments()
+#6 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/ExpressionParser.php(283): Twig_ExpressionParser->parseSubscriptExpression(Object(Twig_Node_Expression_Name))
+#7 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/ExpressionParser.php(174): Twig_ExpressionParser->parsePostfixExpression(Object(Twig_Node_Expression_Name))
+#8 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/ExpressionParser.php(84): Twig_ExpressionParser->parsePrimaryExpression()
+#9 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/ExpressionParser.php(41): Twig_ExpressionParser->getPrimary()
+#10 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Parser.php(145): Twig_ExpressionParser->parseExpression()
+#11 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Parser.php(99): Twig_Parser->subparse(NULL, false)
+#12 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Environment.php(479): Twig_Parser->parse(Object(Twig_TokenStream))
+#13 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Environment.php(529): Twig_Environment->parse(Object(Twig_TokenStream))
+#14 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Environment.php(323): Twig_Environment->compileSource('<h1>???????????...', 'Tests/add.htm')
+#15 /home/www-data/www/testing/app/Plugin/TwigView/View/TwigView.php(155): Twig_Environment->loadTemplate('Tests/add.htm')
+#16 /home/www-data/www/testing/lib/Cake/View/View.php(462): TwigView->_render('/home/www-data/...')
+#17 /home/www-data/www/testing/lib/Cake/Controller/Controller.php(952): View->render('add', NULL)
+#18 /home/www-data/www/testing/app/Controller/TestsController.php(85): Controller->render('add')
+#19 [internal function]: TestsController->edit('13')
+#20 /home/www-data/www/testing/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TestsController), Array)
+#21 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#22 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(TestsController), Object(CakeRequest), Object(CakeResponse))
+#23 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#24 {main}
+2013-12-29 13:49:39 Error: [Twig_Error_Syntax] The function "if" does not exist in "Tests/add.htm" at line 89
+Request URL: /tests/add
+Stack Trace:
+#0 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/ExpressionParser.php(334): Twig_ExpressionParser->getFunctionNodeClass('if', 89)
+#1 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/ExpressionParser.php(147): Twig_ExpressionParser->getFunctionNode('if', 89)
+#2 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/ExpressionParser.php(84): Twig_ExpressionParser->parsePrimaryExpression()
+#3 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/ExpressionParser.php(41): Twig_ExpressionParser->getPrimary()
+#4 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Parser.php(145): Twig_ExpressionParser->parseExpression()
+#5 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Parser.php(99): Twig_Parser->subparse(NULL, false)
+#6 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Environment.php(479): Twig_Parser->parse(Object(Twig_TokenStream))
+#7 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Environment.php(529): Twig_Environment->parse(Object(Twig_TokenStream))
+#8 /home/www-data/www/testing/app/Plugin/TwigView/Vendor/Twig/lib/Twig/Environment.php(323): Twig_Environment->compileSource('<h1>???????????...', 'Tests/add.htm')
+#9 /home/www-data/www/testing/app/Plugin/TwigView/View/TwigView.php(155): Twig_Environment->loadTemplate('Tests/add.htm')
+#10 /home/www-data/www/testing/lib/Cake/View/View.php(462): TwigView->_render('/home/www-data/...')
+#11 /home/www-data/www/testing/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#12 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#13 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(TestsController), Object(CakeRequest), Object(CakeResponse))
+#14 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2013-12-29 13:56:02 Error: [MissingActionException] Action TestsController::del() could not be found.
+Exception Attributes: array (
+  'controller' => 'TestsController',
+  'action' => 'del',
+)
+Request URL: /tests/del/15
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(TestsController), Object(CakeRequest), Object(CakeResponse))
+#2 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-12-29 13:56:15 Error: [MissingViewException] View file "/home/www-data/www/testing/app/View/Tests/del.htm" is missing.
+Exception Attributes: array (
+  'file' => '/home/www-data/www/testing/app/View/Tests/del.htm',
+)
+Request URL: /tests/del/15
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/View/View.php(459): View->_getViewFileName(NULL)
+#1 /home/www-data/www/testing/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#2 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#3 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(TestsController), Object(CakeRequest), Object(CakeResponse))
+#4 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}

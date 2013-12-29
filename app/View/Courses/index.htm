@@ -1,6 +1,6 @@
 <h1>Список курсов:</h1>
 {% for cours in courses %}
-   Курс:  {{ cours.Cours.title}}&nbsp;&nbsp;&nbsp;<a href="/courses/edit/{{ cours.Cours.id }}">изминить</a><br/>
+   Курс:  {{ cours.Cours.title}}&nbsp;&nbsp;&nbsp;<a href="/courses/edit/{{ cours.Cours.id }}">изменить</a><br/>
 {% endfor %}
 <br/>
 <a href="/courses/add">Добавить</a>

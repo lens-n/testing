@@ -1,0 +1,152 @@
+<h1>Добовление теста:</h1>
+{{ form.create('Test', {'class':'form'}) }}
+
+    {{ form.hidden('id') }}
+    {{ form.hidden('date') }}
+
+        <div class="section">
+            <label>Название теста:</label>
+            <p class="error"></p>
+            {{ form.input('title', {'div' : false, 'label' : false }) }}
+        </div>
+
+<div class="row">
+    <label>Предмет:</label>
+    <div class="row">
+        <select name="data[Test][subject_id]" id="subject_id" >
+            {% for subject in subjects %}
+                <option {% if subject.Subject.id == _view.request.data['Test']['subject_id'] %}selected="selected" {% endif %} value="{{ subject.Subject.id}}">{{ subject.Subject.title }}</option>
+            {% endfor %}
+        </select>
+    </div>
+</div>
+<div class="row">
+    <label>Темы:</label>
+    <div class="row" id="themes">
+
+    </div>
+</div>
+<div class="row">
+    <label>Курс:</label>
+    <div class="row">
+        <select name="data[Test][cours_id]" id="cours_id" >
+            {% for cours in courses %}
+                <option {% if  cours.Cours.id == _view.request.data['Test']['cours_id'] %}selected="selected" {% endif %} value="{{ cours.Cours.id}}">{{ cours.Cours.title }}</option>
+            {% endfor %}
+        </select>
+    </div>
+</div>
+<div class="row">
+    <label>Факультет:</label>
+    <div class="row">
+        <select name="data[Test][faculty_id]" id="faculty_id" >
+            {% for faculty in faculties %}
+                <option {% if faculty.Faculty.id == _view.request.data['Test']['faculty_id'] %}selected="selected" {% endif %} value="{{ faculty.Faculty.id}}">{{ faculty.Faculty.title }}</option>
+            {% endfor %}
+        </select>
+    </div>
+</div>
+
+
+<div class="row">
+    <label>Группа:</label>
+    <div class="row">
+        <select name="data[Test][group_id]" id="groups" >
+            {% for group in groups %}
+                <option {% if grop.Group.id ==_view.request.data['Test']['group_id'] %}selected="selected" {% endif %} value="{{ group.Group.id}}">{{ group.Group.title }}</option>
+            {% endfor %}
+        </select>
+    </div>
+</div>
+<div class="row">
+    <label>Преподователь:</label>
+    <div class="row">
+        <select name="data[Test][teacher_id]" id="subject_id" >
+            {% for teacher in teachers %}
+                <option {% if teacher.Teacher.id == _view.request.data['Test']['subjects_id'] %}selected="selected" {% endif %} value="{{ teacher.Teacher.id}}">{{ teacher.Teacher.sname }} {{ teacher.Teacher.fname }} {{ teacher.Teacher.pname }}</option>
+            {% endfor %}
+        </select>
+    </div>
+</div>
+
+    <div class="section last">
+        <div>
+            {{ form.submit('Сохранить', {'class' : 'uibutton loading'}) }}
+        </div>
+    </div>
+
+    {{ form.end() }}
+<script type="text/javascript">
+    $(function() {
+
+        id = $('#cours_id').val() + '/' + $('#faculty_id').val();
+        $.post( "/students/getGroup/" + id, function(data ) {
+            $('#groups').html( data );
+
+        });
+
+{% if _view.request.data['Test'] %}
+            subject_id = {{  _view.request.data['Test']['subject_id'] }} ;
+            checked = $.parseJSON( '{{ _view.request.data['Test']['themes'] }}' );
+
+            $.ajax({
+                type: "POST",
+                data: {subject_id:subject_id, checked :checked},
+                url: "/tests/getThemes/",
+                success: function(data){
+                    $('#themes').html( data );
+                }
+            });
+{% else %}
+        subject_id = $('#subject_id').val() ;
+        $.post( "/tests/getThemes/" + subject_id, function(data ) {
+            $('#themes').html( data );
+
+        });
+{% endif %}
+
+
+
+
+
+        $('#subject_id').change(function() {
+            subject_id = $('#subject_id').val() ;
+            $.post( "/tests/getThemes/" + subject_id, function(data ) {
+                $('#themes').html( data );
+
+            });
+        });
+
+        $('#cours_id, #faculty_id').change(function() {
+
+            id = $('#cours_id').val() + '/' + $('#faculty_id').val();
+            $.post( "/students/getGroup/" + id, function(data ) {
+                $('#groups').html( data );
+            });
+        });
+
+        $('#TestEditForm , #TestAddForm').submit(function() {
+
+           if($( "input:checked" ).length == 0){
+               alert('Выбирете тему!');
+               return false
+           }
+        });
+
+    });
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

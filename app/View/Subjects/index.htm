@@ -1,0 +1,23 @@
+<h1>Предметы:</h1>
+
+{% for subject in subjects %}
+    {{ subject.Subject.title }}  <a href="/subjects/edit/{{ subject.Subject.id }}">изменить</a>  <a href="/subjects/del/{{ subject.Subject.id }}">x</a><br/>
+{% endfor %}
+
+<br/>
+<a href="/subjects/add">Добавить</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

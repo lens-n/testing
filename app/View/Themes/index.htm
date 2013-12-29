@@ -1,0 +1,29 @@
+<h1>Темы:</h1>
+<table width="80%">
+    <tr>
+        <td>Тема</td>
+        <td>Предмет</td>
+        <td></td>
+        <td></td>
+    </tr>
+{% for theme in themes %}
+    <tr>
+        <td>{{ theme.Theme.title }}</td>
+        <td>{{ subjects[theme.Theme.subjects_id]['title']}} </td>
+        <td><a href="/themes/edit/{{ theme.Theme.id }}">изменить</a></td>
+        <td> <a href="/themes/del/{{ theme.Theme.id }}">x</a></td>
+    </tr>
+
+{% endfor %}
+</table>
+<br/>
+<a href="/themes/add">Добавить</a>
+
+
+
+
+
+
+
+
+

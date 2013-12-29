@@ -1,0 +1,37 @@
+<h1>Тесты:</h1>
+<table width="80%">
+    <tr>
+        <td>Название</td>
+        <td>Предмет</td>
+        <td>Факультет</td>
+        <td>Курс</td>
+        <td>Группа</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+{% for test in tests %}
+    <tr>
+        <td>{{ test.Test.title }}</td>
+        <td>{{ subjects[ test.Test.subject_id]['title']}} </td>
+        <td>{{ faculties[ test.Test.faculty_id]['title']}} </td>
+        <td>{{ courses[ test.Test.cours_id]['title']}} </td>
+        <td>{{ groups[ test.Test.group_id]['title']}} </td>
+        <td><a href="/questions/{{ test.Test.id }}">изменить</a></td>
+        <td><a href="/tests/edit/{{ test.Test.id }}">изменить</a></td>
+        <td> <a href="/tests/del/{{ test.Test.id }}">x</a></td>
+    </tr>
+
+{% endfor %}
+</table>
+<br/>
+<a href="/tests/add">Добавить</a>
+
+
+
+
+
+
+
+
+

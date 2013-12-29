@@ -45,7 +45,7 @@ class StudentsController extends AppController{
 
     }
 
-    public function ajax($cours_id, $faculty_id){
+    public function getGroup($cours_id, $faculty_id){
         $output = '';
       $groups = $this->Group->find('all', array(
           'conditions' => array('Group.cours_id ' => $cours_id, 'Group.faculties_id' => $faculty_id ) ));
@@ -58,6 +58,11 @@ class StudentsController extends AppController{
         $output =  '<option value="">пусто</option>' ;
       exit($output);
 
+    }
+
+    public function del($id){
+        $this->Student->delete($id);
+        $this->redirect('/students');
     }
 
 }

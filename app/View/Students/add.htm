@@ -3,16 +3,17 @@
 
     {{ form.hidden('Student.id') }}
 
+
+        <div class="section">
+            <label>Фамилия:</label>
+            <p class="error"></p>
+            {{ form.input('Student.sname', {'div' : false, 'label' : false }) }}
+        </div>
         <div class="section">
             <label>Имя:</label>
             <p class="error"></p>
 
             {{ form.input('Student.fname', {'div' : false, 'label' : false }) }}
-        </div>
-        <div class="section">
-            <label>Фамилия:</label>
-            <p class="error"></p>
-            {{ form.input('Student.sname', {'div' : false, 'label' : false }) }}
         </div>
         <div class="section">
             <label>Отчество:</label>
