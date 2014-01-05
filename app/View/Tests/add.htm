@@ -79,13 +79,15 @@
 <script type="text/javascript">
     $(function() {
 
+
+///Edit
+{% if _view.request.data['Test'] %}
         id = $('#cours_id').val() + '/' + $('#faculty_id').val();
         $.post( "/students/getGroup/" + id + '/' +{{ _view.request.data['Test']['group_id'] }} , function(data ) {
             $('#groups').html( data );
 
         });
 
-{% if _view.request.data['Test'] %}
             subject_id = {{  _view.request.data['Test']['subject_id'] }} ;
             checked = $.parseJSON( '{{ _view.request.data['Test']['themes'] }}' );
 
@@ -98,14 +100,17 @@
                 }
             });
 {% else %}
+        id = $('#cours_id').val() + '/' + $('#faculty_id').val();
+        $.post( "/students/getGroup/" + id, function(data ) {
+            $('#groups').html( data );
+
+        });
         subject_id = $('#subject_id').val() ;
         $.post( "/tests/getThemes/" + subject_id, function(data ) {
             $('#themes').html( data );
 
         });
 {% endif %}
-
-
 
 
 
