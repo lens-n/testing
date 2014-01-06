@@ -9,7 +9,7 @@ App::uses('AppController', 'Controller');
  */
 class TestsController extends AppController{
     public $helpers = array('Html', 'Form');
-    public $uses = array('Group','Faculty', 'Cours', 'Test', 'Subject', 'Teacher', 'Theme');
+    public $uses = array('Group','Faculty', 'Cours', 'Test', 'Subject', 'Teacher', 'Theme', 'Question');
 
     public function index(){
 
@@ -96,7 +96,24 @@ class TestsController extends AppController{
 
     }
 
-    public function start(){
+    public function start($id){
+        $test = $this->Test->read('', $id);
+        $test = $test['Test'];
+        $themes_list = json_decode($test['themes'],true);
+
+        $questions = $this->Question->find('all',array(
+            'conditions' =>  array('Question.themes_id' =>  $themes_list )));
+        $question =  array();
+        foreach($questions as $item){
+           $item['Question']['answers'] = json_decode($item['Question']['answers']);
+           $question[] = $item['Question'];
+
+        }
+
+
+
+        $this->set('test', $test);
+        $this->set('questions', $question);
 
     }
 

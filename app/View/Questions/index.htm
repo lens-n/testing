@@ -1,6 +1,16 @@
-<h1>Вопросы::</h1>
-
+<h1>Вопросы:</h1>
+{% set subj = '' %}
+{% set theme = '' %}
 {% for question in questions %}
+
+    {% if subj !=  question.subjects_id %}
+        <h2>{{ subjects[question.subjects_id]['title'] }}</h2>
+        {% set subj =  question.subjects_id %}
+    {% endif %}
+    {% if theme != question.themes_id %}
+        <h4>{{ themes[question.themes_id]['title'] }}</h4>
+        {% set theme =  question.themes_id %}
+    {% endif %}
     {{ question.text }}  <a href="/questions/edit/{{ question.id }}">изменить</a>  <a href="/questions/del/{{ question.id }}">x</a><br/>
 {#{% if question.answers %}
 

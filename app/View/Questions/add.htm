@@ -8,7 +8,7 @@
         <div class="row">
             <select name="data[Question][subjects_id]" id="subject_id" >
                 {% for subject in subjects %}
-                    <option {% if subject.Subject.id == _view.request.data['Test']['subject_id'] %}selected="selected" {% endif %} value="{{ subject.Subject.id}}">{{ subject.Subject.title }}</option>
+                    <option {% if subject.Subject.id == _view.request.data['Question']['subjects_id'] %}selected="selected" {% endif %} value="{{ subject.Subject.id}}">{{ subject.Subject.title }}</option>
                 {% endfor %}
             </select>
         </div>
@@ -22,6 +22,19 @@
 
         </div>
     </div>
+<div class="row">
+    <label>Приоретет ответа:</label>
+    <div class="row">
+        <select name="data[Question][priority]" id="priority" >
+
+
+            <option {% if _view.request.data['Question']['priority'] == 0 %}selected="selected" {% endif %} value="0">100%</option>
+            <option {% if _view.request.data['Question']['priority'] == 1 %}selected="selected" {% endif %} value="1">50%</option>
+
+
+        </select>
+    </div>
+</div>
 
         <div class="section">
             <label>Текст воароса:</label>
@@ -34,9 +47,9 @@
         <select name="data[Question][type]" id="type" >
 
 
-                <option value="0">Вписать</option>
-            <option {#{% if subject.Subject.id == _view.request.data['Test']['subject_id'] %}selected="selected" {% endif %}#} value="1">Выбрать один вариант</option>
-                <option value="2">Выбрать несколько</option>
+                <option {% if _view.request.data['Question']['type'] == 0 %}selected="selected" {% endif %} value="0">Вписать</option>
+            <option {% if _view.request.data['Question']['type'] == 1 %}selected="selected" {% endif %} value="1">Выбрать один вариант</option>
+                <option {% if _view.request.data['Question']['type'] == 2 %}selected="selected" {% endif %} value="2">Выбрать несколько</option>
 
         </select>
     </div>
@@ -58,21 +71,43 @@
 
 <script type="text/javascript">
     $(function() {
+//edit
+{% if _view.request.data['Question'] %}
+
+        subject_id = $('#subject_id').val() ;
+        $.post( "/questions/getThemes/" + subject_id + '/' + {{ _view.request.data['Question']['themes_id'] }}, function(data ) {
+            $('#themes').html( data );
+
+        });
+
+
+        qt = {{  _view.request.data['Question']['answers']|length }};
+
+        {% if  _view.request.data['Question']['type'] == 1 %}
+        str = '';
+        {% for answer in _view.request.data['Question']['answers'] %}
+            str += '<input name="data[Question][_serialize][]" value="{{ answer }}" type="text" id ="qst{{ loop.index }}"><br>';
+        {% endfor %}
+
+        $('#answers').html( '<label>Правильный ответ:</label><br><input name="data[Question][answer_correct]" value="{{  _view.request.data['Question']['answer_correct'] }}" type="text" id="QuestionAnswerCorrect"><br>Остальные:<button  id="add_answer">+</button><br>' +
+                str );
+        {% endif %}
+
+        {% else %}
         subject_id = $('#subject_id').val() ;
         $.post( "/questions/getThemes/" + subject_id, function(data ) {
             $('#themes').html( data );
 
         });
 
-    /*    $('#add_answer').click(function() {
 
-            alert('df');
 
-        });*/
-    qt = 1;
+        qt = 1;
 
 
 
+
+{% endif %}
 
         $('#type').change(function() {
 
@@ -82,7 +117,7 @@
                     break;
                 case '1' :
                     $('#answers').html( '<label>Правильный ответ:</label><br><input name="data[Question][answer_correct]" type="text" id="QuestionAnswerCorrect"><br>Остальные:<button  id="add_answer">+</button><br>' +
-                                        '<input name="data[Question][_serialize][]" type="text" id ="qst1">' );
+                            '<input name="data[Question][_serialize][]" type="text" id ="qst1">' );
                     break;
                 case '2' :
                     alert('2');
@@ -91,6 +126,11 @@
             }
 
         });
+
+
+
+
+
 
         $('#answers').on('click', '#add_answer', function(){
             if(qt < 3){
