@@ -3,11 +3,51 @@
 
     {{ form.hidden('id') }}
 
+    <div class="row">
+        <label>Предмет:</label>
+        <div class="row">
+            <select name="data[Question][subjects_id]" id="subject_id" >
+                {% for subject in subjects %}
+                    <option {% if subject.Subject.id == _view.request.data['Test']['subject_id'] %}selected="selected" {% endif %} value="{{ subject.Subject.id}}">{{ subject.Subject.title }}</option>
+                {% endfor %}
+            </select>
+        </div>
+    </div>
+    <div class="row">
+        <label>Темы:</label>
+        <div class="row" >
+            <select name="data[Question][themes_id]" id="themes" >
+
+            </select>
+
+        </div>
+    </div>
+
         <div class="section">
             <label>Текст воароса:</label>
             <p class="error"></p>
             {{ form.input('text', {'div' : false, 'label' : false }) }}
         </div>
+<div class="row">
+    <label>Тип ответа:</label>
+    <div class="row">
+        <select name="data[Question][type]" id="type" >
+
+
+                <option value="0">Вписать</option>
+            <option {#{% if subject.Subject.id == _view.request.data['Test']['subject_id'] %}selected="selected" {% endif %}#} value="1">Выбрать один вариант</option>
+                <option value="2">Выбрать несколько</option>
+
+        </select>
+    </div>
+</div>
+
+<div class="row">
+    <label id="add_answer2">Ответ:</label>
+    <div class="row" id="answers">
+        {{ form.input('answer_correct', {'div' : false, 'label' : false, 'type': 'text' }) }}
+    </div>
+</div>
     <div class="section last">
         <div>
             {{ form.submit('Сохранить', {'class' : 'uibutton loading'}) }}
@@ -16,6 +56,76 @@
 
     {{ form.end() }}
 
+<script type="text/javascript">
+    $(function() {
+        subject_id = $('#subject_id').val() ;
+        $.post( "/questions/getThemes/" + subject_id, function(data ) {
+            $('#themes').html( data );
+
+        });
+
+    /*    $('#add_answer').click(function() {
+
+            alert('df');
+
+        });*/
+    qt = 1;
+
+
+
+
+        $('#type').change(function() {
+
+            switch ($("#type").val()) {
+                case '0' :
+                    $('#answers').html( '<input name="data[Question][answer_correct]" type="text" id="QuestionAnswerCorrect">' );
+                    break;
+                case '1' :
+                    $('#answers').html( '<label>Правильный ответ:</label><br><input name="data[Question][answer_correct]" type="text" id="QuestionAnswerCorrect"><br>Остальные:<button  id="add_answer">+</button><br>' +
+                                        '<input name="data[Question][_serialize][]" type="text" id ="qst1">' );
+                    break;
+                case '2' :
+                    alert('2');
+                    break;
+
+            }
+
+        });
+
+        $('#answers').on('click', '#add_answer', function(){
+            if(qt < 3){
+            $('#qst' + qt).after('<br><input name="data[Question][_serialize][]" type="text" id="qst' + (qt+1)  + '">');
+            qt++;
+            }else
+                alert('Максимум 4 варианта!');
+            return false;
+        });
+
+
+
+
+
+        $('#subject_id').change(function() {
+            subject_id = $('#subject_id').val() ;
+            $.post( "/questions/getThemes/" + subject_id, function(data ) {
+                $('#themes').html( data );
+
+            });
+        });
+
+
+
+
+
+       // $('#answers').html( '' );
+
+    });
+
+
+
+
+
+</script>
 
 
 

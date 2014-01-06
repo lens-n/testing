@@ -6,14 +6,18 @@ App::uses('AppModel', 'Model');
  *
  */
 
-class Test extends AppModel {
+class Question extends AppModel {
     //public $useTable = 'subjects';
     /**
      * Validation rules
      * @var array
      */
     public $validate = array(
-        'title' => array(
+        'text' => array(
+            'rule' => 'notEmpty',
+            'message' => 'Имя вопроса не может быть пустым!'
+        ),
+        'answer_correct' => array(
             'rule' => 'notEmpty',
             'message' => 'Имя вопроса не может быть пустым!'
         ),

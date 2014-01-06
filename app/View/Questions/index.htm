@@ -1,7 +1,14 @@
 <h1>Вопросы::</h1>
 
-{% for subject in subjects %}
-    {{ subject.Subject.title }}  <a href="/subjects/edit/{{ subject.Subject.id }}">изменить</a>  <a href="/subjects/del/{{ subject.Subject.id }}">x</a><br/>
+{% for question in questions %}
+    {{ question.text }}  <a href="/questions/edit/{{ question.id }}">изменить</a>  <a href="/questions/del/{{ question.id }}">x</a><br/>
+{#{% if question.answers %}
+
+{% for answer in    question.answers %}
+    {{ answer }}<br>
+    {% endfor %}
+{% endif %}#}
+    <br>
 {% endfor %}
 
 <br/>
