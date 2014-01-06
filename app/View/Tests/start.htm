@@ -1,6 +1,62 @@
-<h1>{{ test.title }}</h1>
+    <h1>{{ test.title }}</h1>
+    <div id="container" style="margin-left: -150px;">
+        <div id="carousel">
+            {% for question in questions %}
+            <div  class="slide">
+                <h3>{{ question.text }}</h3><br>
+                {% if question.type == 0 %}
+                    <form id="form{{ question.id }}" method="post" >
+                    Введите ответ:
+                    <input type="text" name="answer" id="answer{{ question.id }}" >
+                        <input type="button" id="{{ question.id }}" value="ответить" onclick="AjaxFormRequest('form{{ question.id }}', '{{ question.id }}')" >
+                    </form>
+                {% endif %}
 
-<div>
-    <h2></h2>
+                {% if question.type == 1 %}
+                    <form id="form{{ question.id }}" method="post" >
+                        <input type="hidden" value="{{ question.id }}">
+                        Выбирите правильный ответ:<br>
+                        <div id="answer"><strong>{{ question.answer_correct }}</strong><input type="radio" name="answer" class="answer"   value="{{ question.answer_correct }}" ></div><br>
+                        {% for answer in question.answers %}
+                        <script type="text/javascript">
+                            if(getRandomInt(0,1) == 0){
+                                $('#answer').after('<strong>{{ answer }}</strong><input type="radio" name="answer" class="answer"  value="{{ answer }}" ><br>');
+                            }
+                            else{
+                                $('#answer').before('<strong>{{ answer }}</strong><input type="radio" name="answer" class="answer"  value="{{ answer }}" ><br>');
+                            }
+                        </script>
+                        {% endfor %}
+                        <input type="button" id="{{ question.id }}" value="ответить" onclick="AjaxFormRequest('form{{ question.id }}', '{{ question.id }}')" >
+                    </form>
+                {% endif %}
+            </div>
+            {% endfor %}
 
-</div>
+        </div>
+        <a href="#"  style="float:right"    id="ui-carousel-next"><span>next</span></a>
+        <a href="#" id="ui-carousel-prev"><span>prev</span></a>
+        <div id="pages"></div>
+    </div>
+
+<script type="text/javascript">
+
+
+
+    function AjaxFormRequest(form_id,url) {
+        jQuery.ajax({
+            url:     "/tests/save_answer/"+url, //Адрес подгружаемой страницы
+            type:     "POST", //Тип запроса
+            dataType: "html", //Тип данных
+            data: jQuery("#"+form_id).serialize(),
+            success: function(response) { //Если все нормально
+                $('#alert').html( response );
+               // document.getElementById(result_id).innerHTML = response;
+            },
+            error: function(response) { //Если ошибка
+                $('#alert').html( response );
+            }
+        });
+    }
+</script>
+

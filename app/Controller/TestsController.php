@@ -97,6 +97,7 @@ class TestsController extends AppController{
     }
 
     public function start($id){
+        $this->layout = 'test';
         $test = $this->Test->read('', $id);
         $test = $test['Test'];
         $themes_list = json_decode($test['themes'],true);
@@ -144,6 +145,24 @@ class TestsController extends AppController{
         }else
             $output =  'По данному предмету нет заполненых тем!' ;
         exit($output);
+
+    }
+
+    public function save_answer($id){
+        if(empty($this->request->data['answer']))
+            exit('Вы ничего не выбрали!');
+        $correct_answer = $this->Question->findById($id,array('field' => 'answer_correct'));
+        $answer = trim(mb_strtolower($this->request->data['answer']));
+        if($answer == $correct_answer['Question']['answer_correct']){
+          $mark = 1;
+            exit('Верно!');
+        }
+        else{
+            $mark = 0;
+            exit('Не верно!');
+        }
+
+
 
     }
 
