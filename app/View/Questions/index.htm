@@ -11,13 +11,12 @@
         <h4>{{ themes[question.themes_id]['title'] }}</h4>
         {% set theme =  question.themes_id %}
     {% endif %}
+    {% if question.priority == 0  %}
     {{ question.text }}  <a href="/questions/edit/{{ question.id }}">изменить</a>  <a href="/questions/del/{{ question.id }}">x</a><br/>
-{#{% if question.answers %}
+    {% else %}
+        <div style="margin-left: 50px; width:200px; float:left"> -->{{ question.text }}</div>  <a href="/questions/edit/{{ question.id }}">изменить</a>  <a href="/questions/del/{{ question.id }}">x</a><br/>
+    {% endif %}
 
-{% for answer in    question.answers %}
-    {{ answer }}<br>
-    {% endfor %}
-{% endif %}#}
     <br>
 {% endfor %}
 

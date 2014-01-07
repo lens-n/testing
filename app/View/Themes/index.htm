@@ -1,6 +1,7 @@
 <h1>Темы:</h1>
 <table width="80%">
     <tr>
+        <td>Ид</td>
         <td>Тема</td>
         <td>Предмет</td>
         <td></td>
@@ -8,6 +9,7 @@
     </tr>
 {% for theme in themes %}
     <tr>
+        <td>{{ theme.Theme.id }}</td>
         <td>{{ theme.Theme.title }}</td>
         <td>{{ subjects[theme.Theme.subjects_id]['title']}} </td>
         <td><a href="/themes/edit/{{ theme.Theme.id }}">изменить</a></td>

@@ -33,7 +33,7 @@
  */
 class AppController extends Controller {
     public $components = array(
-        'DebugKit.Toolbar'
+        'DebugKit.Toolbar', 'Session'
     );
     public $viewClass = 'TwigView.Twig';
 

@@ -9,7 +9,7 @@ App::uses('AppController', 'Controller');
  */
 class TestsController extends AppController{
     public $helpers = array('Html', 'Form');
-    public $uses = array('Group','Faculty', 'Cours', 'Test', 'Subject', 'Teacher', 'Theme', 'Question');
+    public $uses = array('Group','Faculty', 'Cours', 'Test', 'Subject', 'Teacher', 'Theme', 'Question', 'Student', 'Report' ,'ReportQuestion');
 
     public function index(){
 
@@ -56,6 +56,7 @@ class TestsController extends AppController{
     public function add(){
         if($this->request->data){
             $this->request->data['Test']['themes'] = json_encode($this->request->data['Test']['_serialize']);
+            $this->request->data['Test']['config'] = json_encode($this->request->data['Test']['config']);
             $this->Test->saveAll($this->request->data);
             //$this->setFlash('Факультет сохранен', 'success');
             $this->redirect('/tests');
@@ -70,6 +71,7 @@ class TestsController extends AppController{
     public function edit($id){
         if($this->request->data){
             $this->request->data['Test']['themes'] = json_encode($this->request->data['Test']['_serialize']);
+            $this->request->data['Test']['config'] = json_encode($this->request->data['Test']['config']);
 
             if($this->Test->saveAll($this->request->data))
             //$this->setFlash('Факультет сохранен', 'success');
@@ -80,6 +82,7 @@ class TestsController extends AppController{
         }
 
         $data = $this->Test->read('', $id);
+        $data['Test']['config'] = json_decode($data['Test']['config'],true);
         $this->set('faculties', $this->Faculty->find('all'));
         $this->set('courses', $this->Cours->find('all'));
         $this->set('subjects', $this->Subject->find('all'));
@@ -92,29 +95,124 @@ class TestsController extends AppController{
 
     public function del($id){
         $this->Test->delete($id);
-        $this->render('index');
+        $this->redirect('/tests');
 
     }
 
-    public function start($id){
+    public function getstudent(){
+        $this->set('students', $this->Student->find('all'));
+        $this->set('tests', $this->Test->find('all',array(
+            'conditions' =>  array('Test.active' =>  '1' ))));
+    }
+
+    public function start($id, $student_id){
         $this->layout = 'test';
         $test = $this->Test->read('', $id);
         $test = $test['Test'];
-        $themes_list = json_decode($test['themes'],true);
 
-        $questions = $this->Question->find('all',array(
-            'conditions' =>  array('Question.themes_id' =>  $themes_list )));
-        $question =  array();
-        foreach($questions as $item){
-           $item['Question']['answers'] = json_decode($item['Question']['answers']);
-           $question[] = $item['Question'];
+        if((int)$test['active'] !== 0){
+            if(!($this->Session->read('Report_id'))){
+                $data = array('students_id' => $student_id,'tests_id' => $id);
+                $this->Report->saveAll($data);
+                $this->Session->write('Report_id', $this->Report->getLastInsertID());
+            }
+
+            $themes_list = json_decode($test['themes'],true);
+
+            $config = json_decode($test['config'],true);
+
+            $questions =  $this->Question->find('all',array(
+                'conditions' =>  array('Question.themes_id' =>  $themes_list, 'Question.priority' => '0' ), 'limit' => $config['max']));
+            $question =  array();
+            foreach($questions as $item){
+               $item['Question']['answers'] = json_decode($item['Question']['answers']);
+               $question[] = $item['Question'];
+
+            }
+            $this->set('test', $test);
+            $this->set('questions', $question);
+        }
+        else{
+            $this->Session->setFlash('error');
+            $this->redirect('/tests');
 
         }
 
+    }
+
+    public function stop(){
+        if($this->Session->read('Report_id')){
+            $id = $this->Session->read('Report_id');
+            $reports = $this->ReportQuestion->find('all',array(
+                'conditions' =>  array('ReportQuestion.reports_id' =>  $id )));
+            $count = count($reports);
+            $mark = 0;
+            foreach($reports as $item){
+               if(((int)$item['ReportQuestion']['correct']) == 1){
+                   if( $item['ReportQuestion']['priority'] == 0){
+                        $mark+= (int)$item['ReportQuestion']['correct'];
+                   }
+                    else{
+                        $mark+= ((int)$item['ReportQuestion']['correct'])/2;
+                    }
+
+                }
+            }
+            if($mark !== 0){
+                $mark = $mark/$count*100;
+                $this->Report->read(null, $id);
+                $this->Report->set('mark', $mark);
+                $this->Report->save();
+                $this->set('mark', $mark);
 
 
-        $this->set('test', $test);
-        $this->set('questions', $question);
+            }else{
+                $this->Report->read(null, $id);
+                $this->Report->set('mark', $mark);
+                $this->Report->save();
+                $this->set('mark', $mark);
+            }
+            $this->Session->delete('Report_id');
+            $this->render('stop');
+
+
+        }
+        else
+           $this->redirect('/tests/getstudent');
+    }
+
+    public function active($id){
+        $test = $this->Test->read('', $id);
+        $test = $test['Test'];
+
+        $config = json_decode($test['config'],true);
+        $themes_list = json_decode($test['themes'],true);
+        $questions = array();
+        if((int)$test['active'] == 0){
+            foreach($themes_list as $theme){
+                $quest = $this->Question->find('all',array(
+                    'conditions' =>  array('Question.themes_id' =>  $theme, 'Question.priority' => '0' ), 'limit' => $config['max']));
+
+                if(count($quest) >= ((int)$config['min'])){
+                    $questions[] = $quest;
+                }
+                else{
+                    exit('Недостаточно вопросов по теме' . $theme);
+                }
+            }
+            $this->Test->read(null, $id);
+            $this->Test->set('active', '1');
+            $this->Test->save();
+            exit('Тест активирован!');
+
+
+        }else{
+            $this->Test->read(null, $id);
+            $this->Test->set('active', '0');
+            $this->Test->save();
+            exit('Тест деактивирован!');
+        }
+
 
     }
 
@@ -153,13 +251,34 @@ class TestsController extends AppController{
             exit('Вы ничего не выбрали!');
         $correct_answer = $this->Question->findById($id,array('field' => 'answer_correct'));
         $answer = trim(mb_strtolower($this->request->data['answer']));
-        if($answer == $correct_answer['Question']['answer_correct']){
+        $correct_answer = trim(mb_strtolower($correct_answer['Question']['answer_correct']));
+        $data['ReportQuestion']['questions_id'] = $id;
+        $data['ReportQuestion']['answer'] = $answer;
+        $data['ReportQuestion']['priority'] = $this->request->data['priority'];
+        $data['ReportQuestion']['reports_id'] = $this->Session->read('Report_id');
+
+        if($answer == $correct_answer){
           $mark = 1;
-            exit('Верно!');
+            $data['ReportQuestion']['correct'] = $mark;
+            $this->ReportQuestion->saveAll($data);
+          //  exit('Ответ принят!');
         }
         else{
             $mark = 0;
-            exit('Не верно!');
+            $data['ReportQuestion']['correct'] = $mark;
+            $this->ReportQuestion->saveAll($data);
+
+      /*      $theme = $this->request->data['themes_id'];
+            $quest = $this->Question->find('all',array(
+                'conditions' =>  array('Question.themes_id' =>  $theme, 'Question.priority' => '1' )));*/
+
+
+
+
+
+
+
+            exit('Ответ принят!');
         }
 
 

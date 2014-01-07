@@ -1,4 +1,4 @@
-    <h1>{{ test.title }}</h1>
+    <h1>{{ test.title }}</h1><a href="/tests/stop" style="float:right;margin-top: -25px;"><span>Окончить тест</span></a>
     <div id="container" style="margin-left: -150px;">
         <div id="carousel">
             {% for question in questions %}
@@ -6,6 +6,8 @@
                 <h3>{{ question.text }}</h3><br>
                 {% if question.type == 0 %}
                     <form id="form{{ question.id }}" method="post" >
+                        <input type="hidden" name="priority" value="{{ question.priority }}">
+                        <input type="hidden" name="themes_id" value="{{ question.themes_id }}">
                     Введите ответ:
                     <input type="text" name="answer" id="answer{{ question.id }}" >
                         <input type="button" id="{{ question.id }}" value="ответить" onclick="AjaxFormRequest('form{{ question.id }}', '{{ question.id }}')" >
@@ -14,16 +16,18 @@
 
                 {% if question.type == 1 %}
                     <form id="form{{ question.id }}" method="post" >
-                        <input type="hidden" value="{{ question.id }}">
+                        <input type="hidden" name="question_id" value="{{ question.id }}">
+                        <input type="hidden" name="priority" value="{{ question.priority }}">
+                        <input type="hidden" name="themes_id" value="{{ question.themes_id }}">
                         Выбирите правильный ответ:<br>
-                        <div id="answer"><strong>{{ question.answer_correct }}</strong><input type="radio" name="answer" class="answer"   value="{{ question.answer_correct }}" ></div><br>
+                        <div id="answer{{question.id  }}"><strong>{{ question.answer_correct }}</strong><input type="radio" name="answer" class="answer"   value="{{ question.answer_correct }}" ></div><br>
                         {% for answer in question.answers %}
                         <script type="text/javascript">
                             if(getRandomInt(0,1) == 0){
-                                $('#answer').after('<strong>{{ answer }}</strong><input type="radio" name="answer" class="answer"  value="{{ answer }}" ><br>');
+                                $('#answer{{ question.id  }}').after('<br><strong>{{ answer }}</strong><input type="radio" name="answer" class="answer"  value="{{ answer }}" ><br>');
                             }
                             else{
-                                $('#answer').before('<strong>{{ answer }}</strong><input type="radio" name="answer" class="answer"  value="{{ answer }}" ><br>');
+                                $('#answer{{ question.id  }}').before('<br><strong>{{ answer }}</strong><input type="radio" name="answer" class="answer"  value="{{ answer }}" ><br>');
                             }
                         </script>
                         {% endfor %}
@@ -34,8 +38,9 @@
             {% endfor %}
 
         </div>
-        <a href="#"  style="float:right"    id="ui-carousel-next"><span>next</span></a>
-        <a href="#" id="ui-carousel-prev"><span>prev</span></a>
+        <a href="#"  style="float:right"    id="ui-carousel-next"><span>след.</span></a>
+        <a href="#" id="ui-carousel-prev"><span>прев.</span></a>
+
         <div id="pages"></div>
     </div>
 

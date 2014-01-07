@@ -72,8 +72,9 @@ class QuestionsController extends AppController{
 
     }
 
-    public function delete(){
-
+    public function del($id){
+        $this->Question->delete($id);
+        $this->redirect('/questions/');
     }
 
 

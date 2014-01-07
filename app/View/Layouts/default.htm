@@ -12,6 +12,9 @@
 
 
     <a href="index.html"><img src="/images/logo.png" alt="Business Events" width="281" height="56" border="0" class="logo" title="Business Events" /></a>
+    <h3 id="alert" style="color: green;
+float: right;
+margin-top: 100px; margin-left: 50px"></h3>
 </div>
 
     {#<div id="headerPan">#}
@@ -41,6 +44,7 @@
     {#</div>#}
 <div id="bodyPan">
    {# {{ Session.flash() }}#}
+    <h1>{{ _view.session.flash() }}</h1>
     {{ _view.fetch('content') }}
     {#<h2>latest updates</h2>#}
     {#<p class="date">on 2nd october 2006</p>#}

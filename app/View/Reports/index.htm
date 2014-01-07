@@ -1,0 +1,23 @@
+<h1>Отчеты:</h1>
+
+{% for report in reports %}
+    {{ report.Report.id }} {{ students[report.Report.students_id ]['sname'] }}{{ students[report.Report.students_id ]['fname'] }} тест: <strong>{{ tests[report.Report.tests_id ]['title'] }}</strong> оценка:   <strong>{{ report.Report.mark }}    </strong>   <a href="/reports/view/ {{ report.Report.id }}">посмотреть</a><br/>
+{% endfor %}
+
+<br/>
+<a href="/subjects/add">Добавить</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

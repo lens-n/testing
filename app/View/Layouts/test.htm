@@ -61,7 +61,7 @@
                             enabled: false
                         },
                         width: 780,
-                        height: 240,
+                        height: 350,
                         start: generatePages,
                         pageLoaded: pageLoaded
                     }
@@ -99,6 +99,7 @@
     #carousel {
         width: 780px;
         margin: 0 auto;
+        height: auto;
     }
 
 /*    #ui-carousel-next, #ui-carousel-prev {
@@ -127,9 +128,14 @@
     .slide {
         margin: 0;
         position: relative;
-
+        height: auto;
         text-align: center;
         background: paleturquoise;    }
+
+    .slide form{
+        text-align: left;
+        margin-left: 100px;
+    }
 
     .slide  h1 {
         font: 72px/1 Anton, sans-serif;
@@ -188,7 +194,7 @@ margin-top: 100px;"></h1>
 
 
 <div id="bodyPan">
-
+    <h1>{{ session.flash() }}</h1>
     {{ _view.fetch('content') }}
 
 </div>

@@ -1,4 +1,4 @@
-<h1>Добовление теста:</h1>
+<h1>Добавление теста:</h1>
 {{ form.create('Test', {'class':'form'}) }}
 
     {{ form.hidden('id') }}
@@ -61,13 +61,57 @@
 <div class="row">
     <label>Преподователь:</label>
     <div class="row">
-        <select name="data[Test][teacher_id]" id="subject_id" >
+        <select name="data[Test][teacher_id]" id="teacher_id" >
             {% for teacher in teachers %}
-                <option {% if teacher.Teacher.id == _view.request.data['Test']['subjects_id'] %}selected="selected" {% endif %} value="{{ teacher.Teacher.id}}">{{ teacher.Teacher.sname }} {{ teacher.Teacher.fname }} {{ teacher.Teacher.pname }}</option>
+                <option {% if teacher.Teacher.id == _view.request.data['Test']['teacher_id'] %}selected="selected" {% endif %} value="{{ teacher.Teacher.id}}">{{ teacher.Teacher.sname }} {{ teacher.Teacher.fname }} {{ teacher.Teacher.pname }}</option>
             {% endfor %}
         </select>
     </div>
 </div>
+<div class="section">
+    <label>Пароль:</label>
+    <p class="error"></p>
+    {{ form.input('Test.config.password', {'div' : false, 'label' : false }) }}
+</div>
+<div class="row">
+    <label>Мин. кол. вопросов по теме:</label>
+    <div class="row">
+        <select name="data[Test][config][min]"  >
+            {% for min in 2..4 %}
+            <option {% if  _view.request.data['Test']['config']['min'] == min %}selected="selected" {% endif %} value="{{ min }}">{{ min }}</option>
+            {% endfor %}
+
+
+        </select>
+    </div>
+</div>
+<div class="row">
+    <label>Макс. кол. вопросов по теме:</label>
+    <div class="row">
+        <select name="data[Test][config][max]"  >
+            {% for max in 4..8 %}
+                <option {% if  _view.request.data['Test']['config']['max'] == max %}selected="selected" {% endif %} value="{{ max }}">{{ max }}</option>
+            {% endfor %}
+
+
+        </select>
+    </div>
+</div>
+
+
+
+
+{#<div class="row">
+    <label>Статус:</label>
+    <div class="row">
+        <select name="data[Test][active]" id="subject_id" >
+
+                <option {% if  _view.request.data['Test']['active'] == 0 %}selected="selected" {% endif %} value="0">Деактивирован </option>
+                <option {% if  _view.request.data['Test']['sactive'] == 1 %}selected="selected" {% endif %} value="1">Активирован</option>
+
+        </select>
+    </div>
+</div>#}
 
     <div class="section last">
         <div>

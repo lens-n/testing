@@ -1,0 +1,23 @@
+<h1>Список студентов</h1>
+<table border="0"  cellspacing="5"  >
+    {% for student in students %}
+        <tr>
+            <td>{{ student.Student.id}}</td>
+            <td>{{ student.Student.fname}}</td>
+            <td> {{ student.Student.sname}}</td>
+            <td>{{ student.Student.pname}}</td>
+            {% for test in tests %}
+            <td>
+                <a href="/tests/start/{{ test.Test.id }}/{{ student.Student.id}}"> Начать тест "{{ test.Test.title }}"</a>
+            </td>
+            {% endfor %}
+
+
+        </tr>
+    {% endfor %}
+</table>
+
+
+
+
+
