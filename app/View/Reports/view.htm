@@ -1,9 +1,17 @@
-Sudents:
-{% for student in students %}
-    {{ student.Student.student_id}}
-
+<h1>Результаты:</h1>
+{% for theme in themes_marks %}
+    Ваша  оценка по теме <strong>"{{ themes[theme.id]['title']}}" : </strong> <strong>{{ theme.mark}} балов </strong><br><br>
 {% endfor %}
 
+
+Ваша оценка за весь тест: <strong>{{ mark }} балов</strong><br><br>
+
+<strong>Отчет ответов:</strong><br><br>
+
+{% for report in reports %}
+<strong>{{ loop.index }}.</strong> {{ report.Question.text  }}<br><br>
+<strong> Ответ:<div class=" {% if report.ReportQuestion.correct == 1  %} text-success{% else %}text-error{% endif %} "></strong><br>{{ report.ReportQuestion.answer }}</div><br>
+{% endfor %}
 
 
 

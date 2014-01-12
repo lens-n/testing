@@ -14,6 +14,7 @@ class TestsController extends AppController{
     public function index(){
 
 
+
         $groups = $this->Group->find('all');
         $group = array();
         foreach($groups  as $item){
@@ -122,7 +123,7 @@ class TestsController extends AppController{
             $config = json_decode($test['config'],true);
 
             $questions =  $this->Question->find('all',array(
-                'conditions' =>  array('Question.themes_id' =>  $themes_list, 'Question.priority' => '0' ), 'limit' => $config['max']));
+                'conditions' =>  array('Question.themes_id' =>  $themes_list/*, 'Question.priority' => '0'*/ ), 'limit' => $config['max']));
             $question =  array();
             foreach($questions as $item){
                $item['Question']['answers'] = json_decode($item['Question']['answers']);
@@ -142,21 +143,44 @@ class TestsController extends AppController{
 
     public function stop(){
         if($this->Session->read('Report_id')){
+            $themes =  $this->Theme->find('all');
+            $theme =  array();
+
+            foreach($themes as $item){
+                $theme[$item['Theme']['id']] =  $item['Theme'];
+            }
+
+            $this->set('themes', $theme);
             $id = $this->Session->read('Report_id');
             $reports = $this->ReportQuestion->find('all',array(
-                'conditions' =>  array('ReportQuestion.reports_id' =>  $id )));
+                'conditions' =>  array('ReportQuestion.reports_id' =>  $id,
+                    ),'order' => array('ReportQuestion.themes_id')));
             $count = count($reports);
             $mark = 0;
+            $themes_mark = array();
+            $themes_id = '';
+            $themes_count = array();
             foreach($reports as $item){
+               if($themes_id !== $item['ReportQuestion']['themes_id']) {
+                   $themes_id = $item['ReportQuestion']['themes_id'];
+
+                   $themes_mark[$themes_id] = 0;
+                   $themes_count[$themes_id] = 0;
+               }
                if(((int)$item['ReportQuestion']['correct']) == 1){
                    if( $item['ReportQuestion']['priority'] == 0){
+                       $themes_mark[$themes_id] += (int)$item['ReportQuestion']['correct'];
                         $mark+= (int)$item['ReportQuestion']['correct'];
                    }
                     else{
                         $mark+= ((int)$item['ReportQuestion']['correct'])/2;
+                        $themes_mark[$themes_id] += ((int)$item['ReportQuestion']['correct'])/2;
                     }
 
                 }
+
+                $themes_count[$themes_id] += 1;
+
             }
             if($mark !== 0){
                 $mark = $mark/$count*100;
@@ -172,6 +196,13 @@ class TestsController extends AppController{
                 $this->Report->save();
                 $this->set('mark', $mark);
             }
+            foreach($themes_mark as $item => $val){
+                $themes_marks[$item]['id'] =  $item;
+                $themes_marks[$item]['mark'] =  $val/$themes_count[$item]*100;
+
+            }
+            $this->set('themes_marks', $themes_marks);
+            $this->set('themes_count', $themes_count);
             $this->Session->delete('Report_id');
             $this->render('stop');
 
@@ -255,6 +286,7 @@ class TestsController extends AppController{
         $data['ReportQuestion']['questions_id'] = $id;
         $data['ReportQuestion']['answer'] = $answer;
         $data['ReportQuestion']['priority'] = $this->request->data['priority'];
+        $data['ReportQuestion']['themes_id'] = $this->request->data['themes_id'];
         $data['ReportQuestion']['reports_id'] = $this->Session->read('Report_id');
 
         if($answer == $correct_answer){

@@ -80,12 +80,12 @@ class ReportsController extends AppController{
     public function edit($id){
         if($this->request->data){
 
-            $this->Subject->saveAll($this->request->data);
+            $this->Report->saveAll($this->request->data);
             //$this->setFlash('Факультет сохранен', 'success');
             $this->redirect('/subjects');
         }
 
-        $data = $this->Subject->read('', $id);
+        $data = $this->Report->read('', $id);
         $this->request->data = $data;
         $this->set('title', 'Редактирование предмета');
         $this->render('add');
@@ -94,8 +94,83 @@ class ReportsController extends AppController{
     }
 
     public function del($id){
-        $this->Subject->delete($id);
-        $this->redirect('/subjects');
+        $this->Report->delete($id);
+        $this->redirect('/reports');
+
+    }
+
+    public function  view($id){
+        //$this->set('report', $this->Report->read('',$id));
+
+
+        $themes =  $this->Theme->find('all');
+        $theme =  array();
+
+        foreach($themes as $item){
+            $theme[$item['Theme']['id']] =  $item['Theme'];
+        }
+
+        $this->set('themes', $theme);
+        $this->ReportQuestion->bindModel(array(
+            'belongsTo' => array(
+                'Question' => array(
+
+                    'foreignKey' => 'questions_id',
+                )
+            )
+        ));
+        $reports = $this->ReportQuestion->find('all',array(
+            'conditions' =>  array('ReportQuestion.reports_id' =>  $id,
+            ),'order' => array('ReportQuestion.themes_id')));
+        $count = count($reports);
+        $mark = 0;
+        $themes_mark = array();
+        $themes_id = '';
+        $themes_count = array();
+        foreach($reports as $item){
+            if($themes_id !== $item['ReportQuestion']['themes_id']) {
+                $themes_id = $item['ReportQuestion']['themes_id'];
+
+                $themes_mark[$themes_id] = 0;
+                $themes_count[$themes_id] = 0;
+            }
+            if(((int)$item['ReportQuestion']['correct']) == 1){
+                if( $item['ReportQuestion']['priority'] == 0){
+                    $themes_mark[$themes_id] += (int)$item['ReportQuestion']['correct'];
+                    $mark+= (int)$item['ReportQuestion']['correct'];
+                }
+                else{
+                    $mark+= ((int)$item['ReportQuestion']['correct'])/2;
+                    $themes_mark[$themes_id] += ((int)$item['ReportQuestion']['correct'])/2;
+                }
+
+            }
+
+            $themes_count[$themes_id] += 1;
+
+        }
+        if($mark !== 0){
+            $mark = $mark/$count*100;
+            $this->Report->read(null, $id);
+            $this->Report->set('mark', $mark);
+            $this->Report->save();
+            $this->set('mark', $mark);
+
+
+        }else{
+            $this->Report->read(null, $id);
+            $this->Report->set('mark', $mark);
+            $this->Report->save();
+            $this->set('mark', $mark);
+        }
+        foreach($themes_mark as $item => $val){
+            $themes_marks[$item]['id'] =  $item;
+            $themes_marks[$item]['mark'] =  $val/$themes_count[$item]*100;
+
+        }
+        $this->set('themes_marks', $themes_marks);
+        $this->set('reports', $reports);
+
 
     }
 }

@@ -3,27 +3,27 @@
 
     {{ form.hidden('id') }}
 
-        <div class="section">
+        <div class="row">
             <label>Имя группы:</label>
-            <p class="error"></p>
+
             {{ form.input('title', {'div' : false, 'label' : false }) }}
         </div>
 
     <div class="row">
         <label>Предмет:</label>
-        <div class="row">
+
             <select name="data[Theme][subjects_id]" id="subject_id" >
                 {% for subject in subjects %}
                     <option {% if subject.Subject.id == _view.request.data['Theme']['subjects_id'] %}selected="selected" {% endif %} value="{{ subject.Subject.id}}">{{ subject.Subject.title }}</option>
                 {% endfor %}
             </select>
-        </div>
+
     </div>
 
 
-    <div class="section last">
+    <div class="row">
         <div>
-            {{ form.submit('Сохранить', {'class' : 'uibutton loading'}) }}
+            {{ form.submit('Сохранить', {'class' : 'btn btn-primary'}) }}
         </div>
     </div>
 

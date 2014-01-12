@@ -8,6 +8,7 @@
     <link type="text/css" rel="stylesheet" href="/css/reset.css" />
     <link type="text/css" rel="stylesheet" href="/css/style.css" />
     <link type="text/css" rel="stylesheet" href="/css/rcarousel.css" />
+    <link href="/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="/js/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src="/js/jquery.ui.core.js"></script>
     <script type="text/javascript" src="/js/jquery.ui.widget.js"></script>
@@ -18,6 +19,7 @@
                 var _total, i, _link;
 
                 _total = $( "#carousel" ).rcarousel( "getTotalPages" );
+                var randNum = Math.floor(Math.random()*(TOTAL_ITEMS+1));
 
                 for ( i = 0; i < _total; i++ ) {
                     _link = $( "<a href='#'></a>" );

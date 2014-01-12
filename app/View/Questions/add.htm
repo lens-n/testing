@@ -63,7 +63,7 @@
 </div>
     <div class="section last">
         <div>
-            {{ form.submit('Сохранить', {'class' : 'uibutton loading'}) }}
+            {{ form.submit('Сохранить', {'class' : 'btn btn-primary'}) }}
         </div>
     </div>
 
@@ -116,7 +116,7 @@
                     $('#answers').html( '<input name="data[Question][answer_correct]" type="text" id="QuestionAnswerCorrect">' );
                     break;
                 case '1' :
-                    $('#answers').html( '<label>Правильный ответ:</label><br><input name="data[Question][answer_correct]" type="text" id="QuestionAnswerCorrect"><br>Остальные:<button  id="add_answer">+</button><br>' +
+                    $('#answers').html( '<label>Правильный ответ:</label><br><input name="data[Question][answer_correct]" type="text" id="QuestionAnswerCorrect"><br>Остальные:<button  id="add_answer" >+</button><br>' +
                             '<input name="data[Question][_serialize][]" type="text" id ="qst1">' );
                     break;
                 case '2' :

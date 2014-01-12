@@ -4,7 +4,7 @@
     {{ form.hidden('id') }}
     {{ form.hidden('date') }}
 
-        <div class="section">
+        <div class="row">
             <label>Название теста:</label>
             <p class="error"></p>
             {{ form.input('title', {'div' : false, 'label' : false }) }}
@@ -12,70 +12,70 @@
 
 <div class="row">
     <label>Предмет:</label>
-    <div class="row">
+
         <select name="data[Test][subject_id]" id="subject_id" >
             {% for subject in subjects %}
                 <option {% if subject.Subject.id == _view.request.data['Test']['subject_id'] %}selected="selected" {% endif %} value="{{ subject.Subject.id}}">{{ subject.Subject.title }}</option>
             {% endfor %}
         </select>
-    </div>
+
 </div>
 <div class="row">
     <label>Темы:</label>
-    <div class="row" id="themes">
+    <div  id="themes">
 
     </div>
 </div>
 <div class="row">
     <label>Курс:</label>
-    <div class="row">
+
         <select name="data[Test][cours_id]" id="cours_id" >
             {% for cours in courses %}
                 <option {% if  cours.Cours.id == _view.request.data['Test']['cours_id'] %}selected="selected" {% endif %} value="{{ cours.Cours.id}}">{{ cours.Cours.title }}</option>
             {% endfor %}
         </select>
-    </div>
+
 </div>
 <div class="row">
     <label>Факультет:</label>
-    <div class="row">
+
         <select name="data[Test][faculty_id]" id="faculty_id" >
             {% for faculty in faculties %}
                 <option {% if faculty.Faculty.id == _view.request.data['Test']['faculty_id'] %}selected="selected" {% endif %} value="{{ faculty.Faculty.id}}">{{ faculty.Faculty.title }}</option>
             {% endfor %}
         </select>
-    </div>
+
 </div>
 
 
 <div class="row">
     <label>Группа:</label>
-    <div class="row">
+
         <select name="data[Test][group_id]" id="groups" >
             {% for group in groups %}
                 <option {% if group.Group.id ==_view.request.data['Test']['group_id'] %}selected="selected" {% endif %} value="{{ group.Group.id}}">{{ group.Group.title }}</option>
             {% endfor %}
         </select>
-    </div>
+
 </div>
 <div class="row">
     <label>Преподователь:</label>
-    <div class="row">
+
         <select name="data[Test][teacher_id]" id="teacher_id" >
             {% for teacher in teachers %}
                 <option {% if teacher.Teacher.id == _view.request.data['Test']['teacher_id'] %}selected="selected" {% endif %} value="{{ teacher.Teacher.id}}">{{ teacher.Teacher.sname }} {{ teacher.Teacher.fname }} {{ teacher.Teacher.pname }}</option>
             {% endfor %}
         </select>
-    </div>
+
 </div>
-<div class="section">
+<div class="row">
     <label>Пароль:</label>
     <p class="error"></p>
     {{ form.input('Test.config.password', {'div' : false, 'label' : false }) }}
 </div>
 <div class="row">
     <label>Мин. кол. вопросов по теме:</label>
-    <div class="row">
+
         <select name="data[Test][config][min]"  >
             {% for min in 2..4 %}
             <option {% if  _view.request.data['Test']['config']['min'] == min %}selected="selected" {% endif %} value="{{ min }}">{{ min }}</option>
@@ -83,11 +83,11 @@
 
 
         </select>
-    </div>
+
 </div>
 <div class="row">
     <label>Макс. кол. вопросов по теме:</label>
-    <div class="row">
+
         <select name="data[Test][config][max]"  >
             {% for max in 4..8 %}
                 <option {% if  _view.request.data['Test']['config']['max'] == max %}selected="selected" {% endif %} value="{{ max }}">{{ max }}</option>
@@ -95,7 +95,7 @@
 
 
         </select>
-    </div>
+
 </div>
 
 
@@ -113,9 +113,9 @@
     </div>
 </div>#}
 
-    <div class="section last">
+    <div class="row">
         <div>
-            {{ form.submit('Сохранить', {'class' : 'uibutton loading'}) }}
+            {{ form.submit('Сохранить', {'class' : 'btn btn-primary'}) }}
         </div>
     </div>
 
@@ -183,6 +183,8 @@
         });
 
     });
+
+
 
 </script>
 
