@@ -40,4 +40,23 @@ class AppController extends Controller {
 
 
 
+
+
+
+    public function check(){
+        if(($this->Session->read('Login') == 'True')){
+            $this->autoRender = 'false';
+
+        }
+        else{
+            if(!($this->request->here == '/'))
+                $this->redirect('/admin/login');
+        };
+    }
+
+
+
+
+
+
 }

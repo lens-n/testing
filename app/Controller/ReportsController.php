@@ -12,29 +12,13 @@ class ReportsController extends AppController{
 
     public $uses = array('Report','Faculty', 'Cours', 'Test', 'Subject', 'Teacher', 'Theme', 'Question', 'Student', 'Report' ,'ReportQuestion', 'Student');
 
+    public function beforeFilter() {
+        parent::beforeFilter();
+        $this->check();
+    }
+
     public function index(){
 
-
-      /*  $groups = $this->Group->find('all');
-        $group = array();
-        foreach($groups  as $item){
-            $group[$item['Group']['id']] =  $item['Group'];
-        }
-        $this->set('groups', $group);
-
-        $faculties = $this->Faculty->find('all');
-        $faculty = array();
-        foreach($faculties  as $item){
-            $faculty[$item['Faculty']['id']] =  $item['Faculty'];
-        }
-        $this->set('faculties', $faculty);
-
-        $teachers = $this->Teacher->find('all');
-        $teacher = array();
-        foreach($teachers  as $item){
-            $teacher[$item['Teacher']['id']] =  $item['Teacher'];
-        }
-        $this->set('teachers', $teacher);*/
 
         $this->set('tests', $this->Test->find('all'));
 

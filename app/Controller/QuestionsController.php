@@ -11,6 +11,12 @@ class QuestionsController extends AppController{
     public $helpers = array('Html', 'Form');
     public $uses = array( 'Theme', 'Subject', 'Question');
 
+
+    public function beforeFilter() {
+        parent::beforeFilter();
+        $this->check();
+    }
+
     public function index(){
         $questions = $this->Question->find('all',    array(
             'order' => array('Question.subjects_id')));

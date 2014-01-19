@@ -11,6 +11,11 @@ class GroupsController extends AppController{
     public $helpers = array('Html', 'Form');
     public $uses = array('Group','Faculty', 'Cours');
 
+    public function beforeFilter() {
+        parent::beforeFilter();
+        $this->check();
+    }
+
     public function index(){
         $this->set('groups', $this->Group->find('all',    array(
             'order' => array('Group.cours_id' => 'asc'))));

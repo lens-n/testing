@@ -12,6 +12,12 @@ class StudentsController extends AppController{
     public $uses = array('Group','Faculty', 'Cours','Student');
 
 
+    public function beforeFilter() {
+        parent::beforeFilter();
+        $this->check();
+    }
+
+
     public function index(){
         $this->set('students', $this->Student->find('all'));
         $this->set('title_for_layout', 'Список студентов');

@@ -12,6 +12,11 @@ class TeachersController extends AppController{
     public $uses = array('Teacher');
 
 
+    public function beforeFilter() {
+        parent::beforeFilter();
+        $this->check();
+    }
+
     public function index(){
         $this->set('teachers', $this->Teacher->find('all'));
         $this->set('title_for_layout', 'Список преподавателей');

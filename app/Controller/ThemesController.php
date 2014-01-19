@@ -11,6 +11,12 @@ class ThemesController extends AppController{
     public $helpers = array('Html', 'Form');
     public $uses = array('Theme', 'Subject');
 
+
+    public function beforeFilter() {
+        parent::beforeFilter();
+        $this->check();
+    }
+
     public function index(){
         $this->set('themes', $this->Theme->find('all'));
 

@@ -10,7 +10,12 @@ App::uses('AppController', 'Controller');
 class FacultiesController extends AppController{
     public $helpers = array('Html', 'Form');
     public $uses = array('Faculty');
-    var $scaffold;
+
+
+    public function beforeFilter() {
+        parent::beforeFilter();
+        $this->check();
+    }
 
     public function index(){
         $this->set('faculties', $this->Faculty->find('all'));

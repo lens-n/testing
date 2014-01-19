@@ -69,18 +69,15 @@
 
 </div>
 <div class="row">
-    <label>Начало диапазона:</label>
-    <p class="error"></p>
+    <label>Начало диапазона IP:</label>
     {{ form.input('Test.config.min_ip', {'div' : false, 'label' : false }) }}
 </div>
 <div class="row">
-    <label>Конец диапазона:</label>
-    <p class="error"></p>
+    <label>Конец диапазона IP:</label>
     {{ form.input('Test.config.max_ip', {'div' : false, 'label' : false }) }}
 </div>
 <div class="row">
     <label>Мин. кол. вопросов по теме:</label>
-
         <select name="data[Test][config][min]"  >
             {% for min in 2..4 %}
             <option {% if  _view.request.data['Test']['config']['min'] == min %}selected="selected" {% endif %} value="{{ min }}">{{ min }}</option>

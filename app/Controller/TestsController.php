@@ -1,5 +1,7 @@
 <?php
 App::uses('AppController', 'Controller');
+
+
 /**
  * StudentsController
  *
@@ -13,6 +15,12 @@ class TestsController extends AppController{
     public $components = array(
         'RequestHandler'
     );
+
+
+    public function beforeFilter() {
+        parent::beforeFilter();
+        $this->check();
+    }
 
     public function index(){
 
@@ -110,27 +118,24 @@ class TestsController extends AppController{
     }
 
     public function start($id, $student_id){
-        $ip = $this->request->clientIp();
+
 
         $this->layout = 'test';
         $test = $this->Test->read('', $id);
         $test = $test['Test'];
         $config = json_decode($test['config'],true);
 
-        //$min_ip = '127.0.0.2';
-        //$max_ip = '127.255.255.255';
-        $min_ip = explode('.',$config['min_ip']);
-        $max_ip = explode('.',$config['max_ip']);
+        if(!empty($config['min_ip']) && !empty($config['max_ip']) ){
 
+            $ip = $this->request->clientIp();
+            $min_ip = explode('.',$config['min_ip']);
+            $max_ip = explode('.',$config['max_ip']);
+            $info = explode('.', $ip);
 
-
-        $info = explode('.', $ip);
-
-
-        for ($i = 0; $i < 4; $i++) {
-            if (!($info[$i] >= $min_ip[$i] && $info[$i] <= $max_ip[$i])) {
-
-                $this->redirect('/');
+            for ($i = 0; $i < 4; $i++) {
+                if (!($info[$i] >= $min_ip[$i] && $info[$i] <= $max_ip[$i])) {
+                    $this->redirect('/');
+                }
             }
         }
 

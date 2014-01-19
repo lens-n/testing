@@ -10,6 +10,12 @@ App::uses('AppController', 'Controller');
 class SubjectsController extends AppController{
     public $helpers = array('Html', 'Form');
 
+
+    public function beforeFilter() {
+        parent::beforeFilter();
+        $this->check();
+    }
+
     public function index(){
         $this->set('subjects', $this->Subject->find('all'));
 

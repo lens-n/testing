@@ -1,4 +1,4 @@
-    <h2>{{ test.title }}</h2><a href="/tests/stop" style="float:right;margin-top: -25px;"><span>Окончить тест</span></a>
+    <h2>Тест: "{{ test.title }}"</h2><a href="/tests/stop" style="float:right;margin-top: -25px;"><span>Окончить тест</span></a>
     <div id="container" style="margin-left: -150px;">
         <div id="carousel">
             {% for question in questions %}
@@ -50,15 +50,15 @@
 
     function AjaxFormRequest(form_id,url) {
         jQuery.ajax({
-            url:     "/tests/save_answer/"+url, //Адрес подгружаемой страницы
-            type:     "POST", //Тип запроса
-            dataType: "html", //Тип данных
+            url:     "/tests/save_answer/"+url,
+            type:     "POST",
+            dataType: "html",
             data: jQuery("#"+form_id).serialize(),
-            success: function(response) { //Если все нормально
+            success: function(response) {
                 $('#alert').html( response );
-               // document.getElementById(result_id).innerHTML = response;
+
             },
-            error: function(response) { //Если ошибка
+            error: function(response) {
                 $('#alert').html( response );
             }
         });

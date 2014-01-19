@@ -11,6 +11,11 @@ class CoursesController extends AppController{
     public $helpers = array('Html', 'Form');
     public $uses = array('Cours');
 
+    public function beforeFilter() {
+        parent::beforeFilter();
+        $this->check();
+    }
+
     public function index(){
         $this->set('courses', $this->Cours->find('all'));
         $this->set('title_for_layout', 'Список факультетов');
