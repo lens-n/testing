@@ -19,7 +19,7 @@
                 var _total, i, _link;
 
                 _total = $( "#carousel" ).rcarousel( "getTotalPages" );
-                var randNum = Math.floor(Math.random()*(TOTAL_ITEMS+1));
+
 
                 for ( i = 0; i < _total; i++ ) {
                     _link = $( "<a href='#'></a>" );
@@ -136,10 +136,10 @@
 
     .slide form{
         text-align: left;
-        margin-left: 100px;
+        margin-left: 50px;
     }
 
-    .slide  h1 {
+    .slide  h2 {
         font: 72px/1 Anton, sans-serif;
         color: #ff5c43;
         margin: 0;
@@ -189,14 +189,14 @@
 
 
     <a href="index.html"><img src="/images/logo.png" alt="Business Events" width="281" height="56" border="0" class="logo" title="Business Events" /></a>
-    <h1 id="alert" style="color: green;
+    <h2 id="alert" style="color: green;
 float: right;
-margin-top: 100px;"></h1>
+margin-top: 100px;"></h2>
 </div>
 
 
 <div id="bodyPan">
-    <h1>{{ session.flash() }}</h1>
+    <h2>{{ session.flash() }}</h2>
     {{ _view.fetch('content') }}
 
 </div>

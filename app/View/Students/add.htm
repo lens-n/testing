@@ -1,54 +1,52 @@
-<h1>Добавление студента:</h1>
+<h2>Добавление студента:</h2>
 {{ form.create('Student', {'class':'form'}) }}
 
     {{ form.hidden('Student.id') }}
 
 
-        <div class="section">
+        <div class="row">
             <label>Фамилия:</label>
-            <p class="error"></p>
+ 
             {{ form.input('Student.sname', {'div' : false, 'label' : false }) }}
         </div>
-        <div class="section">
+        <div class="row">
             <label>Имя:</label>
-            <p class="error"></p>
-
             {{ form.input('Student.fname', {'div' : false, 'label' : false }) }}
         </div>
-        <div class="section">
+        <div class="row">
             <label>Отчество:</label>
-            <p class="error"></p>
+          
             {{ form.input('Student.pname', {'div' : false, 'label' : false }) }}
         </div>
             <div class="row">
                 <label>Курс:</label>
-                <div class="row">
+
                     <select name="data[Student][cours_id]" id="cours_id" >
                         {% for cours in courses %}
                             <option {% if  cours.Cours.id == _view.request.data['Student']['cours_id'] %}selected="selected" {% endif %} value="{{ cours.Cours.id}}">{{ cours.Cours.title }}</option>
                         {% endfor %}
                     </select>
-                </div>
+
             </div>
             <div class="row">
                 <label>Факультет:</label>
-                <div class="row">
+
                     <select name="data[Student][faculty_id]" id="faculty_id" >
                         {% for faculty in faculties %}
                             <option {% if faculty.Faculty.id == _view.request.data['Student']['faculty_id'] %}selected="selected" {% endif %} value="{{ faculty.Faculty.id}}">{{ faculty.Faculty.title }}</option>
                         {% endfor %}
                     </select>
-                </div>
+
             </div>
         <div class="row">
             <label>Группа:</label>
-            <div class="row">
+
                 <select name="data[Student][group_id]" id="groups" >
                     {% for group in groups %}
                         <option {% if grop.Group.id == _view.request.data['Student']['group_id'] %}selected="selected" {% endif %} value="{{ group.Group.id}}">{{ group.Group.title }}</option>
                     {% endfor %}
                 </select>
-            </div>
+
         </div>
 
     <div class="section last">

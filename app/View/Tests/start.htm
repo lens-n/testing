@@ -1,8 +1,8 @@
-    <h1>{{ test.title }}</h1><a href="/tests/stop" style="float:right;margin-top: -25px;"><span>Окончить тест</span></a>
+    <h2>{{ test.title }}</h2><a href="/tests/stop" style="float:right;margin-top: -25px;"><span>Окончить тест</span></a>
     <div id="container" style="margin-left: -150px;">
         <div id="carousel">
             {% for question in questions %}
-            <div  class="slide">
+            <div  class="slide ">
                 <h3>{{ question.text }}</h3><br>
                 {% if question.type == 0 %}
                     <form id="form{{ question.id }}" method="post" >
@@ -24,10 +24,10 @@
                         {% for answer in question.answers %}
                         <script type="text/javascript">
                             if(getRandomInt(0,1) == 0){
-                                $('#answer{{ question.id  }}').after('<br><strong>{{ answer }}</strong><input type="radio" name="answer" class="answer"  value="{{ answer }}" ><br>');
+                                $('#answer{{ question.id  }}').after('<br><div><strong>{{ answer }}</strong><input type="radio" name="answer" class="answer"  value="{{ answer }}" ></div><br>');
                             }
                             else{
-                                $('#answer{{ question.id  }}').before('<br><strong>{{ answer }}</strong><input type="radio" name="answer" class="answer"  value="{{ answer }}" ><br>');
+                                $('#answer{{ question.id  }}').before('<br><div><strong>{{ answer }}</strong><input type="radio" name="answer" class="answer"  value="{{ answer }}" ></div><br>');
                             }
                         </script>
                         {% endfor %}

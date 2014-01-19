@@ -1,4 +1,4 @@
-<h1>Добавление теста:</h1>
+<h2>Добавление теста:</h2>
 {{ form.create('Test', {'class':'form'}) }}
 
     {{ form.hidden('id') }}
@@ -69,9 +69,14 @@
 
 </div>
 <div class="row">
-    <label>Пароль:</label>
+    <label>Начало диапазона:</label>
     <p class="error"></p>
-    {{ form.input('Test.config.password', {'div' : false, 'label' : false }) }}
+    {{ form.input('Test.config.min_ip', {'div' : false, 'label' : false }) }}
+</div>
+<div class="row">
+    <label>Конец диапазона:</label>
+    <p class="error"></p>
+    {{ form.input('Test.config.max_ip', {'div' : false, 'label' : false }) }}
 </div>
 <div class="row">
     <label>Мин. кол. вопросов по теме:</label>

@@ -1,8 +1,29 @@
-<h1>Отчеты:</h1>
+<h2>Отчеты:</h2>
+<table class="table table-striped">
+    <tr>
+        <th>ID</th>
+        <th>Фамилия</th>
+        <th>Имя</th>
+        <th>Название теста</th>
+        <th> Оценка</th>
+        <th></th>
+    </tr>
+ {% for report in reports %}
+     <tr>
+         <td>{{ report.Report.id }}</td>
+         <td>{{ students[report.Report.students_id ]['sname'] }}</td>
+         <td>{{ students[report.Report.students_id ]['fname'] }}</td>
+         <td>{{ tests[report.Report.tests_id ]['title'] }}</td>
+         <td> {{ report.Report.mark }}     </td>
+         <td><a href="/reports/view/ {{ report.Report.id }}">посмотреть</a></td>
+     </tr>
 
-{% for report in reports %}
-    {{ report.Report.id }} {{ students[report.Report.students_id ]['sname'] }}{{ students[report.Report.students_id ]['fname'] }} тест: <strong>{{ tests[report.Report.tests_id ]['title'] }}</strong> оценка:   <strong>{{ report.Report.mark }}    </strong>   <a href="/reports/view/ {{ report.Report.id }}">посмотреть</a><br/>
-{% endfor %}
+
+    {% endfor %}
+
+
+</table>
+
 
 <br/>
 <a href="/subjects/add">Добавить</a>

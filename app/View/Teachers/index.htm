@@ -1,4 +1,4 @@
-<h1>Преподаватели:</h1>
+<h2>Преподаватели:</h2>
 
 {% for teacher in teachers %}
     {{ teacher.Teacher.sname}} {{ teacher.Teacher.fname}} {{ teacher.Teacher.pname}}    <a href="/teachers/edit/{{ teacher.Teacher.id}}">изменить</a><br/>

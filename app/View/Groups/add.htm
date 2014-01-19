@@ -1,34 +1,34 @@
-<h1>Добавление группы:</h1>
+<h2>Добавление группы:</h2>
 {{ form.create('Group', {'class':'form'}) }}
 
     {{ form.hidden('id') }}
 
-        <div class="section">
+        <div class="row">
             <label>Имя группы:</label>
-            <p class="error"></p>
+          
             {{ form.input('title', {'div' : false, 'label' : false }) }}
         </div>
 
     <div class="row">
         <label>Факультет:</label>
-        <div class="row">
+
             <select name="data[Group][faculties_id]" id="group_id" >
                 {% for faculty in faculties %}
                     <option {% if faculty.Faculty.id == _view.request.data['Group']['faculties_id'] %}selected="selected" {% endif %} value="{{ faculty.Faculty.id}}">{{ faculty.Faculty.title }}</option>
                 {% endfor %}
             </select>
-        </div>
+
     </div>
 
     <div class="row">
         <label>Курс:</label>
-        <div class="row">
+
             <select name="data[Group][cours_id]" id="shop_brands" >
                 {% for cours in courses %}
                     <option {% if  cours.Cours.id == _view.request.data['Group']['cours_id'] %}selected="selected" {% endif %} value="{{ cours.Cours.id}}">{{ cours.Cours.title }}</option>
                 {% endfor %}
             </select>
-        </div>
+
     </div>
     <div class="section last">
         <div>

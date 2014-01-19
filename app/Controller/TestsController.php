@@ -10,6 +10,9 @@ App::uses('AppController', 'Controller');
 class TestsController extends AppController{
     public $helpers = array('Html', 'Form');
     public $uses = array('Group','Faculty', 'Cours', 'Test', 'Subject', 'Teacher', 'Theme', 'Question', 'Student', 'Report' ,'ReportQuestion');
+    public $components = array(
+        'RequestHandler'
+    );
 
     public function index(){
 
@@ -107,9 +110,30 @@ class TestsController extends AppController{
     }
 
     public function start($id, $student_id){
+        $ip = $this->request->clientIp();
+
         $this->layout = 'test';
         $test = $this->Test->read('', $id);
         $test = $test['Test'];
+        $config = json_decode($test['config'],true);
+
+        //$min_ip = '127.0.0.2';
+        //$max_ip = '127.255.255.255';
+        $min_ip = explode('.',$config['min_ip']);
+        $max_ip = explode('.',$config['max_ip']);
+
+
+
+        $info = explode('.', $ip);
+
+
+        for ($i = 0; $i < 4; $i++) {
+            if (!($info[$i] >= $min_ip[$i] && $info[$i] <= $max_ip[$i])) {
+
+                $this->redirect('/');
+            }
+        }
+
 
         if((int)$test['active'] !== 0){
             if(!($this->Session->read('Report_id'))){
@@ -120,7 +144,7 @@ class TestsController extends AppController{
 
             $themes_list = json_decode($test['themes'],true);
 
-            $config = json_decode($test['config'],true);
+
 
             $questions =  $this->Question->find('all',array(
                 'conditions' =>  array('Question.themes_id' =>  $themes_list/*, 'Question.priority' => '0'*/ ), 'limit' => $config['max']));
@@ -132,6 +156,8 @@ class TestsController extends AppController{
             }
             $this->set('test', $test);
             $this->set('questions', $question);
+            $this->set('IP', $this->request->clientIp());
+
         }
         else{
             $this->Session->setFlash('error');
@@ -293,7 +319,7 @@ class TestsController extends AppController{
           $mark = 1;
             $data['ReportQuestion']['correct'] = $mark;
             $this->ReportQuestion->saveAll($data);
-          //  exit('Ответ принят!');
+            exit('Ответ принят!');
         }
         else{
             $mark = 0;
@@ -303,12 +329,6 @@ class TestsController extends AppController{
       /*      $theme = $this->request->data['themes_id'];
             $quest = $this->Question->find('all',array(
                 'conditions' =>  array('Question.themes_id' =>  $theme, 'Question.priority' => '1' )));*/
-
-
-
-
-
-
 
             exit('Ответ принят!');
         }

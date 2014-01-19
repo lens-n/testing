@@ -1,21 +1,21 @@
-<h1>Добавление преподователя:</h1>
+<h2>Добавление преподователя:</h2>
 {{ form.create('Teacher', {'class':'form'}) }}
 
     {{ form.hidden('id') }}
 
         <div class="section">
             <label>Имя:</label>
-            <p class="error"></p>
+          
             {{ form.input('fname', {'div' : false, 'label' : false }) }}
         </div>
         <div class="section">
             <label>Фамилия:</label>
-            <p class="error"></p>
+          
             {{ form.input('sname', {'div' : false, 'label' : false }) }}
         </div>
         <div class="section">
             <label>Отчество:</label>
-            <p class="error"></p>
+          
             {{ form.input('pname', {'div' : false, 'label' : false }) }}
         </div>
     <div class="section last">
