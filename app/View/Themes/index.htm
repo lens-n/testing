@@ -1,11 +1,11 @@
 <h2>Темы:</h2>
-<table width="80%">
+<table class="table table-striped">
     <tr>
-        <td>Ид</td>
-        <td>Тема</td>
-        <td>Предмет</td>
-        <td></td>
-        <td></td>
+        <th>Ид</th>
+        <th>Тема</th>
+        <th>Предмет</th>
+        <th></th>
+        <th></th>
     </tr>
 {% for theme in themes %}
     <tr>
@@ -13,9 +13,8 @@
         <td>{{ theme.Theme.title }}</td>
         <td>{{ subjects[theme.Theme.subjects_id]['title']}} </td>
         <td><a href="/themes/edit/{{ theme.Theme.id }}">изменить</a></td>
-        <td> <a href="/themes/del/{{ theme.Theme.id }}">x</a></td>
+        <td > <a style="color:#f00" href="/themes/del/{{ theme.Theme.id }}">x</a></td>
     </tr>
-
 {% endfor %}
 </table>
 <br/>

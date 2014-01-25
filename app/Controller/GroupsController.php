@@ -39,7 +39,6 @@ class GroupsController extends AppController{
     public function add(){
         if($this->request->data){
             $this->Group->saveAll($this->request->data);
-            //$this->setFlash('Факультет сохранен', 'success');
             $this->redirect('/groups');
         }
         $this->set('courses', $this->Cours->find('all'));

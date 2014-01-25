@@ -1,4 +1,4 @@
-<h2>Список студентов{% set a = app.session.get('error') %}{{ a }}</h2>
+<h2>Список студентов</h2>
 <table class="table table-striped"   >
     {% for student in students %}
         <tr>
@@ -12,7 +12,6 @@
                 <a href="/tests/start/{{ test.Test.id }}/{{ student.Student.id}}"> Начать тест "{{ test.Test.title }}"</a>
             </td>
             {% endfor %}
-
 
         </tr>
     {% endfor %}

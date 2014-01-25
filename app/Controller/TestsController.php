@@ -134,7 +134,7 @@ class TestsController extends AppController{
 
             for ($i = 0; $i < 4; $i++) {
                 if (!($info[$i] >= $min_ip[$i] && $info[$i] <= $max_ip[$i])) {
-                    $this->redirect('/');
+                   $this->redirect('/');
                 }
             }
         }
@@ -148,8 +148,6 @@ class TestsController extends AppController{
             }
 
             $themes_list = json_decode($test['themes'],true);
-
-
 
             $questions =  $this->Question->find('all',array(
                 'conditions' =>  array('Question.themes_id' =>  $themes_list/*, 'Question.priority' => '0'*/ ), 'limit' => $config['max']));

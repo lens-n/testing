@@ -1,10 +1,18 @@
 <h2>Преподаватели:</h2>
 
-{% for teacher in teachers %}
-    {{ teacher.Teacher.sname}} {{ teacher.Teacher.fname}} {{ teacher.Teacher.pname}}    <a href="/teachers/edit/{{ teacher.Teacher.id}}">изменить</a><br/>
-{% endfor %}
+<table class="table table-striped">
+    {% for teacher in teachers %}
+        <tr>
+            <td>{{ teacher.Teacher.sname}}</td>
+            <td>{{ teacher.Teacher.fname}}</td>
+            <td> {{ teacher.Teacher.pname}}</td>
+            <td><a href="/students/edit/{{ student.Student.id}}">изменить</a></td>
+            <td><a href="/students/del/{{ student.Student.id}}" style="color: red">x</a></td>
 
-<br/>
+        </tr>
+    {% endfor %}
+</table>
+
 <a href="/teachers/add">Добавить</a>
 
 

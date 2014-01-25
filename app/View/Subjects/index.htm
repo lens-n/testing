@@ -1,10 +1,22 @@
 <h2>Предметы:</h2>
+<table class="table table-striped" style="width: 40%">
+<tr>
+    <th>Предмет</th>
+    <th></th>
+    <th></th>
+</tr>
+    {% for subject in subjects %}
+<tr>
+    <td> {{ subject.Subject.title }} </td>
+    <td><a href="/subjects/edit/{{ subject.Subject.id }}">изменить</a></td>
+    <td> <a href="/subjects/del/{{ subject.Subject.id }}" style="color: #f00">x</a></td>
+</tr>
+    {% endfor %}
 
-{% for subject in subjects %}
-    {{ subject.Subject.title }}  <a href="/subjects/edit/{{ subject.Subject.id }}">изменить</a>  <a href="/subjects/del/{{ subject.Subject.id }}">x</a><br/>
-{% endfor %}
+</table>
 
-<br/>
+
+
 <a href="/subjects/add">Добавить</a>
 
 
