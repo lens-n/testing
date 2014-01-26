@@ -86,7 +86,6 @@ class TestsController extends AppController{
             $this->request->data['Test']['config'] = json_encode($this->request->data['Test']['config']);
 
             if($this->Test->saveAll($this->request->data))
-            //$this->setFlash('Факультет сохранен', 'success');
                 $this->redirect('/tests');
             else
                 $this->redirect($this->referer());
@@ -112,6 +111,7 @@ class TestsController extends AppController{
     }
 
     public function getstudent(){
+        $this->layout = 'front-end';
         $this->set('students', $this->Student->find('all'));
         $this->set('tests', $this->Test->find('all',array(
             'conditions' =>  array('Test.active' =>  '1' ))));

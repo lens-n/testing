@@ -37,8 +37,11 @@ class AppController extends Controller {
     );
     public $viewClass = 'TwigView.Twig';
 
-
-
+    function beforeRender() {
+        if($this->name == 'CakeError') {
+            $this->layout = 'front-end';
+        }
+    }
 
 
 
@@ -49,7 +52,7 @@ class AppController extends Controller {
 
         }
         else{
-            if(!($this->request->here == '/'))
+            if(!($this->request->here == '/') && !($this->request->params['controller'] == 'tests' &&  $this->request->params['action'] == 'start'))
                 $this->redirect('/admin/login');
         };
     }

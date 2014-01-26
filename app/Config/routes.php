@@ -27,6 +27,7 @@
  * to use (in this case, /app/View/Pages/home.ctp)...
  */
 	Router::connect('/', array('controller' => 'tests', 'action' => 'getstudent'));
+	Router::connect('/admin', array('controller' => 'admin', 'action' => 'login'));
 /**
  * ...and connect the rest of 'Pages' controller's URLs.
  */

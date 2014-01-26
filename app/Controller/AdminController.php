@@ -12,7 +12,7 @@ class AdminController extends AppController{
     public $uses = array('Config');
 
     public function login(){
-    if($this->request->data['login'] &&  $this->request->data['password']){
+    if(!empty($this->request->data['login']) &&  $this->request->data['password']){
 
       $configs =   $this->Config->find('first');
 
@@ -21,6 +21,7 @@ class AdminController extends AppController{
             $this->redirect('/tests');
         }
     }
+        $this->layout = 'front-end';
 
     }
 
