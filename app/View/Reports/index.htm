@@ -6,6 +6,7 @@
         <th>Имя</th>
         <th>Название теста</th>
         <th> Оценка</th>
+        <th> ECTS</th>
         <th></th>
     </tr>
  {% for report in reports %}
@@ -15,6 +16,30 @@
          <td>{{ students[report.Report.students_id ]['fname'] }}</td>
          <td>{{ tests[report.Report.tests_id ]['title'] }}</td>
          <td> {{ report.Report.mark }}     </td>
+         {% if report.Report.mark > 89 %}
+             <td>  A  </td>
+         {% elseif  report.Report.mark > 79 %}
+
+             <td>  B </td>
+         {% elseif  report.Report.mark > 64 %}
+
+             <td>  C </td>
+         {% elseif  report.Report.mark > 54 %}
+
+             <td>  D </td>
+         {% elseif  report.Report.mark > 49 %}
+
+             <td>  E </td>
+         {% elseif  report.Report.mark > 34 %}
+
+             <td>  FX</td>
+         {% else  %}
+
+             <td>  F</td>
+         {% endif %}
+
+
+
          <td><a href="/reports/view/ {{ report.Report.id }}">посмотреть</a></td>
      </tr>
 

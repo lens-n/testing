@@ -45,14 +45,15 @@ class AppController extends Controller {
 
 
 
-
     public function check(){
         if(($this->Session->read('Login') == 'True')){
             $this->autoRender = 'false';
 
         }
         else{
-            if(!($this->request->here == '/') && !($this->request->params['controller'] == 'tests' &&  $this->request->params['action'] == 'start'))
+            if(!($this->request->here == '/') && !($this->request->params['controller'] == 'tests'
+                    &&  ($this->request->params['action'] == 'start' || $this->request->params['action'] == 'save_answer'
+                        || $this->request->params['action'] == 'stop' || $this->request->params['action'] == 'getstudent')))
                 $this->redirect('/admin/login');
         };
     }

@@ -4,7 +4,7 @@ div, p, ul, h2, img{margin:0px; padding:0px;}
 ul{list-style-type:none;}
 
 /*----TOP PANEL----*/
-#topPan{width:778px; height:141px; position:relative; margin:0 auto; font:14px/18px Arial, Helvetica, sans-serif;}
+#topPan{ height:141px; position:relative; margin:0 auto; font:14px/18px Arial, Helvetica, sans-serif;}
 #topPan ul{width:125px; height:22px; position:absolute; top:0px; right:130px;}
 #topPan ul li{float:left; width:45px; height:22px;}
 #topPan ul li a{width:45px; height:16px; display:block; background:url(../images/arrow1.gif) 40px 6px no-repeat #CC0000; color:#fff; font:13px/16px Arial, Helvetica, sans-serif; text-decoration:none;}
@@ -14,7 +14,7 @@ ul{list-style-type:none;}
 #topPan ul li.register a{width:65px; height:16px; display:block; background:url(../images/arrow1.gif) 65px 6px no-repeat #CC0000; color:#fff; font:13px/16px Arial, Helvetica, sans-serif; text-decoration:none; padding:0 0 0 10px;}
 #topPan ul li.register a:hover{background:url(../images/arrow1-hover.gif) 65px 6px no-repeat #CC0000; color:#FEF0B7; text-decoration:none;}
 
-#topPan img.logo{width:281px; height:56px; position:absolute; top:53px; left:29px;}
+#topPan img.logo{  margin-left: 100px;}
 
 #topPan p.callus{width:119px; height:25px; background:url(../images/callus-bg.gif) 0 0 no-repeat #212121; color:#fff; position:absolute; top:53px; right:115px; line-height:24px; text-align:center;}
 #topPan p.phone{width:130px; height:25px; background:#212121; color:#EAE8CD; position:absolute; top:83px; right:109px; font-size:20px; line-height:25px; text-align:center;}
@@ -62,7 +62,7 @@ ul{list-style-type:none;}
 
 /*----BODY PANEL----*/
 #bodyPan{width:686px; position:relative; margin:0 auto; min-height: 500px;}
-#bodyPan h2{width:300px; height:54px; background:#F2F0DC; color:#D80000; font:26px/54px "Trebuchet MS",Arial, Helvetica, sans-serif;}
+.answer{float:right; margin-right: 50px!important;}
 
 #bodyPan p{padding:10px 0 0;}
 #bodyPan p span{font-weight:bold;}

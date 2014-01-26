@@ -171,6 +171,7 @@ class TestsController extends AppController{
     }
 
     public function stop(){
+        $this->layout = 'front-end';
         if($this->Session->read('Report_id')){
             $themes =  $this->Theme->find('all');
             $theme =  array();

@@ -49,7 +49,7 @@
 
                 <option {% if _view.request.data['Question']['type'] == 0 %}selected="selected" {% endif %} value="0">Вписать</option>
             <option {% if _view.request.data['Question']['type'] == 1 %}selected="selected" {% endif %} value="1">Выбрать один вариант</option>
-                <option {% if _view.request.data['Question']['type'] == 2 %}selected="selected" {% endif %} value="2">Выбрать несколько</option>
+              {#  <option {% if _view.request.data['Question']['type'] == 2 %}selected="selected" {% endif %} value="2">Выбрать несколько</option>#}
 
         </select>
     </div>

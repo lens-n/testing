@@ -6,8 +6,8 @@
             <td>{{ teacher.Teacher.sname}}</td>
             <td>{{ teacher.Teacher.fname}}</td>
             <td> {{ teacher.Teacher.pname}}</td>
-            <td><a href="/students/edit/{{ student.Student.id}}">изменить</a></td>
-            <td><a href="/students/del/{{ student.Student.id}}" style="color: red">x</a></td>
+            <td><a href="/teachers/edit/{{teacher.Teacher.id}}">изменить</a></td>
+            <td><a href="/teachers/del/{{teacher.Teacher.id}}" style="color: red">x</a></td>
 
         </tr>
     {% endfor %}

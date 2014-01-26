@@ -15,7 +15,7 @@
                 {% endif %}
 
                 {% if question.type == 1 %}
-                    <form id="form{{ question.id }}" method="post" >
+                    <form id="form{{ question.id }}" method="post" class="test" >
                         <input type="hidden" name="question_id" value="{{ question.id }}">
                         <input type="hidden" name="priority" value="{{ question.priority }}">
                         <input type="hidden" name="themes_id" value="{{ question.themes_id }}">

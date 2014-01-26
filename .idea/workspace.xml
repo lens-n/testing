@@ -1,77 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5b3f1ff8-e392-450a-a971-a622aa704de6" name="Default" comment="Fix test add ajax">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/View/Tests/start.htm" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/tmp/cache/models/myapp_cake_model_default_testing_db_students" afterPath="" />
+    <list default="true" id="f35145e3-7c8f-4c51-a3d7-89fc29bc660c" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/testing_db.sql" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/webroot/images/leftfolder.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/webroot/images/logo.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/webroot/images/red-image.jpg" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Controller/AppController.php" afterPath="$PROJECT_DIR$/app/Controller/AppController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CONTRIBUTING.md" afterPath="$PROJECT_DIR$/CONTRIBUTING.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Controller/QuestionsController.php" afterPath="$PROJECT_DIR$/app/Controller/QuestionsController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Controller/TestsController.php" afterPath="$PROJECT_DIR$/app/Controller/TestsController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/webroot/victory_pro_template_2162.2/about.html" afterPath="$PROJECT_DIR$/app/webroot/victory_pro_template_2162.2/about.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/View/Courses/add.htm" afterPath="$PROJECT_DIR$/app/View/Courses/add.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/View/Questions/add.htm" afterPath="$PROJECT_DIR$/app/View/Questions/add.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/webroot/victory_pro_template_2162.2/all-free-download.com.url" afterPath="$PROJECT_DIR$/app/webroot/victory_pro_template_2162.2/all-free-download.com.url" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/webroot/victory_pro_template_2162.2/blog.html" afterPath="$PROJECT_DIR$/app/webroot/victory_pro_template_2162.2/blog.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/webroot/bootstrap/css/bootstrap.css" afterPath="$PROJECT_DIR$/app/webroot/bootstrap/css/bootstrap.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Console/cake.bat" afterPath="$PROJECT_DIR$/app/Console/cake.bat" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/Cake/Console/cake.bat" afterPath="$PROJECT_DIR$/lib/Cake/Console/cake.bat" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/Cake/Console/Templates/skel/Console/cake.bat" afterPath="$PROJECT_DIR$/lib/Cake/Console/Templates/skel/Console/cake.bat" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tmp/cache/cake_toolbar_cachebbfe8e43167de7611adb4e96bc0351d1" afterPath="$PROJECT_DIR$/app/tmp/cache/cake_toolbar_cachebbfe8e43167de7611adb4e96bc0351d1" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/webroot/victory_pro_template_2162.2/css/coin-slider.css" afterPath="$PROJECT_DIR$/app/webroot/victory_pro_template_2162.2/css/coin-slider.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/webroot/victory_pro_template_2162.2/contact.html" afterPath="$PROJECT_DIR$/app/webroot/victory_pro_template_2162.2/contact.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/View/Layouts/default.htm" afterPath="$PROJECT_DIR$/app/View/Layouts/default.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tmp/logs/error.log" afterPath="$PROJECT_DIR$/app/tmp/logs/error.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/View/Questions/index.htm" afterPath="$PROJECT_DIR$/app/View/Questions/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/View/Tests/index.htm" afterPath="$PROJECT_DIR$/app/View/Tests/index.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/View/Elements/footer.htm" afterPath="$PROJECT_DIR$/app/View/Elements/footer.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/View/Layouts/front-end.htm" afterPath="$PROJECT_DIR$/app/View/Layouts/front-end.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/View/Reports/index.htm" afterPath="$PROJECT_DIR$/app/View/Reports/index.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/View/Teachers/index.htm" afterPath="$PROJECT_DIR$/app/View/Teachers/index.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/webroot/business_events/index.html" afterPath="$PROJECT_DIR$/app/webroot/business_events/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/webroot/victory_pro_template_2162.2/index.html" afterPath="$PROJECT_DIR$/app/webroot/victory_pro_template_2162.2/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/webroot/business_events/license.txt" afterPath="$PROJECT_DIR$/app/webroot/business_events/license.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tmp/cache/persistent/myapp_cake_core_cake_dev_ru" afterPath="$PROJECT_DIR$/app/tmp/cache/persistent/myapp_cake_core_cake_dev_ru" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tmp/cache/persistent/myapp_cake_core_cake_ru" afterPath="$PROJECT_DIR$/app/tmp/cache/persistent/myapp_cake_core_cake_ru" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tmp/cache/persistent/myapp_cake_core_debug_kit_ru" afterPath="$PROJECT_DIR$/app/tmp/cache/persistent/myapp_cake_core_debug_kit_ru" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tmp/cache/persistent/myapp_cake_core_file_map" afterPath="$PROJECT_DIR$/app/tmp/cache/persistent/myapp_cake_core_file_map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tmp/cache/persistent/myapp_cake_core_method_cache" afterPath="$PROJECT_DIR$/app/tmp/cache/persistent/myapp_cake_core_method_cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tmp/cache/models/myapp_cake_model_default_testing_db_courses" afterPath="$PROJECT_DIR$/app/tmp/cache/models/myapp_cake_model_default_testing_db_courses" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tmp/cache/models/myapp_cake_model_default_testing_db_faculties" afterPath="$PROJECT_DIR$/app/tmp/cache/models/myapp_cake_model_default_testing_db_faculties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tmp/cache/models/myapp_cake_model_default_testing_db_groups" afterPath="$PROJECT_DIR$/app/tmp/cache/models/myapp_cake_model_default_testing_db_groups" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tmp/cache/models/myapp_cake_model_default_testing_db_list" afterPath="$PROJECT_DIR$/app/tmp/cache/models/myapp_cake_model_default_testing_db_list" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tmp/cache/models/myapp_cake_model_default_testing_db_teachers" afterPath="$PROJECT_DIR$/app/tmp/cache/models/myapp_cake_model_default_testing_db_teachers" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tmp/cache/models/myapp_cake_model_default_testing_db_students" afterPath="$PROJECT_DIR$/app/tmp/cache/models/myapp_cake_model_default_testing_db_students" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/webroot/js/script.js" afterPath="$PROJECT_DIR$/app/webroot/js/script.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/webroot/victory_pro_template_2162.2/js/script.js" afterPath="$PROJECT_DIR$/app/webroot/victory_pro_template_2162.2/js/script.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/View/Tests/start.htm" afterPath="$PROJECT_DIR$/app/View/Tests/start.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/webroot/css/style.css" afterPath="$PROJECT_DIR$/app/webroot/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/webroot/victory_pro_template_2162.2/css/style.css" afterPath="$PROJECT_DIR$/app/webroot/victory_pro_template_2162.2/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/webroot/victory_pro_template_2162.2/support.html" afterPath="$PROJECT_DIR$/app/webroot/victory_pro_template_2162.2/support.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/View/Layouts/test.htm" afterPath="$PROJECT_DIR$/app/View/Layouts/test.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="testing.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/StudentsController.php" changelist="5b3f1ff8-e392-450a-a971-a622aa704de6" time="1388323186883" ignored="false" />
-    <file path="/index.ctp" changelist="5b3f1ff8-e392-450a-a971-a622aa704de6" time="1387027002364" ignored="false" />
-    <file path="/default.ctp" changelist="5b3f1ff8-e392-450a-a971-a622aa704de6" time="1382209661055" ignored="false" />
-    <file path="/StudentModel.php" changelist="5b3f1ff8-e392-450a-a971-a622aa704de6" time="1382260433156" ignored="false" />
-    <file path="/a.dummy" changelist="5b3f1ff8-e392-450a-a971-a622aa704de6" time="1389010545487" ignored="false" />
-    <file path="/Studentq.php" changelist="5b3f1ff8-e392-450a-a971-a622aa704de6" time="1382274644876" ignored="false" />
-    <file path="/index.htm" changelist="5b3f1ff8-e392-450a-a971-a622aa704de6" time="1389023802895" ignored="false" />
-    <file path="/default.htm" changelist="5b3f1ff8-e392-450a-a971-a622aa704de6" time="1388322559680" ignored="false" />
-    <file path="/footer.htm" changelist="5b3f1ff8-e392-450a-a971-a622aa704de6" time="1388324375545" ignored="false" />
-    <file path="/style.css" changelist="5b3f1ff8-e392-450a-a971-a622aa704de6" time="1387032836341" ignored="false" />
-    <file path="/AdminController.php" changelist="5b3f1ff8-e392-450a-a971-a622aa704de6" time="1387033373375" ignored="false" />
-    <file path="/TestsController.php" changelist="5b3f1ff8-e392-450a-a971-a622aa704de6" time="1389026349313" ignored="false" />
-    <file path="/FacultiesController.php" changelist="5b3f1ff8-e392-450a-a971-a622aa704de6" time="1387108142362" ignored="false" />
-    <file path="/add.htm" changelist="5b3f1ff8-e392-450a-a971-a622aa704de6" time="1389022418633" ignored="false" />
-    <file path="/CoursesController.php" changelist="5b3f1ff8-e392-450a-a971-a622aa704de6" time="1387106755654" ignored="false" />
-    <file path="/GroupsController.php" changelist="5b3f1ff8-e392-450a-a971-a622aa704de6" time="1387127991454" ignored="false" />
-    <file path="$PROJECT_DIR$/../bestcats/app/Plugin/Admin/Controller/AdminPagesController.php" changelist="5b3f1ff8-e392-450a-a971-a622aa704de6" time="1387107972865" ignored="false" />
-    <file path="/Faculty.php" changelist="5b3f1ff8-e392-450a-a971-a622aa704de6" time="1387108119043" ignored="false" />
-    <file path="/Cours.php" changelist="5b3f1ff8-e392-450a-a971-a622aa704de6" time="1387109797741" ignored="false" />
-    <file path="/TeachersController.php" changelist="5b3f1ff8-e392-450a-a971-a622aa704de6" time="1387129359592" ignored="false" />
-    <file path="$PROJECT_DIR$/../bestcats/app/Plugin/Admin/View/Layouts/default.htm" changelist="5b3f1ff8-e392-450a-a971-a622aa704de6" time="1387138434984" ignored="false" />
-    <file path="/Dummy.txt" changelist="5b3f1ff8-e392-450a-a971-a622aa704de6" time="1389014479226" ignored="false" />
-    <file path="/SubjectsController.php" changelist="5b3f1ff8-e392-450a-a971-a622aa704de6" time="1387725246062" ignored="false" />
-    <file path="/ThemesController.php" changelist="5b3f1ff8-e392-450a-a971-a622aa704de6" time="1387742774791" ignored="false" />
-    <file path="/Theme.php" changelist="5b3f1ff8-e392-450a-a971-a622aa704de6" time="1387742130117" ignored="false" />
-    <file path="/Test.php" changelist="5b3f1ff8-e392-450a-a971-a622aa704de6" time="1388236628672" ignored="false" />
-    <file path="/QuestionsController.php" changelist="5b3f1ff8-e392-450a-a971-a622aa704de6" time="1389023652332" ignored="false" />
-    <file path="/dummy.txt" changelist="5b3f1ff8-e392-450a-a971-a622aa704de6" time="1388354801346" ignored="false" />
-    <file path="/Question.php" changelist="5b3f1ff8-e392-450a-a971-a622aa704de6" time="1389010581381" ignored="false" />
-    <file path="/start.htm" changelist="5b3f1ff8-e392-450a-a971-a622aa704de6" time="1389026434523" ignored="false" />
+    <file path="/Dummy.txt" changelist="f35145e3-7c8f-4c51-a3d7-89fc29bc660c" time="1390739998511" ignored="false" />
+    <file path="/AppController.php" changelist="f35145e3-7c8f-4c51-a3d7-89fc29bc660c" time="1390744060295" ignored="false" />
+    <file path="/TestsController.php" changelist="f35145e3-7c8f-4c51-a3d7-89fc29bc660c" time="1390743987228" ignored="false" />
+    <file path="/default.htm" changelist="f35145e3-7c8f-4c51-a3d7-89fc29bc660c" time="1390744720371" ignored="false" />
+    <file path="/add.htm" changelist="f35145e3-7c8f-4c51-a3d7-89fc29bc660c" time="1390755751610" ignored="false" />
+    <file path="/index.htm" changelist="f35145e3-7c8f-4c51-a3d7-89fc29bc660c" time="1390756564496" ignored="false" />
+    <file path="/bootstrap.css" changelist="f35145e3-7c8f-4c51-a3d7-89fc29bc660c" time="1390756667982" ignored="false" />
+    <file path="/start.htm" changelist="f35145e3-7c8f-4c51-a3d7-89fc29bc660c" time="1390757544487" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,66 +60,39 @@
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
   </component>
-  <component name="DatabaseView">
-    <flatten value="false" />
-    <groupTables value="false" />
-    <sortChildren value="false" />
-  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="testing" />
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TestsController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Controller/TestsController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="115" column="42" selection-start="3723" selection-end="3723" vertical-scroll-proportion="-15.458333">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="start.htm" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="start.htm" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/View/Tests/start.htm">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="8" selection-start="41" selection-end="41" vertical-scroll-proportion="0.090361446">
+            <state line="64" column="5" selection-start="3324" selection-end="3324" vertical-scroll-proportion="-30.625">
+              <folding>
+                <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#0;n#!!top" expanded="true" />
+                <marker date="1390760592705" expanded="true" signature="1859:1875" placeholder="{...}" />
+                <marker date="1390760592705" expanded="true" signature="2117:2133" placeholder="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="core.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Config/core.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="35" column="31" selection-start="1213" selection-end="1213" vertical-scroll-proportion="0.27939466">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="QuestionsController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Controller/QuestionsController.php">
+      <file leaf-file-name="test.htm" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/View/Layouts/test.htm">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="52" selection-start="370" selection-end="410" vertical-scroll-proportion="-5.625">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.htm" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/View/Questions/index.htm">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="37" selection-start="298" selection-end="298" vertical-scroll-proportion="-5.625">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.htm" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/View/Tests/index.htm">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="60" selection-start="615" selection-end="615" vertical-scroll-proportion="-11.875">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="add.htm" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/View/Tests/add.htm">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="86" column="38" selection-start="3082" selection-end="3082" vertical-scroll-proportion="-16.791666">
+            <state line="56" column="27" selection-start="2595" selection-end="2604" vertical-scroll-proportion="-20.0">
               <folding />
             </state>
           </provider>
@@ -157,11 +105,6 @@
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
-  <component name="FrameworkCommandLineHistory">
-    <commandsHistory>
-      <command text="ll" />
-    </commandsHistory>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -173,39 +116,30 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/Model/Test.php" />
-        <option value="$PROJECT_DIR$/app/View/Layouts/default.htm" />
-        <option value="$PROJECT_DIR$/app/Controller/StudentsController.php" />
-        <option value="$PROJECT_DIR$/app/View/Students/add.htm" />
-        <option value="$PROJECT_DIR$/app/View/Elements/footer.htm" />
-        <option value="$PROJECT_DIR$/mysql-connector-license.txt" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/app/Model/Qustion.php" />
-        <option value="$PROJECT_DIR$/app/Model/Question.php" />
-        <option value="$PROJECT_DIR$/app/View/Tests/add.htm" />
-        <option value="$PROJECT_DIR$/app/View/Questions/add.htm" />
-        <option value="$PROJECT_DIR$/app/Controller/QuestionsController.php" />
-        <option value="$PROJECT_DIR$/app/View/Questions/index.htm" />
-        <option value="$PROJECT_DIR$/app/View/Tests/index.htm" />
+        <option value="$PROJECT_DIR$/app/webroot/css/style.css" />
+        <option value="$PROJECT_DIR$/app/View/Layouts/front-end.htm" />
+        <option value="$PROJECT_DIR$/app/View/Layouts/test.htm" />
         <option value="$PROJECT_DIR$/app/Controller/TestsController.php" />
+        <option value="$PROJECT_DIR$/app/Controller/AppController.php" />
+        <option value="$PROJECT_DIR$/app/View/Layouts/default.htm" />
+        <option value="$PROJECT_DIR$/app/View/Elements/footer.htm" />
+        <option value="$PROJECT_DIR$/app/View/Courses/add.htm" />
+        <option value="$PROJECT_DIR$/app/View/Teachers/index.htm" />
+        <option value="$PROJECT_DIR$/app/View/Questions/add.htm" />
+        <option value="$PROJECT_DIR$/app/View/Reports/index.htm" />
+        <option value="$PROJECT_DIR$/app/webroot/bootstrap/css/bootstrap.css" />
         <option value="$PROJECT_DIR$/app/View/Tests/start.htm" />
+        <option value="$PROJECT_DIR$/app/Config/core.php" />
       </list>
     </option>
   </component>
-  <component name="PhpServers">
-    <option name="servers">
-      <server debugger_id="php.debugger.ZendDebugger" host="http://testing.loc/" name="Unnamed" />
-      <server host="testing.loc" name="testing.loc" />
-    </option>
-  </component>
-  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="Unnamed" />
   <component name="ProjectFrameBounds">
     <option name="x" value="49" />
     <option name="y" value="24" />
     <option name="width" value="1607" />
     <option name="height" value="1026" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -231,6 +165,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -321,7 +256,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Questions" />
+              <option name="myItemId" value="Layouts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -339,149 +274,50 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="testing" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="testing" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Controller" />
+              <option name="myItemId" value="Config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="Configurable.PHP" />
-    <property name="recentsLimit" value="5" />
-    <property name="restartRequiresConfirmation" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/View" />
-      <recent name="$PROJECT_DIR$/app/Model" />
-      <recent name="$PROJECT_DIR$/app/Controller" />
-      <recent name="$PROJECT_DIR$/app/View/Tests" />
-      <recent name="$PROJECT_DIR$/app/View/Faculties" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/Controller" />
-    </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
-      <TestRunner />
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
-      <JSDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSDebuggerConfigurationSettings>
-      <method />
-    </configuration>
-    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
-      <option name="VM_PARAMETERS" value="" />
-      <option name="USER_CFG_CLASS" />
-      <option name="CONTEXT_PROVIDER" />
-      <method />
-    </configuration>
     <list size="0" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
-  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="sslv3">
-    <option name="USER" value="" />
-    <option name="PASSWORD" value="" />
-    <option name="mySSHConnectionTimeout" value="30000" />
-    <option name="mySSHReadTimeout" value="30000" />
-    <option name="LAST_MERGED_REVISION" />
-    <option name="MERGE_DRY_RUN" value="false" />
-    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
-    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
-    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
-    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
-    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
-    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
-    <option name="FORCE_UPDATE" value="false" />
-    <option name="IGNORE_EXTERNALS" value="false" />
-    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="5b3f1ff8-e392-450a-a971-a622aa704de6" name="Default" comment="" />
-      <created>1382180127301</created>
-      <updated>1382180127301</updated>
+      <changelist id="f35145e3-7c8f-4c51-a3d7-89fc29bc660c" name="Default" comment="" />
+      <created>1390740001659</created>
+      <updated>1390740001659</updated>
     </task>
-    <task id="LOCAL-00001" summary="Added teachers, groups, students, courses , faculties management">
-      <created>1387716884344</created>
-      <updated>1387716884344</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Added tests managment with theme&#10;">
-      <created>1388321575247</created>
-      <updated>1388321575247</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Fix group ajax">
-      <created>1388354769340</created>
-      <updated>1388354769340</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Fix test add ajax">
-      <created>1388966358763</created>
-      <updated>1388966358763</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Added question add show">
-      <created>1389014473752</created>
-      <updated>1389014473752</updated>
-    </task>
-    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="49" y="24" width="1607" height="1026" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296582" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.02049968" sideWeight="0.60418963" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1877002" sideWeight="0.60418963" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39581037" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296582" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24983984" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296582" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296582" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296582" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -489,8 +325,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
-    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <option name="CHECK_NEW_TODO" value="false" />
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="CHECK_NEW_TODO" value="true" />
     <option name="myTodoPanelSettings">
       <value>
         <are-packages-shown value="false" />
@@ -526,7 +362,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added question add show" />
+    <option name="LAST_COMMIT_MESSAGE" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -540,133 +376,122 @@
     <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Added teachers, groups, students, courses , faculties management" />
-    <MESSAGE value="Added tests managment with theme&#10;" />
-    <MESSAGE value="Fix group ajax" />
-    <MESSAGE value="Fix test add ajax" />
-    <MESSAGE value="Added question add show" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/Controller/TestsController.php</url>
-          <line>113</line>
-          <option name="timeStamp" value="64" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="65" />
-    </breakpoint-manager>
+    <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Model/Test.php">
+    <entry file="file://$PROJECT_DIR$/app/webroot/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="0" selection-start="498" selection-end="498" vertical-scroll-proportion="0.47257876">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/View/Elements/footer.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="35" selection-start="576" selection-end="576" vertical-scroll-proportion="0.21003501">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Controller/StudentsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.26254377">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="15" selection-start="110" selection-end="110" vertical-scroll-proportion="0.10215664">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Model/Question.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="23" selection-start="381" selection-end="381" vertical-scroll-proportion="-11.875">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Controller/GroupsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="7" selection-start="683" selection-end="781" vertical-scroll-proportion="-11.25">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/View/Groups/index.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/View/Tests/add.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="38" selection-start="3082" selection-end="3082" vertical-scroll-proportion="-16.791666">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/View/Tests/index.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="60" selection-start="615" selection-end="615" vertical-scroll-proportion="-11.875">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Cake/Controller/Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="391" column="0" selection-start="11201" selection-end="11201" vertical-scroll-proportion="0.3501048">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Cake/Routing/Dispatcher.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="187" column="0" selection-start="6619" selection-end="6619" vertical-scroll-proportion="-6.625">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/View/Questions/add.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="20" selection-start="821" selection-end="821" vertical-scroll-proportion="0.2262931">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/View/Questions/index.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="37" selection-start="298" selection-end="298" vertical-scroll-proportion="-5.625">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Controller/QuestionsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="52" selection-start="370" selection-end="410" vertical-scroll-proportion="-5.625">
+        <state line="27" column="56" selection-start="2010" selection-end="2010" vertical-scroll-proportion="0.46551725">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Controller/TestsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="115" column="42" selection-start="3723" selection-end="3723" vertical-scroll-proportion="-15.458333">
+        <state line="241" column="35" selection-start="8222" selection-end="8232" vertical-scroll-proportion="0.7092199">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Controller/AppController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="120" selection-start="1832" selection-end="1832" vertical-scroll-proportion="0.6111758">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/View/Layouts/front-end.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="4" selection-start="657" selection-end="721" vertical-scroll-proportion="-9.375">
+          <folding>
+            <element signature="n#style#0;n#h3#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/View/Elements/footer.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="2" selection-start="50" selection-end="663" vertical-scroll-proportion="0.034924332">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/View/Layouts/default.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="62" selection-start="999" selection-end="999" vertical-scroll-proportion="0.25408804">
+          <folding>
+            <element signature="n#style#0;n#a#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/View/Courses/add.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="20" selection-start="20" selection-end="20" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/View/Teachers/index.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="38" selection-start="373" selection-end="373" vertical-scroll-proportion="-5.625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/View/Questions/add.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="16" selection-start="1843" selection-end="1977" vertical-scroll-proportion="-24.375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Controller/ReportsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.20954598">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/webroot/bootstrap/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2012" column="20" selection-start="35099" selection-end="35099" vertical-scroll-proportion="0.4035503">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/View/Reports/index.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="7" selection-start="60" selection-end="60" vertical-scroll-proportion="0.034924332">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/View/Layouts/test.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="27" selection-start="2595" selection-end="2604" vertical-scroll-proportion="-20.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/View/Tests/start.htm">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="8" selection-start="41" selection-end="41" vertical-scroll-proportion="0.090361446">
+        <state line="64" column="5" selection-start="3324" selection-end="3324" vertical-scroll-proportion="-30.625">
+          <folding>
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#!!top" expanded="true" />
+            <marker date="1390760592705" expanded="true" signature="1859:1875" placeholder="{...}" />
+            <marker date="1390760592705" expanded="true" signature="2117:2133" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Config/core.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="31" selection-start="1213" selection-end="1213" vertical-scroll-proportion="0.27939466">
           <folding />
         </state>
       </provider>
