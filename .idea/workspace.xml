@@ -2,44 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f35145e3-7c8f-4c51-a3d7-89fc29bc660c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/testing_db.sql" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/webroot/images/leftfolder.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/webroot/images/logo.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/webroot/images/red-image.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Controller/AppController.php" afterPath="$PROJECT_DIR$/app/Controller/AppController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DIPLOM.rar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CONTRIBUTING.md" afterPath="$PROJECT_DIR$/CONTRIBUTING.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Controller/TestsController.php" afterPath="$PROJECT_DIR$/app/Controller/TestsController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/View/Courses/add.htm" afterPath="$PROJECT_DIR$/app/View/Courses/add.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/View/Questions/add.htm" afterPath="$PROJECT_DIR$/app/View/Questions/add.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/webroot/bootstrap/css/bootstrap.css" afterPath="$PROJECT_DIR$/app/webroot/bootstrap/css/bootstrap.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Console/cake.bat" afterPath="$PROJECT_DIR$/app/Console/cake.bat" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/Cake/Console/cake.bat" afterPath="$PROJECT_DIR$/lib/Cake/Console/cake.bat" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/Cake/Console/Templates/skel/Console/cake.bat" afterPath="$PROJECT_DIR$/lib/Cake/Console/Templates/skel/Console/cake.bat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tmp/cache/cake_toolbar_cachebbfe8e43167de7611adb4e96bc0351d1" afterPath="$PROJECT_DIR$/app/tmp/cache/cake_toolbar_cachebbfe8e43167de7611adb4e96bc0351d1" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/View/Layouts/default.htm" afterPath="$PROJECT_DIR$/app/View/Layouts/default.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tmp/logs/error.log" afterPath="$PROJECT_DIR$/app/tmp/logs/error.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/View/Elements/footer.htm" afterPath="$PROJECT_DIR$/app/View/Elements/footer.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/View/Layouts/front-end.htm" afterPath="$PROJECT_DIR$/app/View/Layouts/front-end.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/View/Reports/index.htm" afterPath="$PROJECT_DIR$/app/View/Reports/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/View/Teachers/index.htm" afterPath="$PROJECT_DIR$/app/View/Teachers/index.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/webroot/business_events/index.html" afterPath="$PROJECT_DIR$/app/webroot/business_events/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/webroot/business_events/license.txt" afterPath="$PROJECT_DIR$/app/webroot/business_events/license.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tmp/cache/persistent/myapp_cake_core_cake_dev_ru" afterPath="$PROJECT_DIR$/app/tmp/cache/persistent/myapp_cake_core_cake_dev_ru" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tmp/cache/persistent/myapp_cake_core_cake_ru" afterPath="$PROJECT_DIR$/app/tmp/cache/persistent/myapp_cake_core_cake_ru" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tmp/cache/persistent/myapp_cake_core_debug_kit_ru" afterPath="$PROJECT_DIR$/app/tmp/cache/persistent/myapp_cake_core_debug_kit_ru" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tmp/cache/persistent/myapp_cake_core_file_map" afterPath="$PROJECT_DIR$/app/tmp/cache/persistent/myapp_cake_core_file_map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tmp/cache/persistent/myapp_cake_core_method_cache" afterPath="$PROJECT_DIR$/app/tmp/cache/persistent/myapp_cake_core_method_cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tmp/cache/models/myapp_cake_model_default_testing_db_list" afterPath="$PROJECT_DIR$/app/tmp/cache/models/myapp_cake_model_default_testing_db_list" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tmp/cache/models/myapp_cake_model_default_testing_db_students" afterPath="$PROJECT_DIR$/app/tmp/cache/models/myapp_cake_model_default_testing_db_students" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/webroot/js/script.js" afterPath="$PROJECT_DIR$/app/webroot/js/script.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/View/Tests/start.htm" afterPath="$PROJECT_DIR$/app/View/Tests/start.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/webroot/css/style.css" afterPath="$PROJECT_DIR$/app/webroot/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/View/Layouts/test.htm" afterPath="$PROJECT_DIR$/app/View/Layouts/test.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="testing.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="f35145e3-7c8f-4c51-a3d7-89fc29bc660c" time="1390739998511" ignored="false" />
+    <file path="/Dummy.txt" changelist="f35145e3-7c8f-4c51-a3d7-89fc29bc660c" time="1390762195907" ignored="false" />
     <file path="/AppController.php" changelist="f35145e3-7c8f-4c51-a3d7-89fc29bc660c" time="1390744060295" ignored="false" />
     <file path="/TestsController.php" changelist="f35145e3-7c8f-4c51-a3d7-89fc29bc660c" time="1390743987228" ignored="false" />
     <file path="/default.htm" changelist="f35145e3-7c8f-4c51-a3d7-89fc29bc660c" time="1390744720371" ignored="false" />
@@ -83,7 +59,7 @@
       <file leaf-file-name="core.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Config/core.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="31" selection-start="1213" selection-end="1213" vertical-scroll-proportion="0.27939466">
+            <state line="35" column="31" selection-start="1213" selection-end="1213" vertical-scroll-proportion="0.28004667">
               <folding />
             </state>
           </provider>
@@ -289,18 +265,41 @@
     <list size="0" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="f35145e3-7c8f-4c51-a3d7-89fc29bc660c" name="Default" comment="" />
       <created>1390740001659</created>
       <updated>1390740001659</updated>
     </task>
+    <task id="LOCAL-00001" summary="added sql dump to git">
+      <created>1390762200663</created>
+      <updated>1390762200663</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="49" y="24" width="1607" height="1026" extended-state="6" />
     <editor active="false" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -325,8 +324,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
-    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
-    <option name="CHECK_NEW_TODO" value="true" />
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <option name="myTodoPanelSettings">
       <value>
         <are-packages-shown value="false" />
@@ -362,7 +361,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" />
+    <option name="LAST_COMMIT_MESSAGE" value="added sql dump to git" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -376,6 +375,7 @@
     <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
+    <MESSAGE value="added sql dump to git" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -491,7 +491,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Config/core.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="31" selection-start="1213" selection-end="1213" vertical-scroll-proportion="0.27939466">
+        <state line="35" column="31" selection-start="1213" selection-end="1213" vertical-scroll-proportion="0.28004667">
           <folding />
         </state>
       </provider>
