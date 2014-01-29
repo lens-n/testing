@@ -139,18 +139,26 @@ class TestsController extends AppController{
             }
         }
 
-
         if((int)$test['active'] !== 0){
             if(!($this->Session->read('Report_id'))){
                 $data = array('students_id' => $student_id,'tests_id' => $id);
                 $this->Report->saveAll($data);
                 $this->Session->write('Report_id', $this->Report->getLastInsertID());
+                $this->Session->write('test_algo', $config['algo']);
             }
 
             $themes_list = json_decode($test['themes'],true);
 
             $questions =  $this->Question->find('all',array(
                 'conditions' =>  array('Question.themes_id' =>  $themes_list/*, 'Question.priority' => '0'*/ ), 'limit' => $config['max']));
+            $t_count =array();
+
+            foreach($questions as $item){
+                $i = $item['Question']['themes_id'];
+                $t_count[$i]++;
+            }
+            $this->Session->write('count', count($questions));
+            $this->Session->write('t_count', $t_count);
             $question =  array();
             foreach($questions as $item){
                $item['Question']['answers'] = json_decode($item['Question']['answers']);
@@ -212,7 +220,22 @@ class TestsController extends AppController{
                 $themes_count[$themes_id] += 1;
 
             }
+                $t_count = $this->Session->read('t_count');
+            foreach($themes_mark as $item => $val){
+                $themes_marks[$item]['id'] =  $item;
+                $themes_marks[$item]['mark'] =  $val/$t_count[$item]*100;
+                if( ($themes_marks[$item]['mark']) < 60 && ($this->Session->read('test_algo') == 'all_done')){
+                    $mark = 0;
+                }
+
+            }
+
             if($mark !== 0){
+                $count = $this->Session->read('count');
+             /*   foreach($themes_marks as $item){
+
+                }*/
+
                 $mark = $mark/$count*100;
                 $this->Report->read(null, $id);
                 $this->Report->set('mark', $mark);
@@ -226,11 +249,7 @@ class TestsController extends AppController{
                 $this->Report->save();
                 $this->set('mark', $mark);
             }
-            foreach($themes_mark as $item => $val){
-                $themes_marks[$item]['id'] =  $item;
-                $themes_marks[$item]['mark'] =  $val/$themes_count[$item]*100;
 
-            }
             $this->set('themes_marks', $themes_marks);
             $this->set('themes_count', $themes_count);
             $this->Session->delete('Report_id');

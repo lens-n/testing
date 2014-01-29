@@ -12,6 +12,9 @@ class AdminController extends AppController{
     public $uses = array('Config');
 
     public function login(){
+    if( $this->Session->read('Login')){
+        $this->redirect('/tests');
+    }
     if(!empty($this->request->data['login']) &&  $this->request->data['password']){
 
       $configs =   $this->Config->find('first');

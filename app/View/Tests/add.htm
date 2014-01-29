@@ -78,6 +78,7 @@
 </div>
 <div class="row">
     <label>Мин. кол. вопросов по теме:</label>
+
         <select name="data[Test][config][min]"  >
             {% for min in 2..4 %}
             <option {% if  _view.request.data['Test']['config']['min'] == min %}selected="selected" {% endif %} value="{{ min }}">{{ min }}</option>
@@ -94,11 +95,21 @@
             {% for max in 4..8 %}
                 <option {% if  _view.request.data['Test']['config']['max'] == max %}selected="selected" {% endif %} value="{{ max }}">{{ max }}</option>
             {% endfor %}
-
-
         </select>
 
 </div>
+<div class="row">
+    <label>Алгоритм подсчета:</label>
+
+    <select name="data[Test][config][algo]"  >
+
+            <option {% if  _view.request.data['Test']['config']['algo'] == 'middle' %}selected="selected" {% endif %} value="middle">Среднее</option>
+            <option {% if  _view.request.data['Test']['config']['algo'] == 'all_done' %}selected="selected" {% endif %} value="all_done">Благориятный</option>
+
+    </select>
+
+</div>
+
 
 
 
