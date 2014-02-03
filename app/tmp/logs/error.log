@@ -12315,3 +12315,55 @@ Request URL: /css/reset.css
 Stack Trace:
 #0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2014-02-03 23:33:03 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/reset.css
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-02-03 23:34:13 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/reset.css
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-02-03 23:35:15 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '49-5' for key 'PRIMARY'
+Request URL: /tests/save_answer/5
+Stack Trace:
+#0 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `te...', Array)
+#2 /home/www-data/www/testing/lib/Cake/Model/Datasource/DboSource.php(1004): DboSource->execute('INSERT INTO `te...')
+#3 /home/www-data/www/testing/lib/Cake/Model/Model.php(1827): DboSource->create(Object(ReportQuestion), Array, Array)
+#4 /home/www-data/www/testing/lib/Cake/Model/Model.php(2373): Model->save(Array, Array)
+#5 /home/www-data/www/testing/lib/Cake/Model/Model.php(2163): Model->saveAssociated(Array, Array)
+#6 /home/www-data/www/testing/app/Controller/TestsController.php(344): Model->saveAll(Array)
+#7 [internal function]: TestsController->save_answer('5')
+#8 /home/www-data/www/testing/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TestsController), Array)
+#9 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 /home/www-data/www/testing/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(TestsController), Object(CakeRequest), Object(CakeResponse))
+#11 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-02-03 23:36:03 Error: [MissingControllerException] Controller class фвьштController could not be found.
+Exception Attributes: array (
+  'class' => 'фвьштController',
+  'plugin' => NULL,
+)
+Request URL: /%D1%84%D0%B2%D1%8C%D1%88%D1%82
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-02-03 23:36:18 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/reset.css
+Stack Trace:
+#0 /home/www-data/www/testing/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
